@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박정호 — Backend Engineer Portfolio</title>
+  <meta name="description" content="백엔드 기반 제너럴리스트 엔지니어 박정호의 포트폴리오. 7년간의 백엔드, DevOps, 인프라, AI 활용 개발 경험.">
+  <meta name="author" content="박정호">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="박정호 — Backend Engineer Portfolio">
+  <meta property="og:description" content="백엔드 기반 제너럴리스트 엔지니어. DevOps, 인프라, AI 활용 개발까지 커버하는 문제 해결형 엔지니어.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="theme-color" content="#121212">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts: Pretendard + JetBrains Mono via Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "박정호",
+    "jobTitle": "Backend Engineer",
+    "url": "https://mydoor3520.github.io",
+    "email": "mydoor3520@gmail.com",
+    "knowsAbout": ["Backend Architecture", "DevOps", "Cloud Infrastructure", "AI/LLM Integration", "Java", "Spring Boot", "Python", "FastAPI"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "팀플백"
+    },
+    "alumniOf": [
+      { "@type": "Organization", "name": "팀플백" },
+      { "@type": "Organization", "name": "프라임에듀넷" },
+      { "@type": "Organization", "name": "버블콘" },
+      { "@type": "Organization", "name": "브레이너" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav main-nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <ul class="nav__links">
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">소개</a></li>
+        <li><a href="#career" class="nav-link" data-i18n="nav_career">경력</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a></li>
+        <li><a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a></li>
+        <li><a href="#journey" class="nav-link" data-i18n="nav_journey">여정</a></li>
+      </ul>
+      <button class="nav__lang" data-lang-toggle type="button" aria-label="Toggle language">
+        <span class="lang-ko active">KO</span> / <span class="lang-en">EN</span>
+      </button>
+      <button class="nav__hamburger mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile navigation menu -->
+  <div class="nav__mobile nav-menu">
+    <a href="#about" class="nav-link" data-i18n="nav_about">소개</a>
+    <a href="#career" class="nav-link" data-i18n="nav_career">경력</a>
+    <a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a>
+    <a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a>
+    <a href="#journey" class="nav-link" data-i18n="nav_journey">여정</a>
+  </div>
+
+  <main>
+
+    <!-- ============================================
+         HERO / ABOUT SECTION
+         ============================================ -->
+    <section id="about" class="hero" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="hero__tagline" data-i18n="hero_title">Backend Engineer</p>
+        <h1 id="about-heading" class="hero__title" data-i18n="hero_name">박정호</h1>
+
+        <div class="hero__tags" aria-label="Core competencies">
+          <span class="hero__tag" data-i18n="tag_backend">백엔드 아키텍처</span>
+          <span class="hero__tag" data-i18n="tag_devops">DevOps/인프라</span>
+          <span class="hero__tag" data-i18n="tag_incident">장애 대응/복구</span>
+          <span class="hero__tag" data-i18n="tag_business">비즈니스 로직 설계</span>
+          <span class="hero__tag" data-i18n="tag_ai">AI/LLM 연동</span>
+        </div>
+
+      <div class="hero__metrics">
+        <div class="metric-card">
+          <div class="metric-card__value" data-i18n="hero_metric1_value">7+</div>
+          <div class="metric-card__label" data-i18n="hero_metric1_label">년 경력</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value" data-i18n="hero_metric2_value">70K</div>
+          <div class="metric-card__label" data-i18n="hero_metric2_label">동시접속 아키텍처</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value" data-i18n="hero_metric3_value">14h</div>
+          <div class="metric-card__label" data-i18n="hero_metric3_label">인프라 전체 복구</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value" data-i18n="hero_metric4_value">10x</div>
+          <div class="metric-card__label" data-i18n="hero_metric4_label">검색 성능 개선</div>
+        </div>
+      </div>
+
+        <p class="hero__bio" data-i18n="hero_bio">7년간 다양한 도메인에서 백엔드 시스템을 설계하고 운영했습니다. 코드만 다루던 신입에서 출발해, 7만 동시접속을 견디는 아키텍처를 설계하고, 금요일 오후 4시에 전체 인프라가 소멸한 위기를 14시간 만에 복구했습니다. 좋은 코드를 넘어 좋은 시스템을 만드는 데 집중합니다.</p>
+
+        <div class="hero__contact">
+          <a href="mailto:mydoor3520@gmail.com" data-i18n="hero_contact">mydoor3520@gmail.com</a>
+          <button class="print-btn" onclick="window.print()" type="button" data-i18n="print_btn">PDF 다운로드</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CAREER SECTION
+         ============================================ -->
+    <section id="career" class="career-section" aria-labelledby="career-heading">
+      <div class="container">
+        <h2 id="career-heading" data-i18n="career_heading">경력</h2>
+
+        <!-- ---- Company 1: 팀플백 ---- -->
+        <div class="career__company" data-company="teampleback">
+          <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0">
+            <h3 data-i18n="c1_name">팀플백</h3>
+            <span class="period" data-i18n="c1_period">2024.10 ~ 2026.02</span>
+            <span class="toggle-icon"></span>
+          </div>
+          <div class="company-projects accordion-content">
+            <div class="company-meta">
+              <p><span data-i18n="c1_role">선임연구원</span></p>
+              <p data-i18n="c1_service">AI 기반 글쓰기 평가 플랫폼 (B2G)</p>
+              <p data-i18n="c1_team">5명 (백엔드 3, 프론트 2) | 역할: 백엔드 리드 + DevOps</p>
+            </div>
+            <div class="company-tech">
+              <span>Java</span><span>Spring Boot</span><span>NCP</span><span>NHN Cloud</span><span>GitHub Actions</span><span>Docker</span><span>Locust</span><span>Python</span><span>FastAPI</span><span>MySQL</span><span>Redis</span>
+            </div>
+
+            <!-- Project 1-1: 7만 CCU -->
+            <div class="project project--highlight">
+              <h4 class="project__title" data-i18n="c1_p1_title">7만 CCU 부하 테스트 및 고가용성 아키텍처</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c1_p1_s">강원도교육청 납품, 13만 학생 중 7만 동시접속 요건</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--analysis" data-i18n="star_analysis">분석</span>
+                  <span class="star-content" data-i18n="c1_p1_a">Locust로 실제 사용 시나리오 기반 부하 테스트 설계 (벌크 가입 - 글 작성 - AI 피드백)</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c1_p1_r_solve">트랜잭션 범위 분리로 락 점유 시간 최소화, LIMIT 적용으로 불필요한 전체 조회 제거</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c1_p1_r">에러율 0%, 서버 9대 고가용성 아키텍처 구축 (API 2대, 프론트 2대, Redis 1대, DB 2대, PDF 1대, 배치 1대)</span>
+                </div>
+              </div>
+            <div class="arch-diagram">
+              <div class="arch-diagram__title" data-i18n="arch_title">Server Architecture</div>
+              <div class="arch-row">
+                <div class="arch-node arch-node--accent" data-i18n="arch_ext_lb">External LB</div>
+              </div>
+              <div class="arch-arrow">|</div>
+              <div class="arch-row">
+                <div class="arch-node arch-node--accent" data-i18n="arch_be_lb">Backend LB</div>
+                <div class="arch-node arch-node--accent" data-i18n="arch_fe_lb">Frontend LB</div>
+              </div>
+              <div class="arch-arrow">|</div>
+              <div class="arch-row">
+                <div class="arch-node" data-i18n="arch_api1">API Server #1</div>
+                <div class="arch-node" data-i18n="arch_api2">API Server #2</div>
+                <div class="arch-node" data-i18n="arch_fe1">Frontend #1</div>
+                <div class="arch-node" data-i18n="arch_fe2">Frontend #2</div>
+              </div>
+              <div class="arch-arrow">|</div>
+              <div class="arch-row">
+                <div class="arch-node" data-i18n="arch_redis">Redis</div>
+                <div class="arch-node" data-i18n="arch_db_master">DB Master</div>
+                <div class="arch-node" data-i18n="arch_db_slave">DB Slave</div>
+              </div>
+              <div class="arch-row" style="margin-top: 0.75rem;">
+                <div class="arch-node" data-i18n="arch_pdf">PDF Server</div>
+                <div class="arch-node" data-i18n="arch_batch">Batch Server</div>
+              </div>
+            </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
+              <p class="decision-block__content" data-i18n="c1_p1_decision">PDF 생성 서버를 별도로 분리한 이유는 문집 생성 기능의 CPU 부하가 API 서버의 응답 시간에 직접적 영향을 주었기 때문입니다. DB Slave는 읽기 분산 대신 순수 백업 전용으로 운영했는데, 읽기 부하가 크지 않아 복잡도를 추가하는 것보다 백업 안정성을 우선한 판단이었습니다.</p>
+            </div>
+            </div>
+
+            <!-- Project 1-2: CI/CD -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c1_p2_title">CI/CD 파이프라인 구축</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c1_p2_s">수동 배포(SSH 직접 접속)로 인한 휴먼 에러, 배포 속도 저하</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--analysis" data-i18n="star_analysis">분석</span>
+                  <span class="star-content" data-i18n="c1_p2_a">Docker 이미지 기반 배포 체계 필요성 판단</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c1_p2_r_solve">GitHub Actions 기반 파이프라인 -- 스테이징(빌드-테스트-SonarQube-배포), 운영(빌드-테스트-블루/그린 배포-헬스체크-자동 롤백)</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c1_p2_r">NCP CLI 기반 블루/그린 배포 구현, SonarQube 정적분석 도입</span>
+                </div>
+              </div>
+            <div class="cicd-flow">
+              <div class="cicd-step" data-i18n="cicd_build">Build</div>
+              <div class="cicd-arrow">&rarr;</div>
+              <div class="cicd-step" data-i18n="cicd_test">Test</div>
+              <div class="cicd-arrow">&rarr;</div>
+              <div class="cicd-step" data-i18n="cicd_sonar">SonarQube</div>
+              <div class="cicd-arrow">&rarr;</div>
+              <div class="cicd-step cicd-step--highlight" data-i18n="cicd_deploy">Blue/Green Deploy</div>
+              <div class="cicd-arrow">&rarr;</div>
+              <div class="cicd-step" data-i18n="cicd_health">Health Check</div>
+              <div class="cicd-arrow">&rarr;</div>
+              <div class="cicd-step" data-i18n="cicd_rollback">Auto Rollback</div>
+            </div>
+            </div>
+
+            <!-- Project 1-3: Slack 모니터링 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c1_p3_title">Slack 모니터링 시스템</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c1_p3_s">서비스 장애 감지 체계 부재</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c1_p3_r_solve">500 에러 실시간 Slack 알림 + NAS 기반 헬스체크 서버 구축</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c1_p3_r">LLM 서비스 장애를 CS 인입 전 선제 감지, 즉시 다른 모델로 교체 배포</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 1-4: 클라우드 위기 대응 -->
+            <div class="project project--highlight">
+              <h4 class="project__title" data-i18n="c1_p4_title">클라우드 위기 대응 14시간 복구</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c1_p4_s">NHN Cloud 계정이 예고 없이 삭제됨 -- 모든 서버, DB, 인프라 소멸</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--analysis" data-i18n="star_analysis">분석</span>
+                  <span class="star-content" data-i18n="c1_p4_a">사용자 안내 - DB 복구 - 인프라 재구성 - 검증 - 오픈 순서로 우선순위 수립</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c1_p4_r_solve">14시간 동안 NCP에 서버 9대 전체 신규 구축, DB 복구, 팀 역할 분배 주도</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c1_p4_r">금요일 오후 4시 사고 - 토요일 오전 6시 서비스 정상 오픈. 이후 NAS 백업 체계 구축</span>
+                </div>
+              </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
+              <p class="decision-block__content" data-i18n="c1_p4_decision">복구 우선순위를 사용자 안내 → DB 복구 → 인프라 구성 → 검증 → 오픈 순서로 수립했습니다. 사용자가 빈 페이지를 보는 것이 가장 큰 리스크라 판단하여, NCP Object Storage에 점검 안내 HTML을 올리고 가비아 도메인을 임시 연결하는 것을 1순위로 실행했습니다. 이후 NAS 백업 체계를 구축하여 같은 사고의 재발을 방지했습니다.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---- Company 2: 프라임에듀넷 ---- -->
+        <div class="career__company" data-company="primeedunet">
+          <div class="company-header accordion-header" aria-expanded="false" role="button" tabindex="0">
+            <h3 data-i18n="c2_name">프라임에듀넷</h3>
+            <span class="period" data-i18n="c2_period">2022.06 ~ 2024.10</span>
+            <span class="toggle-icon"></span>
+          </div>
+          <div class="company-projects accordion-content" style="max-height: 0;">
+            <div class="company-meta">
+              <p><span data-i18n="c2_role">주임</span></p>
+              <p data-i18n="c2_service">공무원 시험 인강 플랫폼</p>
+            </div>
+            <div class="company-tech">
+              <span>Java</span><span>Spring Framework</span><span>Oracle</span><span>MySQL</span><span>이니시스 PG</span><span>Spring Batch</span>
+            </div>
+
+            <!-- Project 2-1: 환불 시스템 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c2_p1_title">환불 시스템 구축</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c2_p1_s">환불/정산 시스템 없음, 운영팀이 PG사에서 수동 취소 후 엑셀 장부 관리</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--analysis" data-i18n="star_analysis">분석</span>
+                  <span class="star-content" data-i18n="c2_p1_a">단품/일반패키지/선택형패키지 등 복잡한 상품 구조와 강사별 정산 비율 분석</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c2_p1_r_solve">이니시스 PG 연동 환불 시스템 설계 및 구현, 진도율 기반 환불 비율 계산 로직</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c2_p1_r">수동 환불 프로세스 자동화</span>
+                </div>
+              </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
+              <p class="decision-block__content" data-i18n="c2_p1_decision">단품, 일반 패키지, 선택형 패키지라는 세 가지 상품 유형이 각각 다른 환불 비율 계산과 강사 정산 로직을 필요로 했습니다. 하나의 통합 환불 계산 엔진을 설계하되, 상품 유형별 정산 분배 전략을 분리하는 구조를 택했습니다. 이를 통해 새로운 상품 유형이 추가되어도 환불 로직 자체는 수정 없이 확장할 수 있었습니다.</p>
+            </div>
+            </div>
+
+            <!-- Project 2-2: 데이터 마이그레이션 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c2_p2_title">레거시 결제 데이터 마이그레이션</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c2_p2_s">환불 데이터가 결제 테이블에 상태값만 달리하여 혼재</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c2_p2_r_solve">테이블 분리 및 새 스키마 설계, 데이터 마이그레이션</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c2_p2_r">결제/환불 데이터 정합성 확보 및 추적 가능한 구조로 개선</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2-3: 정산 시스템 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c2_p3_title">정산 시스템 (Spring Batch)</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c2_p3_s">엑셀 기반 수동 정산</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c2_p3_r_solve">Spring Batch 자동화 + 별도 정산관리 서버 구축 + 회계팀 협업</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c2_p3_r">수동 정산 프로세스를 완전 자동화하여 회계팀 업무 효율화</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2-4: 상품 버전관리 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c2_p4_title">상품 버전 관리</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c2_p4_s">자격증 시험 특성상 출제 범위나 법이 바뀌면 상품 내 일부 강의만 교체되는 경우 발생</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c2_p4_r_solve">상품의 버전을 남기는 로직으로 구현</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c2_p4_r">CS 문의 시 과거 거래 내역과의 추적이 가능해져 운영 효율성 향상</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---- Company 3: 버블콘 ---- -->
+        <div class="career__company" data-company="bubblecon">
+          <div class="company-header accordion-header" aria-expanded="false" role="button" tabindex="0">
+            <h3 data-i18n="c3_name">버블콘</h3>
+            <span class="period" data-i18n="c3_period">2020.11 ~ 2022.06</span>
+            <span class="toggle-icon"></span>
+          </div>
+          <div class="company-projects accordion-content" style="max-height: 0;">
+            <div class="company-meta">
+              <p><span data-i18n="c3_role">대리</span></p>
+              <p data-i18n="c3_service">교육 사업 SI</p>
+            </div>
+            <div class="company-tech">
+              <span>Java</span><span>Spring Framework</span><span>PostgreSQL</span>
+            </div>
+
+            <!-- Project 3-1: 검색 성능 개선 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c3_p1_title">검색 성능 개선</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c3_p1_s">XML 기반 데이터 검색에 약 10초 소요</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c3_p1_r_solve">XML - PostgreSQL 정규화, 인덱싱 전략 수립</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c3_p1_r">검색 시간 10초 - 1초 이내 (10배 개선)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3-2: 포스코 현장 지원 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c3_p2_title">포스코 교육 시스템 현장 지원 (4주)</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c3_p2_s">포스코 교육 시스템 사업에서 콘텐츠 허브 구축을 담당하며 운영 오픈 직전 4주간 현장 상주</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c3_p2_r_solve">콘텐츠 업로드/조회/수정 밀도 있게 테스트 및 지원. CP들의 사용 미숙 문제 유선 지원 및 CS 직접 처리</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c3_p2_r">운영 오픈 성공적 완료 및 고객 대면 지원 경험 축적</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---- Company 4: 브레이너 ---- -->
+        <div class="career__company" data-company="brainer">
+          <div class="company-header accordion-header" aria-expanded="false" role="button" tabindex="0">
+            <h3 data-i18n="c4_name">브레이너</h3>
+            <span class="period" data-i18n="c4_period">2019.02 ~ 2020.10</span>
+            <span class="toggle-icon"></span>
+          </div>
+          <div class="company-projects accordion-content" style="max-height: 0;">
+            <div class="company-meta">
+              <p><span data-i18n="c4_role">대리</span></p>
+              <p data-i18n="c4_service">보안 관리 솔루션 납품</p>
+            </div>
+            <div class="company-tech">
+              <span>Java</span><span>Spring Framework</span><span>JasperReports</span>
+            </div>
+
+            <!-- Project 4-1: 보안 보고서 자동화 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c4_p1_title">보안 보고서 자동화</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c4_p1_s">수기로 작성되던 보안 보고서 생성 프로세스</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c4_p1_r_solve">JasperReports 기반 자동화 시스템으로 전환</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c4_p1_r">보안 보고서 생성 자동화로 운영 효율성 향상</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4-2: 보안관제 연동 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c4_p2_title">보안관제-이슈관리 워크플로우 연동</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c4_p2_s">보안관제 시스템에서 탐지된 취약점을 수동으로 추적 및 관리</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c4_p2_r_solve">보안관제 시스템 API와 이슈 관리 플랫폼을 연동하여 취약점 자동 이슈 할당 및 통계 대시보드 제공</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c4_p2_r">취약점 추적 자동화 및 분석 결과 시각화</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4-3: 이슈관리 프로그램 -->
+            <div class="project">
+              <h4 class="project__title" data-i18n="c4_p3_title">자체 이슈관리 프로그램 개발</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c4_p3_s">경력 20년 개발팀장의 제안으로 자체 이슈 관리 프로그램 개발 착수</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c4_p3_r_solve">JIRA, Redmine, METIS, Confluence 등을 벤치마킹하여 기획 및 구현. 사용자 중심의 UI/UX 설계</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c4_p3_r">제품 기획부터 구현까지 전과정 경험 확보</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         TECH STACK SECTION
+         ============================================ -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" data-i18n="skills_heading">기술</h2>
+
+        <div class="skill-category">
+          <h3 data-i18n="skills_lang_title">Language &amp; Framework</h3>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <div class="skill-card__name">Java / Spring</div>
+              <div class="skill-card__level skill-card__level--primary">7 years</div>
+              <div class="skill-card__context" data-i18n="skills_lang_java">7년, 주력 -- 모든 커리어에서 핵심 기술로 활용</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Python / FastAPI</div>
+              <div class="skill-card__level skill-card__level--proficient">Proficient</div>
+              <div class="skill-card__context" data-i18n="skills_lang_python">활용 -- 팀플백 부하 테스트(Locust), AI/LLM 연동 서비스</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">JavaScript</div>
+              <div class="skill-card__level skill-card__level--familiar">Familiar</div>
+              <div class="skill-card__context" data-i18n="skills_lang_js">활용 -- 프론트엔드 협업 및 사이드 프로젝트</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skills_db_title">Database</h3>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <div class="skill-card__name">Oracle</div>
+              <div class="skill-card__context" data-i18n="skills_db_oracle">프라임에듀넷 결제/환불/정산 시스템</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">MariaDB</div>
+              <div class="skill-card__context" data-i18n="skills_db_mariadb">프라임에듀넷 서비스 DB</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">PostgreSQL</div>
+              <div class="skill-card__context" data-i18n="skills_db_pg">버블콘 -- XML 데이터 정규화 및 검색 10배 개선</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">MySQL</div>
+              <div class="skill-card__context" data-i18n="skills_db_mysql">팀플백 메인 DB, 설계/정규화/인덱싱/마이그레이션</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Redis</div>
+              <div class="skill-card__context" data-i18n="skills_db_redis">팀플백 캐싱 및 세션 관리</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skills_devops_title">DevOps</h3>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <div class="skill-card__name">NCP / NHN Cloud / AWS</div>
+              <div class="skill-card__context" data-i18n="skills_devops_cloud">팀플백(NCP, NHN Cloud), 프라임에듀넷(AWS)</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">GitHub Actions</div>
+              <div class="skill-card__context" data-i18n="skills_devops_gha">팀플백 CI/CD 파이프라인 설계 및 구축</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Docker</div>
+              <div class="skill-card__context" data-i18n="skills_devops_docker">컨테이너 기반 배포, 이미지 빌드 자동화</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_devops_bg_label">블루/그린 배포</div>
+              <div class="skill-card__context" data-i18n="skills_devops_bg">NCP CLI 기반 무중단 배포, 헬스체크 및 자동 롤백</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">SonarQube</div>
+              <div class="skill-card__context" data-i18n="skills_devops_sonar">정적 코드 분석, CI 파이프라인 통합</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skills_monitor_title">Monitoring</h3>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_monitor_slack_label">Slack 웹훅</div>
+              <div class="skill-card__context" data-i18n="skills_monitor_slack">500 에러 실시간 알림, 장애 선제 감지 시스템</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_monitor_locust_label">Locust 부하 테스트</div>
+              <div class="skill-card__context" data-i18n="skills_monitor_locust">7만 CCU 시나리오 기반 성능 검증</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-i18n="skills_ai_title">AI / LLM</h3>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_ai_llm_label">LLM API 연동</div>
+              <div class="skill-card__context" data-i18n="skills_ai_llm">팀플백 AI 글쓰기 평가 서비스 핵심 기능</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_ai_prompt_label">프롬프트 엔지니어링</div>
+              <div class="skill-card__context" data-i18n="skills_ai_prompt">LLM 응답 품질 최적화 및 안정화</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name" data-i18n="skills_ai_vibe_label">Claude Code 바이브코딩</div>
+              <div class="skill-card__context" data-i18n="skills_ai_vibe">사이드 프로젝트에서 AI 기반 개발 생산성 실험</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         SIDE PROJECTS SECTION
+         ============================================ -->
+    <section id="side-projects" class="side-projects-section" aria-labelledby="side-projects-heading">
+      <div class="container">
+        <h2 id="side-projects-heading" data-i18n="side_projects_heading">사이드 프로젝트</h2>
+
+        <div class="side-project">
+          <h3 data-i18n="sp1_title">면접 훈련 웹서비스</h3>
+          <p class="side-project__tech">LLM API</p>
+          <p data-i18n="sp1_desc">LLM API를 연동한 AI 기반 면접 훈련 서비스. AI 서비스일수록 좋은 기획과 테스트가 중요하다는 것을 체감.</p>
+          <blockquote class="side-project__insight" data-i18n="sp1_insight">"AI 서비스일수록 좋은 기획과 테스트가 중요"</blockquote>
+        </div>
+
+        <div class="side-project">
+          <h3 data-i18n="sp2_title">SRT 자동 예매 앱</h3>
+          <p class="side-project__tech">Claude Code</p>
+          <p data-i18n="sp2_desc">Claude Code 바이브코딩으로 개발한 SRT 열차 자동 예매 애플리케이션. 비약적 생산성 향상을 경험하는 동시에 코드 오너십에 대한 고민을 갖게 됨.</p>
+          <blockquote class="side-project__insight" data-i18n="sp2_insight">"비약적 생산성 향상과 동시에 코드 오너십에 대한 고민"</blockquote>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         GROWTH NARRATIVE / JOURNEY SECTION
+         ============================================ -->
+    <section id="journey" class="journey-section" aria-labelledby="journey-heading">
+      <div class="container">
+        <h2 id="journey-heading" data-i18n="journey_heading">여정</h2>
+
+        <div class="journey__timeline">
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="j1_year">2019 - 2020</div>
+            <div class="timeline-company" data-i18n="j1_company">브레이너</div>
+            <p class="timeline-desc" data-i18n="j1_desc">첫 직장. 20년차 개발팀장과 둘이서 보안관제 시스템을 개발하고, 현장에 직접 나가 납품했습니다. 리눅스, Docker를 처음 다루기 시작했고, JasperReports 기반 보고서 자동화와 보안관제-이슈관리 연동 워크플로우를 구현했습니다.</p>
+            <p class="timeline-legacy" data-i18n="j1_legacy">다수의 기관에 납품된 보안관제 시스템</p>
+          </div>
+          <div class="timeline-bridge">
+            <div class="timeline-bridge__line"></div>
+            <p class="timeline-bridge__text" data-i18n="j1_transition">혼자가 아닌 팀으로 만드는 개발을 경험하고 싶었습니다.</p>
+            <div class="timeline-bridge__line"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="j2_year">2020 - 2022</div>
+            <div class="timeline-company" data-i18n="j2_company">버블콘</div>
+            <p class="timeline-desc" data-i18n="j2_desc">4인 개발팀에서 교육 콘텐츠 허브를 개발했습니다. XML 데이터를 PostgreSQL로 정규화하여 검색 성능을 10배 개선했고, 포스코 교육 시스템 오픈에 4주간 현장 상주하며 지원했습니다.</p>
+            <p class="timeline-legacy" data-i18n="j2_legacy">현재까지 운영 중인 포스코 사내 교육 시스템</p>
+          </div>
+          <div class="timeline-bridge">
+            <div class="timeline-bridge__line"></div>
+            <p class="timeline-bridge__text" data-i18n="j2_transition">납품하고 떠나는 것이 아닌, 사용자와 함께 성장하는 서비스를 만들고 싶었습니다.</p>
+            <div class="timeline-bridge__line"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="j3_year">2022 - 2024</div>
+            <div class="timeline-company" data-i18n="j3_company">프라임에듀넷</div>
+            <p class="timeline-desc" data-i18n="j3_desc">공무원 시험 인강 플랫폼에서 결제, 환불, 정산이라는 돈이 오가는 시스템을 처음부터 설계했습니다. 이니시스 PG 연동, Spring Batch 정산 자동화, 레거시 데이터 마이그레이션을 수행하며 복잡한 비즈니스 로직을 코드로 풀어내는 역량을 쌓았습니다.</p>
+            <p class="timeline-legacy" data-i18n="j3_legacy">서비스 축소 이후에도 변경 없이 운영 중인 결제/환불/정산 시스템</p>
+          </div>
+          <div class="timeline-bridge">
+            <div class="timeline-bridge__line"></div>
+            <p class="timeline-bridge__text" data-i18n="j3_transition">쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.</p>
+            <div class="timeline-bridge__line"></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="j4_year">2024 - 2026</div>
+            <div class="timeline-company" data-i18n="j4_company">팀플백</div>
+            <p class="timeline-desc" data-i18n="j4_desc">신생 개발팀에 합류하여 팀을 5명으로 구성하고 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 정시 퇴근이 전체 근무일의 20%도 안 될 만큼 내 제품이라는 마음으로 일했습니다.</p>
+            <p class="timeline-legacy" data-i18n="j4_legacy">리뉴얼한 서비스 '자작자작', 9대 서버 인프라와 CI/CD 파이프라인, 모니터링/백업 체계</p>
+          </div>
+          <div class="timeline-bridge timeline-bridge--next">
+            <div class="timeline-bridge__line"></div>
+          </div>
+          <div class="timeline-item timeline-item--next">
+            <div class="timeline-year" data-i18n="j5_year">Next</div>
+            <div class="timeline-company" data-i18n="j5_company">다음 여정</div>
+            <p class="timeline-desc" data-i18n="j5_desc">7년간 네 번의 도전을 통해 제가 가장 잘하는 것과 가장 원하는 것을 알게 되었습니다. 새로운 기술에 두려움 없이 도전하는 팀에서, 신뢰를 기반으로 오래 함께 만들어가는 동료가 되고 싶습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <a href="mailto:mydoor3520@gmail.com" data-i18n="footer_email">mydoor3520@gmail.com</a>
+      <p data-i18n="footer_copyright">&copy; 2026 박정호. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts: ko.js must load first to provide default translations -->
+  <script src="js/ko.js"></script>
+  <script src="js/en.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

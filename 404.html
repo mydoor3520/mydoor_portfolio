@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — 페이지를 찾을 수 없습니다</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-container {
+      max-width: 480px;
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .error-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #a0a0a0;
+      margin-bottom: 2rem;
+    }
+
+    .error-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      color: #ffffff;
+      background-color: transparent;
+      border: 1px solid #333;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .error-link:hover {
+      border-color: #555;
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <p class="error-code">404</p>
+    <h1 class="error-title">페이지를 찾을 수 없습니다</h1>
+    <a href="/" class="error-link">홈으로 돌아가기</a>
+  </div>
+</body>
+</html>
