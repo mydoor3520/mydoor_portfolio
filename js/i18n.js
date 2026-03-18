@@ -228,7 +228,23 @@
     c2_p1_decision: "c2_p1_decision",
 
     // Print button
-    print_btn: "print_btn"
+    print_btn: "print_btn",
+
+    // Social links
+    hero_linkedin: "hero_linkedin",
+
+    // Side project enhancements
+    sp1_feat1: "sideProjects.interviewTrainer.features[0]",
+    sp1_feat2: "sideProjects.interviewTrainer.features[1]",
+    sp1_feat3: "sideProjects.interviewTrainer.features[2]",
+    sp1_link: "sideProjects.interviewTrainer.link",
+    sp2_feat1: "sideProjects.srtApp.features[0]",
+    sp2_feat2: "sideProjects.srtApp.features[1]",
+    sp2_feat3: "sideProjects.srtApp.features[2]",
+    sp2_link: "sideProjects.srtApp.link",
+
+    // Back to top
+    back_to_top: null
   };
 
   function getNestedValue(obj, keyPath) {

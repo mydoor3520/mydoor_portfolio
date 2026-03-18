@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mydoor3520.github.io/mydoor_portfolio/sitemap.xml

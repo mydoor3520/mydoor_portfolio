@@ -96,7 +96,7 @@
         return;
       }
 
-      if (index === 0) {
+      if (index <= 1) {
         header.setAttribute("aria-expanded", "true");
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
@@ -198,6 +198,80 @@
     });
   }
 
+  // --- Scroll reveal animations ---
+
+  function initRevealObserver() {
+    var revealElements = document.querySelectorAll(".reveal");
+    if (revealElements.length === 0) {
+      return;
+    }
+
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -100px 0px",
+        threshold: 0
+      }
+    );
+
+    revealElements.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  }
+
+  // --- Back to top button ---
+
+  function initBackToTop() {
+    var btn = document.getElementById("back-to-top");
+    if (!btn) {
+      return;
+    }
+
+    var scrollThreshold = 300;
+    var ticking = false;
+
+    function updateButton() {
+      if (window.scrollY > scrollThreshold) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateButton);
+        ticking = true;
+      }
+    });
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    updateButton();
+  }
+
+  // --- Print button (replaces inline onclick) ---
+
+  function initPrintButton() {
+    var btn = document.getElementById("print-btn");
+    if (!btn) {
+      return;
+    }
+    btn.addEventListener("click", function () {
+      window.print();
+    });
+  }
+
   // --- Initialization ---
 
   function init() {
@@ -207,6 +281,9 @@
     initLogoClick();
     initNavScroll();
     initLanguageChangeHandler();
+    initRevealObserver();
+    initBackToTop();
+    initPrintButton();
   }
 
   if (document.readyState === "loading") {

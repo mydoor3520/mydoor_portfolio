@@ -177,12 +177,24 @@ window.i18nData.en = {
     interviewTrainer: {
       title: "Interview Training Web Service",
       description: "A service I planned and developed while preparing for a career transition, integrating LLM APIs. Learned that solid planning and thorough testing remain critically important, especially for AI-powered services.",
-      stack: "LLM API, Prompt Engineering"
+      stack: "LLM API, Prompt Engineering",
+      features: [
+        "Job-specific custom interview question generation",
+        "LLM-based answer feedback and improvement suggestions",
+        "Prompt optimization for response quality stabilization"
+      ],
+      link: "GitHub Repo →"
     },
     srtApp: {
       title: "SRT Auto-booking Android App",
       description: "My first mobile app built with vibe coding using Claude Code. Experienced firsthand how AI can deliver dramatic productivity gains, while recognizing the need for more rigorous or different testing methodologies when working with AI-assisted development.",
-      stack: "Claude Code, Android, Vibe Coding"
+      stack: "Claude Code, Android, Vibe Coding",
+      features: [
+        "Real-time SRT seat monitoring and auto-booking",
+        "Rapid prototyping with Claude Code vibe coding",
+        "Exploring testing methodologies for AI-assisted development"
+      ],
+      link: "GitHub Repo →"
     }
   },
 
@@ -290,5 +302,8 @@ window.i18nData.en = {
   c2_p1_decision: "Three product types \u2014 single courses, standard packages, and customizable packages \u2014 each required different refund calculation and instructor settlement logic. The solution was a unified refund calculation engine with separated settlement distribution strategies per product type, enabling extension to new product types without modifying the core refund logic.",
 
   // Print button
-  print_btn: "Download PDF"
+  print_btn: "Download PDF",
+
+  // Social links
+  hero_linkedin: "LinkedIn"
 };

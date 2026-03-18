@@ -175,14 +175,26 @@ window.i18nData.ko = {
   sideProjects: {
     sectionTitle: "Side Projects",
     interviewTrainer: {
-      title: "\uBA74\uC811 \uD6C8\uB828 \uC6F9\uC11C\uBE44\uC2A4",
-      description: "\uC774\uC9C1 \uC900\uBE44 \uC2DC\uAE30\uC5D0 \uC9C1\uC811 \uAE30\uD68D\uD558\uACE0 \uAC1C\uBC1C\uD55C LLM API \uC5F0\uB3D9 \uC11C\uBE44\uC2A4. AI \uAE30\uBC18 \uC11C\uBE44\uC2A4\uC77C\uC218\uB85D \uC88B\uC740 \uAE30\uD68D\uACFC \uCCA0\uC800\uD55C \uD14C\uC2A4\uD2B8\uAC00 \uBCC0\uD568\uC5C6\uC774 \uC911\uC694\uD558\uB2E4\uB294 \uAC83\uC744 \uAE68\uB2EC\uC74C",
-      stack: "LLM API, \uD504\uB86C\uD504\uD2B8 \uC5D4\uC9C0\uB2C8\uC5B4\uB9C1"
+      title: "면접 훈련 웹서비스",
+      description: "이직 준비 시기에 직접 기획하고 개발한 LLM API 연동 서비스. AI 기반 서비스일수록 좋은 기획과 철저한 테스트가 변함없이 중요하다는 것을 깨달음",
+      stack: "LLM API, 프롬프트 엔지니어링",
+      features: [
+        "직무별 맞춤 면접 질문 생성",
+        "LLM 기반 답변 피드백 및 개선점 제안",
+        "프롬프트 최적화를 통한 응답 품질 안정화"
+      ],
+      link: "GitHub 저장소 →"
     },
     srtApp: {
-      title: "SRT \uC790\uB3D9 \uC608\uB9E4 \uC548\uB4DC\uB85C\uC774\uB4DC \uC571",
-      description: "Claude Code \uAE30\uBC18 \uBC14\uC774\uBE0C\uCF54\uB529\uC73C\uB85C \uAC1C\uBC1C\uD55C \uCCAB \uBAA8\uBC14\uC77C \uC571. AI\uAC00 \uBE44\uC57D\uC801\uC778 \uC0DD\uC0B0\uC131 \uD5A5\uC0C1\uC744 \uB9CC\uB4E4\uC5B4\uC904 \uC218 \uC788\uC74C\uC744 \uCCB4\uAC10\uD558\uB294 \uB3D9\uC2DC\uC5D0, \uBC14\uC774\uBE0C\uCF54\uB529\uC5D0 \uB9DE\uB294 \uD14C\uC2A4\uD2B8 \uBC29\uBC95\uB860\uC774 \uD544\uC694\uD568\uC744 \uC778\uC2DD",
-      stack: "Claude Code, Android, \uBC14\uC774\uBE0C\uCF54\uB529"
+      title: "SRT 자동 예매 안드로이드 앱",
+      description: "Claude Code 기반 바이브코딩으로 개발한 첫 모바일 앱. AI가 비약적인 생산성 향상을 만들어줄 수 있음을 체감하는 동시에, 바이브코딩에 맞는 테스트 방법론이 필요함을 인식",
+      stack: "Claude Code, Android, 바이브코딩",
+      features: [
+        "SRT 좌석 실시간 모니터링 및 자동 예매",
+        "Claude Code 활용 바이브코딩으로 빠른 프로토타이핑",
+        "AI 코딩 시 테스트 방법론에 대한 고민과 실험"
+      ],
+      link: "GitHub 저장소 →"
     }
   },
 
@@ -290,5 +302,8 @@ window.i18nData.ko = {
   c2_p1_decision: "단품, 일반 패키지, 선택형 패키지라는 세 가지 상품 유형이 각각 다른 환불 비율 계산과 강사 정산 로직을 필요로 했습니다. 하나의 통합 환불 계산 엔진을 설계하되, 상품 유형별 정산 분배 전략을 분리하는 구조를 택했습니다. 이를 통해 새로운 상품 유형이 추가되어도 환불 로직 자체는 수정 없이 확장할 수 있었습니다.",
 
   // Print button
-  print_btn: "PDF 다운로드"
+  print_btn: "PDF 다운로드",
+
+  // Social links
+  hero_linkedin: "LinkedIn"
 };
