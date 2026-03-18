@@ -11,7 +11,7 @@ window.i18nData.en = {
   hero: {
     tagline: "Backend Engineer",
     title: "Generalist Backend Engineer \u2014 A problem-solving engineer covering DevOps, infrastructure, and AI-powered development",
-    bio: "Over 7 years, I have designed and operated backend systems across diverse domains. Starting as a junior who only knew code, I grew to architect systems handling 70K concurrent users and recover an entire cloud infrastructure from scratch in 14 hours after a Friday 4 PM catastrophe. I focus on building great systems, not just writing great code.",
+    bio: "From backend architecture design to CI/CD, cloud infrastructure, and incident response — I'm an engineer who steps up for whatever it takes to keep services running reliably. With experience translating complex business logic into robust systems and leading teams through crisis situations, I focus on building trustworthy systems and teams.",
     contact: "mydoor3520@gmail.com",
     tags: [
       "Backend Architecture",

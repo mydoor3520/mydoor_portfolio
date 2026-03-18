@@ -11,7 +11,7 @@ window.i18nData.ko = {
   hero: {
     tagline: "Backend Engineer",
     title: "\uBC31\uC5D4\uB4DC \uAE30\uBC18 \uC81C\uB108\uB7F4\uB9AC\uC2A4\uD2B8 \u2014 DevOps, \uC778\uD504\uB77C, AI \uD65C\uC6A9 \uAC1C\uBC1C\uAE4C\uC9C0 \uCEE4\uBC84\uD558\uB294 \uBB38\uC81C \uD574\uACB0\uD615 \uC5D4\uC9C0\uB2C8\uC5B4",
-    bio: "7년간 다양한 도메인에서 백엔드 시스템을 설계하고 운영했습니다. 코드만 다루던 신입에서 출발해, 7만 동시접속을 견디는 아키텍처를 설계하고, 금요일 오후 4시에 전체 인프라가 소멸한 위기를 14시간 만에 복구했습니다. 좋은 코드를 넘어 좋은 시스템을 만드는 데 집중합니다.",
+    bio: "백엔드 아키텍처 설계부터 CI/CD, 클라우드 인프라, 장애 대응까지 — 서비스가 안정적으로 돌아가는 데 필요한 일이라면 직접 나서는 엔지니어입니다. 복잡한 비즈니스 로직을 시스템으로 풀어내고, 위기 상황에서 팀을 이끌어본 경험을 바탕으로, 신뢰할 수 있는 시스템과 팀을 만드는 데 집중합니다.",
     contact: "mydoor3520@gmail.com",
     tags: [
       "\uBC31\uC5D4\uB4DC \uC544\uD0A4\uD14D\uCC98",
