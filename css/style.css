@@ -1600,6 +1600,125 @@ section:last-of-type {
 }
 
 /* ============================================
+   Leadership Section
+   ============================================ */
+.leadership-section {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.leadership-section__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent, #60a5fa);
+}
+
+.leadership-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: baseline;
+}
+
+.leadership-label {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+  white-space: nowrap;
+}
+
+.leadership-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   Business Impact Metrics
+   ============================================ */
+.business-impact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.impact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.impact-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent, #60a5fa);
+}
+
+/* ============================================
+   Failure Case + Project Summary
+   ============================================ */
+.project--lesson {
+  border-left: 3px solid #f59e0b;
+}
+
+.star-label--lesson {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.project-summary {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Architecture Diagram Hover
+   ============================================ */
+@media (hover: hover) {
+  .arch-node:hover {
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.3);
+    border-color: var(--accent, #60a5fa);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+}
+
+/* ============================================
+   CTA Strengthening
+   ============================================ */
+.hero__contact a[href^="mailto"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.hero__contact a[href^="mailto"]:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+/* ============================================
    Responsive — Tablet
    ============================================ */
 @media (max-width: 768px) {
@@ -1651,6 +1770,15 @@ section:last-of-type {
 
   .hero__metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leadership-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .business-impact {
+    flex-direction: column;
   }
 }
 
@@ -1716,5 +1844,9 @@ section:last-of-type {
   .cicd-arrow {
     text-align: center;
     transform: rotate(90deg);
+  }
+
+  .leadership-section {
+    padding: 1rem;
   }
 }

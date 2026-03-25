@@ -152,7 +152,7 @@
 
         <!-- ---- Company 1: 팀플백 ---- -->
         <div class="career__company" data-company="teampleback">
-          <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0">
+          <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0" data-default-open>
             <h3 data-i18n="c1_name">팀플백</h3>
             <span class="period" data-i18n="c1_period">2024.10 ~ 2026.02</span>
             <span class="toggle-icon"></span>
@@ -161,10 +161,21 @@
             <div class="company-meta">
               <p><span data-i18n="c1_role">선임연구원</span></p>
               <p data-i18n="c1_service">AI 기반 글쓰기 평가 플랫폼 (B2G)</p>
-              <p data-i18n="c1_team">5명 (백엔드 3, 프론트 2) | 역할: 백엔드 리드 + DevOps</p>
+              <p data-i18n="c1_team_growth">개발팀 2명 → 6명 성장 (합류 시 2명, 퇴사 시 6명)</p>
             </div>
             <div class="company-tech">
               <span>Java</span><span>Spring Boot</span><span>NCP</span><span>NHN Cloud</span><span>GitHub Actions</span><span>Docker</span><span>Locust</span><span>Python</span><span>FastAPI</span><span>MySQL</span><span>Redis</span>
+            </div>
+            <div class="business-impact">
+              <div class="impact-item">
+                <span class="impact-value" data-i18n="c1_biz_ccu">피크 1,500 CCU</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-value" data-i18n="c1_biz_contract">강원도교육청 10억원 계약</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-value" data-i18n="c1_biz_dev_period">6개월 개발 (메인 서비스 운영 병행)</span>
+              </div>
             </div>
 
             <!-- Project 1-1: 7만 CCU -->
@@ -220,6 +231,31 @@
               <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
               <p class="decision-block__content" data-i18n="c1_p1_decision">PDF 생성 서버를 별도로 분리한 이유는 문집 생성 기능의 CPU 부하가 API 서버의 응답 시간에 직접적 영향을 주었기 때문입니다. DB Slave는 읽기 분산 대신 순수 백업 전용으로 운영했는데, 읽기 부하가 크지 않아 복잡도를 추가하는 것보다 백업 안정성을 우선한 판단이었습니다.</p>
             </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
+              <p class="decision-block__content" data-i18n="c1_redis_decision">Redis는 70K CCU 대응이 아닌, 이메일 인증 시 인증번호의 TTL 기반 임시 저장을 위해 도입했다. 세션 저장소나 캐시 레이어가 아닌, 명확한 기능적 필요에 의한 선택이었다.</p>
+            </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div class="leadership-section">
+              <h4 class="leadership-section__title" data-i18n="c1_leadership_title">팀 리더십</h4>
+              <div class="leadership-item">
+                <span class="leadership-label" data-i18n="c1_leadership_mentoring_label">멘토링</span>
+                <span class="leadership-content" data-i18n="c1_leadership_mentoring">1:1 정기 면담을 통한 성장 지원 및 개인 고민 상담. 내성적이던 주니어가 적극적으로 의사 표현하는 개발자로 성장</span>
+              </div>
+              <div class="leadership-item">
+                <span class="leadership-label" data-i18n="c1_leadership_hiring_label">채용</span>
+                <span class="leadership-content" data-i18n="c1_leadership_hiring">백엔드 주니어 2명 채용 관여. 평가 기준: 개발에 대한 진심, 기본기, 주도적 사고. 원래 1명 채용 예정이었으나 2명 모두 추천하여 채용 성사</span>
+              </div>
+              <div class="leadership-item">
+                <span class="leadership-label" data-i18n="c1_leadership_process_label">개발 문화</span>
+                <span class="leadership-content" data-i18n="c1_leadership_process">브랜치 전략, 코딩 컨벤션, 코드리뷰 방향을 제시하되 팀원의 자율적 의사결정을 유도</span>
+              </div>
+              <div class="leadership-item">
+                <span class="leadership-label" data-i18n="c1_leadership_tech_label">기술 선정</span>
+                <span class="leadership-content" data-i18n="c1_leadership_tech">QueryDSL → jOOQ 전환 주도. QueryDSL의 업데이트 중단으로 유지보수 리스크를 판단, 팀과 대안을 탐색한 결과 jOOQ를 채택</span>
+              </div>
             </div>
 
             <!-- Project 1-2: CI/CD -->
@@ -308,7 +344,7 @@
 
         <!-- ---- Company 2: 프라임에듀넷 ---- -->
         <div class="career__company" data-company="primeedunet">
-          <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0">
+          <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0" data-default-open>
             <h3 data-i18n="c2_name">프라임에듀넷</h3>
             <span class="period" data-i18n="c2_period">2022.06 ~ 2024.10</span>
             <span class="toggle-icon"></span>
@@ -405,6 +441,32 @@
                 </div>
               </div>
             </div>
+
+            <div class="project project--lesson">
+              <h4 class="project__title" data-i18n="c2_p5_title">환불 도메인 설계 실패와 재구축</h4>
+              <div class="project__star">
+                <div class="star-item">
+                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
+                  <span class="star-content" data-i18n="c2_p5_s">상품 가격의 강사 배분율이 시기별로 변경될 수 있다는 사실을 인지하지 못한 채 환불 도메인을 설계</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--analysis" data-i18n="star_analysis">분석</span>
+                  <span class="star-content" data-i18n="c2_p5_a">수개월 후 정산 시스템 개발 시, 환불 히스토리에 시점별 배분율 정보가 누락되어 데이터 정합성 문제 발견. 회계팀과의 사전 면담이 부족했던 것이 근본 원인</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
+                  <span class="star-content" data-i18n="c2_p5_r_solve">도메인을 재설계하고 수주 내에 패치 배포. 수개월간 축적된 데이터는 소급하여 정합성 복구</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
+                  <span class="star-content" data-i18n="c2_p5_r">데이터 정합성 확보. 이후 현업(회계팀)과의 면밀한 도메인 이해를 선행하는 습관을 갖게 된 계기</span>
+                </div>
+                <div class="star-item">
+                  <span class="star-label star-label--lesson" data-i18n="c2_p5_lesson_label">교훈</span>
+                  <span class="star-content" data-i18n="c2_p5_lesson">기술적 설계 이전에 비즈니스 도메인의 시간적 변화(버전, 이력)를 현업 담당자와 함께 깊이 탐색해야 한다</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -443,24 +505,7 @@
               </div>
             </div>
 
-            <!-- Project 3-2: 포스코 현장 지원 -->
-            <div class="project">
-              <h4 class="project__title" data-i18n="c3_p2_title">포스코 교육 시스템 현장 지원 (4주)</h4>
-              <div class="project__star">
-                <div class="star-item">
-                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
-                  <span class="star-content" data-i18n="c3_p2_s">포스코 교육 시스템 사업에서 콘텐츠 허브 구축을 담당하며 운영 오픈 직전 4주간 현장 상주</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
-                  <span class="star-content" data-i18n="c3_p2_r_solve">콘텐츠 업로드/조회/수정 밀도 있게 테스트 및 지원. CP들의 사용 미숙 문제 유선 지원 및 CS 직접 처리</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
-                  <span class="star-content" data-i18n="c3_p2_r">운영 오픈 성공적 완료 및 고객 대면 지원 경험 축적</span>
-                </div>
-              </div>
-            </div>
+            <p class="project-summary" data-i18n="c3_other_summary">이 외: POSCO 교육 시스템 현장 지원 4주</p>
           </div>
         </div>
 
@@ -478,25 +523,6 @@
             </div>
             <div class="company-tech">
               <span>Java</span><span>Spring Framework</span><span>JasperReports</span>
-            </div>
-
-            <!-- Project 4-1: 보안 보고서 자동화 -->
-            <div class="project">
-              <h4 class="project__title" data-i18n="c4_p1_title">보안 보고서 자동화</h4>
-              <div class="project__star">
-                <div class="star-item">
-                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
-                  <span class="star-content" data-i18n="c4_p1_s">수기로 작성되던 보안 보고서 생성 프로세스</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
-                  <span class="star-content" data-i18n="c4_p1_r_solve">JasperReports 기반 자동화 시스템으로 전환</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
-                  <span class="star-content" data-i18n="c4_p1_r">보안 보고서 생성 자동화로 운영 효율성 향상</span>
-                </div>
-              </div>
             </div>
 
             <!-- Project 4-2: 보안관제 연동 -->
@@ -518,24 +544,7 @@
               </div>
             </div>
 
-            <!-- Project 4-3: 이슈관리 프로그램 -->
-            <div class="project">
-              <h4 class="project__title" data-i18n="c4_p3_title">자체 이슈관리 프로그램 개발</h4>
-              <div class="project__star">
-                <div class="star-item">
-                  <span class="star-label star-label--situation" data-i18n="star_situation">상황</span>
-                  <span class="star-content" data-i18n="c4_p3_s">경력 20년 개발팀장의 제안으로 자체 이슈 관리 프로그램 개발 착수</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--action" data-i18n="star_solution">해결</span>
-                  <span class="star-content" data-i18n="c4_p3_r_solve">JIRA, Redmine, METIS, Confluence 등을 벤치마킹하여 기획 및 구현. 사용자 중심의 UI/UX 설계</span>
-                </div>
-                <div class="star-item">
-                  <span class="star-label star-label--result" data-i18n="star_result">결과</span>
-                  <span class="star-content" data-i18n="c4_p3_r">제품 기획부터 구현까지 전과정 경험 확보</span>
-                </div>
-              </div>
-            </div>
+            <p class="project-summary" data-i18n="c4_other_summary">이 외: JasperReports 기반 보안 보고서 자동화, 사내 이슈관리 도구 기획 및 개발</p>
           </div>
         </div>
 

@@ -29,7 +29,7 @@ window.i18nData.ko = {
       period: "2024.10 ~ 2026.02",
       role: "\uC120\uC784\uC5F0\uAD6C\uC6D0",
       description: "AI \uAE30\uBC18 \uAE00\uC4F0\uAE30 \uD3C9\uAC00 \uD50C\uB7AB\uD3FC (B2G \uC6F9\uC11C\uBE44\uC2A4)",
-      team: "\uAC1C\uBC1C\uD300 5\uBA85 (\uBC31\uC5D4\uB4DC 3, \uD504\uB860\uD2B8 2)",
+      team: "개발팀 2명 → 6명 성장 (합류 시 2명, 퇴사 시 6명) | 역할: 백엔드 리드 + DevOps",
       roleDetail: "\uBC31\uC5D4\uB4DC \uD30C\uD2B8 \uB9AC\uB4DC + \uC778\uD504\uB77C(DevOps) \uAC80\uC784",
       stack: "Java, Spring Boot, NCP, NHN Cloud, GitHub Actions, Docker, Locust, Python, FastAPI, Slack, MySQL, Redis",
       projects: {
@@ -92,6 +92,14 @@ window.i18nData.ko = {
           situation: "\uC790\uACA9\uC99D \uC2DC\uD5D8 \uD2B9\uC131\uC0C1 \uCD9C\uC81C \uBC94\uC704\uB098 \uBC95\uC774 \uBC14\uB00C\uBA74 \uC0C1\uD488 \uB0B4 \uC77C\uBD80 \uAC15\uC758\uB9CC \uAD50\uCCB4\uB418\uB294 \uACBD\uC6B0\uAC00 \uBC1C\uC0DD",
           action: "\uC0C1\uD488\uC758 \uBC84\uC804\uC744 \uB0A8\uAE30\uB294 \uB85C\uC9C1\uC73C\uB85C \uAD6C\uD604",
           result: "CS \uBB38\uC758 \uC2DC \uACFC\uAC70 \uAC70\uB798 \uB0B4\uC5ED\uACFC\uC758 \uCD94\uC801\uC774 \uAC00\uB2A5\uD574\uC838 \uC6B4\uC601 \uD6A8\uC728\uC131 \uD5A5\uC0C1"
+        },
+        failureCase: {
+          title: "\uD658\uBD88 \uB3C4\uBA54\uC778 \uC124\uACC4 \uC2E4\uD328\uC640 \uC7AC\uAD6C\uCD95",
+          situation: "\uC0C1\uD488 \uAC00\uACA9\uC758 \uAC15\uC0AC \uBC30\uBD84\uC728\uC774 \uC2DC\uAE30\uBCC4\uB85C \uBCC0\uACBD\uB420 \uC218 \uC788\uB2E4\uB294 \uC0AC\uC2E4\uC744 \uC778\uC9C0\uD558\uC9C0 \uBABB\uD55C \uCC44 \uD658\uBD88 \uB3C4\uBA54\uC778\uC744 \uC124\uACC4",
+          analysis: "\uC218\uAC1C\uC6D4 \uD6C4 \uC815\uC0B0 \uC2DC\uC2A4\uD15C \uAC1C\uBC1C \uC2DC, \uD658\uBD88 \uD788\uC2A4\uD1A0\uB9AC\uC5D0 \uC2DC\uC810\uBCC4 \uBC30\uBD84\uC728 \uC815\uBCF4\uAC00 \uB204\uB77D\uB418\uC5B4 \uB370\uC774\uD130 \uC815\uD569\uC131 \uBB38\uC81C \uBC1C\uACAC. \uD68C\uACC4\uD300\uACFC\uC758 \uC0AC\uC804 \uBA74\uB2F4\uC774 \uBD80\uC871\uD588\uB358 \uAC83\uC774 \uADFC\uBCF8 \uC6D0\uC778",
+          action: "\uB3C4\uBA54\uC778\uC744 \uC7AC\uC124\uACC4\uD558\uACE0 \uC218\uC8FC \uB0B4\uC5D0 \uD328\uCE58 \uBC30\uD3EC. \uC218\uAC1C\uC6D4\uAC04 \uCD95\uC801\uB41C \uB370\uC774\uD130\uB294 \uC18C\uAE09\uD558\uC5EC \uC815\uD569\uC131 \uBCF5\uAD6C",
+          result: "\uB370\uC774\uD130 \uC815\uD569\uC131 \uD655\uBCF4. \uC774\uD6C4 \uD604\uC5C5(\uD68C\uACC4\uD300)\uACFC\uC758 \uBA74\uBC00\uD55C \uB3C4\uBA54\uC778 \uC774\uD574\uB97C \uC120\uD589\uD558\uB294 \uC2B5\uAD00\uC744 \uAC16\uAC8C \uB41C \uACC4\uAE30",
+          lesson: "\uAE30\uC220\uC801 \uC124\uACC4 \uC774\uC804\uC5D0 \uBE44\uC988\uB2C8\uC2A4 \uB3C4\uBA54\uC778\uC758 \uC2DC\uAC04\uC801 \uBCC0\uD654(\uBC84\uC804, \uC774\uB825)\uB97C \uD604\uC5C5 \uB2F4\uB2F9\uC790\uC640 \uD568\uAED8 \uAE4A\uC774 \uD0D0\uC0C9\uD574\uC57C \uD55C\uB2E4"
         }
       }
     },
@@ -115,7 +123,8 @@ window.i18nData.ko = {
           action: "\uCF58\uD150\uCE20\uAC00 LMS\uC5D0\uC11C \uC815\uC0C1\uC801\uC73C\uB85C \uC5C5\uB85C\uB4DC/\uC870\uD68C/\uC218\uC815 \uAC00\uB2A5\uD55C\uC9C0 \uBC00\uB3C4 \uC788\uAC8C \uD14C\uC2A4\uD2B8 \uBC0F \uC9C0\uC6D0. CP\uB4E4\uC758 \uC0AC\uC6A9 \uBBF8\uC219 \uBB38\uC81C \uC720\uC120 \uC9C0\uC6D0 \uBC0F CS \uC9C1\uC811 \uCC98\uB9AC",
           result: "\uC6B4\uC601 \uC624\uD508 \uC131\uACF5\uC801 \uC644\uB8CC \uBC0F \uACE0\uAC1D \uB300\uBA74 \uC9C0\uC6D0 \uACBD\uD5D8 \uCD95\uC801"
         }
-      }
+      },
+      otherSummary: "\uC774 \uC678: POSCO \uAD50\uC721 \uC2DC\uC2A4\uD15C \uD604\uC7A5 \uC9C0\uC6D0 4\uC8FC"
     },
     brainer: {
       company: "\uBE0C\uB808\uC774\uB108",
@@ -142,7 +151,8 @@ window.i18nData.ko = {
           action: "JIRA, Redmine, METIS, Confluence \uB4F1\uC744 \uBCA4\uCE58\uB9C8\uD0B9\uD558\uC5EC \uAE30\uD68D \uBC0F \uAD6C\uD604. \uC0AC\uC6A9\uC790 \uC911\uC2EC\uC758 UI/UX \uC124\uACC4",
           result: "\uC81C\uD488 \uAE30\uD68D\uBD80\uD130 \uAD6C\uD604\uAE4C\uC9C0 \uC804\uACFC\uC815 \uACBD\uD5D8 \uD655\uBCF4"
         }
-      }
+      },
+      otherSummary: "\uC774 \uC678: JasperReports \uAE30\uBC18 \uBCF4\uC548 \uBCF4\uACE0\uC11C \uC790\uB3D9\uD654, \uC0AC\uB0B4 \uC774\uC288\uAD00\uB9AC \uB3C4\uAD6C \uAE30\uD68D \uBC0F \uAC1C\uBC1C"
     }
   },
 
@@ -233,13 +243,14 @@ window.i18nData.ko = {
     analysis: "\uBD84\uC11D",
     action: "\uD574\uACB0",
     result: "\uACB0\uACFC"
-  }
-,
+  },
+  c2_p5_lesson_label: "\uAD50\uD6C8",
+
   // Hero metrics
   hero_metric1_value: "7+",
   hero_metric1_label: "년 경력",
   hero_metric2_value: "70K",
-  hero_metric2_label: "동시접속 아키텍처",
+  hero_metric2_label: "부하테스트 설계 목표",
   hero_metric3_value: "14h",
   hero_metric3_label: "인프라 전체 복구",
   hero_metric4_value: "10x",
@@ -289,7 +300,7 @@ window.i18nData.ko = {
   j3_transition: "쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.",
   j4_year: "2024 - 2026",
   j4_company: "팀플백",
-  j4_desc: "신생 개발팀에 합류하여 팀을 5명으로 구성하고 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 정시 퇴근이 전체 근무일의 20%도 안 될 만큼 내 제품이라는 마음으로 일했습니다.",
+  j4_desc: "신생 개발팀에 합류하여 팀을 2명에서 6명으로 성장시키며 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 정시 퇴근이 전체 근무일의 20%도 안 될 만큼 내 제품이라는 마음으로 일했습니다.",
   j4_legacy: "리뉴얼한 서비스 '자작자작', 9대 서버 인프라와 CI/CD 파이프라인, 모니터링/백업 체계",
   j5_year: "Next",
   j5_company: "다음 여정",
@@ -305,5 +316,27 @@ window.i18nData.ko = {
   print_btn: "PDF 다운로드",
 
   // Social links
-  hero_linkedin: "LinkedIn"
+  hero_linkedin: "LinkedIn",
+
+  // TeamplBack business metrics
+  c1_biz_ccu: "피크 1,500 CCU",
+  c1_biz_contract: "강원도교육청 10억원 계약",
+  c1_biz_dev_period: "6개월 개발 (메인 서비스 운영 병행)",
+
+  // TeamplBack team growth
+  c1_team_growth: "개발팀 2명 → 6명 성장 (합류 시 2명, 퇴사 시 6명) | 역할: 백엔드 리드 + DevOps",
+
+  // TeamplBack leadership
+  c1_leadership_title: "팀 리더십",
+  c1_leadership_mentoring_label: "멘토링",
+  c1_leadership_mentoring: "1:1 정기 면담을 통한 성장 지원 및 개인 고민 상담. 내성적이던 주니어가 적극적으로 의사 표현하는 개발자로 성장",
+  c1_leadership_hiring_label: "채용",
+  c1_leadership_hiring: "백엔드 주니어 2명 채용 관여. 평가 기준: 개발에 대한 진심, 기본기, 주도적 사고. 원래 1명 채용 예정이었으나 2명 모두 추천하여 채용 성사",
+  c1_leadership_process_label: "개발 문화",
+  c1_leadership_process: "브랜치 전략, 코딩 컨벤션, 코드리뷰 방향을 제시하되 팀원의 자율적 의사결정을 유도",
+  c1_leadership_tech_label: "기술 선정",
+  c1_leadership_tech: "QueryDSL → jOOQ 전환 주도. QueryDSL의 업데이트 중단으로 유지보수 리스크를 판단, 팀과 대안을 탐색한 결과 jOOQ를 채택",
+
+  // Redis decision
+  c1_redis_decision: "Redis는 70K CCU 대응이 아닌, 이메일 인증 시 인증번호의 TTL 기반 임시 저장을 위해 도입했다. 세션 저장소나 캐시 레이어가 아닌, 명확한 기능적 필요에 의한 선택이었다."
 };

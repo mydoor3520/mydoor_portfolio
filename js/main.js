@@ -90,13 +90,13 @@
       return;
     }
 
-    accordionHeaders.forEach(function (header, index) {
+    accordionHeaders.forEach(function (header) {
       var content = header.nextElementSibling;
       if (!content || !content.classList.contains("accordion-content")) {
         return;
       }
 
-      if (index <= 1) {
+      if (header.hasAttribute("data-default-open")) {
         header.setAttribute("aria-expanded", "true");
         content.style.maxHeight = content.scrollHeight + "px";
       } else {

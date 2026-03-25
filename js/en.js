@@ -29,7 +29,7 @@ window.i18nData.en = {
       period: "2024.10 ~ 2026.02",
       role: "Senior Researcher",
       description: "AI-powered writing assessment platform (B2G web service)",
-      team: "Dev team of 5 (3 backend, 2 frontend)",
+      team: "Team grew from 2 to 6 (2 at join, 6 at departure) | Role: Backend Lead + DevOps",
       roleDetail: "Backend lead + Infrastructure (DevOps)",
       stack: "Java, Spring Boot, NCP, NHN Cloud, GitHub Actions, Docker, Locust, Python, FastAPI, Slack, MySQL, Redis",
       projects: {
@@ -92,6 +92,14 @@ window.i18nData.en = {
           situation: "Due to the nature of certification exams, some lectures within a product needed to be replaced when exam scope or regulations changed.",
           action: "Implemented a versioning system for products to maintain history.",
           result: "Enabled tracking of past transaction records during customer support inquiries, improving operational efficiency."
+        },
+        failureCase: {
+          title: "Refund Domain Design Failure and Reconstruction",
+          situation: "Designed the refund domain without recognizing that instructor share ratios within product pricing could change over time",
+          analysis: "Months later during settlement system development, discovered data integrity issues — refund history lacked point-in-time share ratio data. Root cause: insufficient upfront consultation with the accounting team",
+          action: "Reconstructed the domain and deployed patches within weeks. Retroactively backfilled months of accumulated data to restore integrity",
+          result: "Achieved data integrity. This experience established a habit of thoroughly understanding business domains with stakeholders before design",
+          lesson: "Before technical design, the temporal dimensions of business domains (versioning, history) must be deeply explored together with business stakeholders"
         }
       }
     },
@@ -115,7 +123,8 @@ window.i18nData.en = {
           action: "Conducted thorough testing to ensure content could be properly uploaded, viewed, and edited in the LMS. Provided direct phone support and handled CS tickets for content provider usage issues.",
           result: "Successfully completed the production launch and accumulated client-facing support experience."
         }
-      }
+      },
+      otherSummary: "Also: POSCO education system on-site support for 4 weeks"
     },
     brainer: {
       company: "Brainer",
@@ -142,7 +151,8 @@ window.i18nData.en = {
           action: "Benchmarked features from JIRA, Redmine, METIS, and Confluence, then planned and implemented the tool with user-centered UI/UX design.",
           result: "Gained end-to-end product experience from planning to implementation."
         }
-      }
+      },
+      otherSummary: "Also: JasperReports-based security report automation, in-house issue management tool planning and development"
     }
   },
 
@@ -228,6 +238,7 @@ window.i18nData.en = {
     copyright: "Park Jeongho. All rights reserved."
   },
 
+  c2_p5_lesson_label: "Lesson",
   labels: {
     situation: "Situation",
     analysis: "Analysis",
@@ -239,7 +250,7 @@ window.i18nData.en = {
   hero_metric1_value: "7+",
   hero_metric1_label: "Years Experience",
   hero_metric2_value: "70K",
-  hero_metric2_label: "CCU Architecture",
+  hero_metric2_label: "Load Test Design Target",
   hero_metric3_value: "14h",
   hero_metric3_label: "Full Infra Recovery",
   hero_metric4_value: "10x",
@@ -289,7 +300,7 @@ window.i18nData.en = {
   j3_transition: "With experience under my belt, I wanted the challenge of building and leading a team from scratch.",
   j4_year: "2024 - 2026",
   j4_company: "TeamplBack",
-  j4_desc: "Joined a new dev team, grew it to 5 members, and served as backend lead and DevOps. Renewed the service, built 70K CCU architecture, CI/CD, monitoring, and recovered entire infrastructure in 14 hours -- working with the dedication of an owner, where on-time departure was less than 20% of all working days.",
+  j4_desc: "Joined a new dev team, grew it from 2 to 6 members, and served as backend lead and DevOps. Renewed the service, built 70K CCU architecture, CI/CD, monitoring, and recovered entire infrastructure in 14 hours -- working with the dedication of an owner, where on-time departure was less than 20% of all working days.",
   j4_legacy: "Renewed service 'Jakjakjakjak', 9-server infrastructure with CI/CD pipeline, monitoring and backup systems",
   j5_year: "Next",
   j5_company: "Next Chapter",
@@ -305,5 +316,27 @@ window.i18nData.en = {
   print_btn: "Download PDF",
 
   // Social links
-  hero_linkedin: "LinkedIn"
+  hero_linkedin: "LinkedIn",
+
+  // TeamplBack business metrics
+  c1_biz_ccu: "Peak 1,500 CCU",
+  c1_biz_contract: "Gangwon Education Office 1B KRW Contract",
+  c1_biz_dev_period: "6-month development (while maintaining main service)",
+
+  // TeamplBack team growth
+  c1_team_growth: "Team grew from 2 to 6 (2 at join, 6 at departure) | Role: Backend Lead + DevOps",
+
+  // TeamplBack leadership
+  c1_leadership_title: "Team Leadership",
+  c1_leadership_mentoring_label: "Mentoring",
+  c1_leadership_mentoring: "Regular 1:1 meetings for growth support and personal concerns. An introverted junior grew into a developer who actively voices opinions",
+  c1_leadership_hiring_label: "Hiring",
+  c1_leadership_hiring: "Involved in hiring 2 backend juniors. Criteria: genuine passion for development, solid fundamentals, proactive thinking. Originally planned to hire 1, but recommended both — both hired successfully",
+  c1_leadership_process_label: "Dev Culture",
+  c1_leadership_process: "Set direction for branch strategy, coding conventions, and code review while encouraging team members' autonomous decision-making",
+  c1_leadership_tech_label: "Tech Selection",
+  c1_leadership_tech: "Led QueryDSL → jOOQ migration. Identified maintenance risk from QueryDSL's discontinued updates, explored alternatives with the team, and adopted jOOQ",
+
+  // Redis decision
+  c1_redis_decision: "Redis was introduced not for 70K CCU scaling, but for TTL-based temporary storage of email verification codes. It was a deliberate choice driven by functional need, not as a session store or general cache layer."
 };

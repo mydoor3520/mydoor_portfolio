@@ -8,7 +8,6 @@
   // Flat key mapping: maps data-i18n attribute values to nested paths in i18nData
   var keyMap = {
     // Nav
-    nav_logo: null, // Keep original text
     nav_about: "nav.about",
     nav_career: "nav.career",
     nav_skills: "nav.skills",
@@ -18,7 +17,6 @@
     // Hero
     hero_name: null, // Name stays the same
     hero_title: "hero.tagline",
-    hero_intro: "hero.title",
     hero_bio: "hero.bio",
     hero_contact: "hero.contact",
     tag_backend: "hero.tags[0]",
@@ -35,7 +33,6 @@
     c1_role: "career.teamplback.role",
     c1_period: "career.teamplback.period",
     c1_service: "career.teamplback.description",
-    c1_team: "career.teamplback.roleDetail",
     c1_p1_title: "career.teamplback.projects.loadTest.title",
     c1_p1_s: "career.teamplback.projects.loadTest.situation",
     c1_p1_a: "career.teamplback.projects.loadTest.analysis",
@@ -78,6 +75,13 @@
     c2_p4_s: "career.primeEdunet.projects.versioning.situation",
     c2_p4_r_solve: "career.primeEdunet.projects.versioning.action",
     c2_p4_r: "career.primeEdunet.projects.versioning.result",
+    c2_p5_title: "career.primeEdunet.projects.failureCase.title",
+    c2_p5_s: "career.primeEdunet.projects.failureCase.situation",
+    c2_p5_a: "career.primeEdunet.projects.failureCase.analysis",
+    c2_p5_r_solve: "career.primeEdunet.projects.failureCase.action",
+    c2_p5_r: "career.primeEdunet.projects.failureCase.result",
+    c2_p5_lesson_label: "c2_p5_lesson_label",
+    c2_p5_lesson: "career.primeEdunet.projects.failureCase.lesson",
 
     // Company 3: 버블콘
     c3_name: "career.bubblecon.company",
@@ -88,28 +92,18 @@
     c3_p1_s: "career.bubblecon.projects.searchOptimization.situation",
     c3_p1_r_solve: "career.bubblecon.projects.searchOptimization.action",
     c3_p1_r: "career.bubblecon.projects.searchOptimization.result",
-    c3_p2_title: "career.bubblecon.projects.posco.title",
-    c3_p2_s: "career.bubblecon.projects.posco.situation",
-    c3_p2_r_solve: "career.bubblecon.projects.posco.action",
-    c3_p2_r: "career.bubblecon.projects.posco.result",
+    c3_other_summary: "career.bubblecon.otherSummary",
 
     // Company 4: 브레이너
     c4_name: "career.brainer.company",
     c4_role: "career.brainer.role",
     c4_period: "career.brainer.period",
     c4_service: "career.brainer.description",
-    c4_p1_title: "career.brainer.projects.reportAutomation.title",
-    c4_p1_s: "career.brainer.projects.reportAutomation.situation",
-    c4_p1_r_solve: "career.brainer.projects.reportAutomation.action",
-    c4_p1_r: "career.brainer.projects.reportAutomation.result",
     c4_p2_title: "career.brainer.projects.securityWorkflow.title",
     c4_p2_s: "career.brainer.projects.securityWorkflow.situation",
     c4_p2_r_solve: "career.brainer.projects.securityWorkflow.action",
     c4_p2_r: "career.brainer.projects.securityWorkflow.result",
-    c4_p3_title: "career.brainer.projects.issueTracker.title",
-    c4_p3_s: "career.brainer.projects.issueTracker.situation",
-    c4_p3_r_solve: "career.brainer.projects.issueTracker.action",
-    c4_p3_r: "career.brainer.projects.issueTracker.result",
+    c4_other_summary: "career.brainer.otherSummary",
 
     // STAR labels
     star_situation: "labels.situation",
@@ -184,7 +178,6 @@
     j5_desc: "j5_desc",
 
     // Footer
-    footer_email: null,
     footer_copyright: "footer.copyright",
 
     // Hero metrics
@@ -221,27 +214,42 @@
     cicd_health: "cicd_health",
     cicd_rollback: "cicd_rollback",
 
+    // TeamplBack business metrics
+    c1_biz_ccu: "c1_biz_ccu",
+    c1_biz_contract: "c1_biz_contract",
+    c1_biz_dev_period: "c1_biz_dev_period",
+
+    // TeamplBack team growth
+    c1_team_growth: "career.teamplback.team",
+
     // Decision blocks
     decision_title: "decision_title",
     c1_p1_decision: "c1_p1_decision",
     c1_p4_decision: "c1_p4_decision",
     c2_p1_decision: "c2_p1_decision",
+    c1_redis_decision: "c1_redis_decision",
+
+    // TeamplBack leadership
+    c1_leadership_title: "c1_leadership_title",
+    c1_leadership_mentoring_label: "c1_leadership_mentoring_label",
+    c1_leadership_mentoring: "c1_leadership_mentoring",
+    c1_leadership_hiring_label: "c1_leadership_hiring_label",
+    c1_leadership_hiring: "c1_leadership_hiring",
+    c1_leadership_process_label: "c1_leadership_process_label",
+    c1_leadership_process: "c1_leadership_process",
+    c1_leadership_tech_label: "c1_leadership_tech_label",
+    c1_leadership_tech: "c1_leadership_tech",
 
     // Print button
     print_btn: "print_btn",
-
-    // Social links
-    hero_linkedin: "hero_linkedin",
 
     // Side project enhancements
     sp1_feat1: "sideProjects.interviewTrainer.features[0]",
     sp1_feat2: "sideProjects.interviewTrainer.features[1]",
     sp1_feat3: "sideProjects.interviewTrainer.features[2]",
-    sp1_link: "sideProjects.interviewTrainer.link",
     sp2_feat1: "sideProjects.srtApp.features[0]",
     sp2_feat2: "sideProjects.srtApp.features[1]",
     sp2_feat3: "sideProjects.srtApp.features[2]",
-    sp2_link: "sideProjects.srtApp.link",
 
     // Back to top
     back_to_top: null
