@@ -261,7 +261,15 @@ window.i18nData.en = {
       data: "Data Layer",
       external: "External / Storage"
     },
-    sp2FigmaFallback: "Figma Prototype: SRTicket Flutter App Design",
+    sp2Screen1Alt: "SRT Home Screen",
+    sp2Screen1Label: "Home",
+    sp2Screen2Alt: "SRT Reservation Settings",
+    sp2Screen2Label: "Reserve",
+    sp2Screen3Alt: "Reservation Details",
+    sp2Screen3Label: "Details",
+    sp2Screen4Alt: "Settings",
+    sp2Screen4Label: "Settings",
+    sp2GalleryNote: "Key screens captured from Figma prototype",
     sp1Insight: "\"The better the AI service, the more critical good planning and testing become\"",
     sp2Insight: "\"Dramatic productivity gains alongside questions about code ownership\""
   },

@@ -264,7 +264,15 @@ window.i18nData.ko = {
       data: "Data Layer",
       external: "External / Storage"
     },
-    sp2FigmaFallback: "Figma 프로토타입: SRTicket Flutter App Design",
+    sp2Screen1Alt: "SRT 홈 화면",
+    sp2Screen1Label: "홈",
+    sp2Screen2Alt: "SRT 예매 설정 화면",
+    sp2Screen2Label: "예매 설정",
+    sp2Screen3Alt: "예약 내역 화면",
+    sp2Screen3Label: "예약 내역",
+    sp2Screen4Alt: "설정 화면",
+    sp2Screen4Label: "설정",
+    sp2GalleryNote: "Figma 프로토타입 기반 주요 화면 캡쳐",
     sp1Insight: "\"AI 서비스일수록 좋은 기획과 테스트가 중요\"",
     sp2Insight: "\"비약적 생산성 향상과 동시에 코드 오너십에 대한 고민\""
   },

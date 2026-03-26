@@ -310,8 +310,16 @@
     sp2_arch_data: "sideProjects.sp2Arch.data",
     sp2_arch_external: "sideProjects.sp2Arch.external",
 
-    // SP2 figma
-    sp2_figma_fallback: "sideProjects.sp2FigmaFallback"
+    // SP2 gallery
+    sp2_screen1_alt: "sideProjects.sp2Screen1Alt",
+    sp2_screen1_label: "sideProjects.sp2Screen1Label",
+    sp2_screen2_alt: "sideProjects.sp2Screen2Alt",
+    sp2_screen2_label: "sideProjects.sp2Screen2Label",
+    sp2_screen3_alt: "sideProjects.sp2Screen3Alt",
+    sp2_screen3_label: "sideProjects.sp2Screen3Label",
+    sp2_screen4_alt: "sideProjects.sp2Screen4Alt",
+    sp2_screen4_label: "sideProjects.sp2Screen4Label",
+    sp2_gallery_note: "sideProjects.sp2GalleryNote"
   };
 
   function getNestedValue(obj, keyPath) {
