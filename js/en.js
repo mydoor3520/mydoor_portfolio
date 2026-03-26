@@ -56,6 +56,7 @@ window.i18nData.en = {
         cloudRecovery: {
           title: "Cloud Crisis Response and Infrastructure Rebuild (NHN Cloud to NCP)",
           situation: "While using NHN Cloud, the CEO mistakenly believed the account was under a partnership agreement, but it was actually an educational account. On a Friday at 4 PM, while users were actively using the service, the entire NHN Cloud account was deleted. All servers, databases, and infrastructure were lost.",
+          analysis: "Recovery priorities set as: user notification \u2192 DB recovery \u2192 infrastructure rebuild \u2192 verification \u2192 launch",
           action: "Led the 14-hour recovery from 4 PM to 6 AM the next day. Deployed a temporary maintenance page, obtained DB backups through NHN support, requested an emergency NCP public cloud account, rebuilt all 9 servers from scratch, and restored and verified the database.",
           result: "Full service recovery completed in 14 hours. Subsequently established a NAS-based daily automated backup system and revised cloud account management procedures to prevent recurrence."
         }
@@ -205,7 +206,64 @@ window.i18nData.en = {
         "Exploring testing methodologies for AI-assisted development"
       ],
       link: "GitHub Repo →"
-    }
+    },
+    tabSpecs: "Specs",
+    tabArch: "Architecture",
+    tabScreens: "Screenshots",
+
+    sp1Specs: {
+      spec1Title: "AI Mock Interview",
+      spec1Desc: "Real-time SSE streaming interviews via Claude API. Difficulty levels (junior/mid/senior), types (technical/behavioral/mixed), company-specific styles (Naver/Coupang/startup)",
+      spec2Title: "Profile & Onboarding",
+      spec2Desc: "4-step onboarding wizard. Skill proficiency (1-5), work experience, certifications, target position management",
+      spec3Title: "Evaluation & Feedback",
+      spec3Desc: "AI-powered 1-10 scoring, strength/weakness analysis, model answer generation, follow-up questions",
+      spec4Title: "Dashboard & Analytics",
+      spec4Desc: "Session stats, score trend charts (Recharts), topic-based performance analysis, skill gap analysis",
+      spec5Title: "Resume Coaching",
+      spec5Desc: "AI resume editing (general/JD-targeted), PDF/OCR parsing, DOCX generation (3 templates), JD keyword matching",
+      spec6Title: "Position Management",
+      spec6Desc: "Target position curation, AI JD parser (URL/text), auto-generated interview questions per position",
+      spec7Title: "Subscription & Payment",
+      spec7Desc: "Stripe-integrated credit-based model. Free/Pro tiers, monthly/yearly billing cycles"
+    },
+    sp1Arch: {
+      client: "Client",
+      middleware: "Middleware",
+      api: "API Layer",
+      knowledge: "Interview Knowledge (37+ topics)",
+      data: "Data Layer",
+      external: "External Services"
+    },
+    sp1ScreensPlaceholder: "Screenshots coming soon.",
+
+    sp2Specs: {
+      spec1Title: "Auto-Reservation Engine",
+      spec1Desc: "Real-time SRT seat monitoring + automated booking attempts. Up to 6 hours, 3-5 second retry intervals",
+      spec2Title: "Flexible Configuration",
+      spec2Desc: "36 stations, date, time range (6:00-23:00), passenger types, seat class selection",
+      spec3Title: "Background Execution",
+      spec3Desc: "Flutter Foreground Service for persistent background operation + real-time progress notifications",
+      spec4Title: "Session Management",
+      spec4Desc: "Auto session refresh every 25 minutes. Automatic IP block and login error recovery",
+      spec5Title: "Reservation History",
+      spec5Desc: "All booking attempts stored in local SQLite DB. 90-day automatic cleanup",
+      spec6Title: "Real-time Status Updates",
+      spec6Desc: "Bidirectional Service\u21d4App callbacks showing attempt count, elapsed time, success info in real-time",
+      spec7Title: "Secure Credentials",
+      spec7Desc: "SRT account credentials encrypted via Flutter Secure Storage"
+    },
+    sp2Arch: {
+      ui: "UI Layer",
+      state: "State Management",
+      service: "Service Layer",
+      engine: "ReservationEngine (retry loop)",
+      data: "Data Layer",
+      external: "External / Storage"
+    },
+    sp2FigmaFallback: "Figma Prototype: SRTicket Flutter App Design",
+    sp1Insight: "\"The better the AI service, the more critical good planning and testing become\"",
+    sp2Insight: "\"Dramatic productivity gains alongside questions about code ownership\""
   },
 
   journey: {

@@ -56,6 +56,7 @@ window.i18nData.ko = {
         cloudRecovery: {
           title: "\uD074\uB77C\uC6B0\uB4DC \uC704\uAE30 \uB300\uC751 \uBC0F \uC778\uD504\uB77C \uC7AC\uAD6C\uCD95 (NHN Cloud \u2192 NCP)",
           situation: "\uAE30\uC874 NHN Cloud \uC0AC\uC6A9 \uC911, \uB300\uD45C\uAC00 NHN Cloud \uACC4\uC815\uC744 \uD611\uC57D\uB41C \uACC4\uC815\uC73C\uB85C \uCC29\uAC01\uD558\uACE0 \uC788\uC5C8\uC73C\uB098 \uC2E4\uC81C\uB85C\uB294 \uAD50\uC721\uC6A9 \uACC4\uC815\uC774\uC5C8\uC74C. \uAE08\uC694\uC77C \uC624\uD6C4 4\uC2DC, \uC0AC\uC6A9\uC790\uAC00 \uC11C\uBE44\uC2A4\uB97C \uC0AC\uC6A9 \uC911\uC778 \uC0C1\uD0DC\uC5D0\uC11C NHN Cloud \uACC4\uC815 \uC804\uCCB4\uAC00 \uC0AD\uC81C\uB428. \uBAA8\uB4E0 \uC11C\uBC84, DB, \uC778\uD504\uB77C\uAC00 \uC18C\uBA78",
+          analysis: "\uC0AC\uC6A9\uC790 \uC548\uB0B4 \u2192 DB \uBCF5\uAD6C \u2192 \uC778\uD504\uB77C \uC7AC\uAD6C\uC131 \u2192 \uAC80\uC99D \u2192 \uC624\uD508 \uC21C\uC11C\uB85C \uBCF5\uAD6C \uC6B0\uC120\uC21C\uC704 \uC218\uB9BD",
           action: "\uC624\uD6C4 4\uC2DC \uC0AC\uACE0 \uC778\uC9C0\uBD80\uD130 \uB2E4\uC74C\uB0A0 \uC624\uC804 6\uC2DC\uAE4C\uC9C0 14\uC2DC\uAC04 \uB3D9\uC548 \uBCF5\uAD6C \uC8FC\uB3C4. \uC0AC\uC6A9\uC790 \uC548\uB0B4 \uD398\uC774\uC9C0 \uC784\uC2DC \uBC30\uD3EC, NHN \uC9C0\uC6D0\uC744 \uBC1B\uC544 DB \uBC31\uC5C5, NCP \uACC4\uC815 \uAE34\uAE09 \uBC1C\uAE09, \uC11C\uBC84 9\uB300 \uC804\uCCB4 \uC2E0\uADDC \uAD6C\uCD95, DB \uBCF5\uAD6C \uBC0F \uAC80\uC99D",
           result: "14\uC2DC\uAC04 \uB9CC\uC5D0 \uC804\uCCB4 \uC11C\uBE44\uC2A4 \uBCF5\uAD6C \uC644\uB8CC. \uC774\uD6C4 NAS \uAE30\uBC18 \uC77C\uC77C \uC790\uB3D9 \uBC31\uC5C5 \uCCB4\uACC4 \uAD6C\uCD95 \uBC0F \uD074\uB77C\uC6B0\uB4DC \uACC4\uC815 \uAD00\uB9AC \uCCB4\uACC4 \uBCC0\uACBD\uC73C\uB85C \uC7AC\uBC1C \uBC29\uC9C0"
         }
@@ -205,7 +206,67 @@ window.i18nData.ko = {
         "AI 코딩 시 테스트 방법론에 대한 고민과 실험"
       ],
       link: "GitHub 저장소 →"
-    }
+    },
+    // Tab labels
+    tabSpecs: "기능 명세",
+    tabArch: "아키텍처",
+    tabScreens: "스크린샷",
+
+    // Interview trainer specs
+    sp1Specs: {
+      spec1Title: "AI 모의 면접",
+      spec1Desc: "Claude API 기반 SSE 스트리밍 실시간 면접. 난이도(주니어/미드/시니어), 유형(기술/행동/혼합), 기업별 스타일(네이버/쿠팡/스타트업) 지원",
+      spec2Title: "프로필 & 온보딩",
+      spec2Desc: "4단계 온보딩 위저드. 스킬 숙련도(1~5), 경력 사항, 자격증, 목표 포지션 관리",
+      spec3Title: "답변 평가 & 피드백",
+      spec3Desc: "AI 기반 1~10점 채점, 강점/약점 분석, 모범 답변 생성, 꼬리질문 지원",
+      spec4Title: "대시보드 & 분석",
+      spec4Desc: "세션 통계, 점수 추이 차트(Recharts), 주제별 성과 분석, 스킬갭 분석",
+      spec5Title: "이력서 코칭",
+      spec5Desc: "AI 이력서 편집(일반/JD 맞춤), PDF/OCR 파싱, DOCX 생성(3가지 템플릿), JD 키워드 매칭",
+      spec6Title: "채용 포지션 관리",
+      spec6Desc: "목표 포지션 큐레이션, AI JD 파서(URL/텍스트), 포지션별 예상 면접 질문 자동 생성",
+      spec7Title: "구독/결제 시스템",
+      spec7Desc: "Stripe 연동 크레딧 기반 모델. 프리/프로 티어, 월간/연간 결제 주기"
+    },
+    sp1Arch: {
+      client: "Client",
+      middleware: "Middleware",
+      api: "API Layer",
+      knowledge: "Interview Knowledge (37+ topics)",
+      data: "Data Layer",
+      external: "External Services"
+    },
+    sp1ScreensPlaceholder: "스크린샷 준비 중입니다.",
+
+    // SRT specs
+    sp2Specs: {
+      spec1Title: "자동 예매 엔진",
+      spec1Desc: "SRT 좌석 실시간 모니터링 + 자동 예매 시도. 최대 6시간, 3~5초 간격 재시도",
+      spec2Title: "유연한 예매 설정",
+      spec2Desc: "출발/도착역 36개, 날짜, 시간대(6:00~23:00), 승객 유형, 좌석 등급 선택",
+      spec3Title: "백그라운드 실행",
+      spec3Desc: "Flutter Foreground Service로 앱 백그라운드에서도 지속 동작 + 실시간 진행 알림",
+      spec4Title: "세션 관리",
+      spec4Desc: "25분마다 SRT 서버 세션 자동 갱신. IP 차단/로그인 에러 자동 복구",
+      spec5Title: "예매 이력 관리",
+      spec5Desc: "SQLite 로컬 DB에 모든 예매 시도 기록 저장. 90일 자동 정리",
+      spec6Title: "실시간 상태 업데이트",
+      spec6Desc: "Service↔App 양방향 콜백으로 시도 횟수, 경과시간, 성공 정보 실시간 표시",
+      spec7Title: "보안 자격 관리",
+      spec7Desc: "Flutter Secure Storage로 SRT 계정 정보 암호화 저장"
+    },
+    sp2Arch: {
+      ui: "UI Layer",
+      state: "State Management",
+      service: "Service Layer",
+      engine: "ReservationEngine (retry loop)",
+      data: "Data Layer",
+      external: "External / Storage"
+    },
+    sp2FigmaFallback: "Figma 프로토타입: SRTicket Flutter App Design",
+    sp1Insight: "\"AI 서비스일수록 좋은 기획과 테스트가 중요\"",
+    sp2Insight: "\"비약적 생산성 향상과 동시에 코드 오너십에 대한 고민\""
   },
 
   journey: {

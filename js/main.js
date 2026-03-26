@@ -274,6 +274,69 @@
 
   // --- Initialization ---
 
+  // --- Side project tab switching ---
+
+  function initSpTabs() {
+    document.querySelectorAll('.sp-tabs').forEach(function(tabContainer) {
+      var buttons = tabContainer.querySelectorAll('[role="tab"]');
+      var panels = tabContainer.querySelectorAll('[role="tabpanel"]');
+
+      function activateTab(btn) {
+        var targetTab = btn.getAttribute('data-tab');
+
+        buttons.forEach(function(b) {
+          b.classList.remove('sp-tab-btn--active');
+          b.setAttribute('aria-selected', 'false');
+          b.setAttribute('tabindex', '-1');
+        });
+        panels.forEach(function(p) {
+          p.classList.remove('sp-tab-panel--active');
+          p.setAttribute('hidden', '');
+        });
+
+        btn.classList.add('sp-tab-btn--active');
+        btn.setAttribute('aria-selected', 'true');
+        btn.setAttribute('tabindex', '0');
+        btn.focus();
+
+        var targetPanel = tabContainer.querySelector('[role="tabpanel"][data-tab="' + targetTab + '"]');
+        if (targetPanel) {
+          targetPanel.classList.add('sp-tab-panel--active');
+          targetPanel.removeAttribute('hidden');
+        }
+      }
+
+      tabContainer.querySelector('[role="tablist"]').addEventListener('click', function(e) {
+        var btn = e.target.closest('[role="tab"]');
+        if (btn) activateTab(btn);
+      });
+
+      tabContainer.querySelector('[role="tablist"]').addEventListener('keydown', function(e) {
+        var btn = e.target.closest('[role="tab"]');
+        if (!btn) return;
+
+        var btns = Array.prototype.slice.call(buttons);
+        var index = btns.indexOf(btn);
+        var newIndex = index;
+
+        if (e.key === 'ArrowRight') {
+          newIndex = (index + 1) % btns.length;
+        } else if (e.key === 'ArrowLeft') {
+          newIndex = (index - 1 + btns.length) % btns.length;
+        } else if (e.key === 'Home') {
+          newIndex = 0;
+        } else if (e.key === 'End') {
+          newIndex = btns.length - 1;
+        } else {
+          return;
+        }
+
+        e.preventDefault();
+        activateTab(btns[newIndex]);
+      });
+    });
+  }
+
   function init() {
     initSectionObserver();
     initMobileMenu();
@@ -284,6 +347,7 @@
     initRevealObserver();
     initBackToTop();
     initPrintButton();
+    initSpTabs();
   }
 
   if (document.readyState === "loading") {

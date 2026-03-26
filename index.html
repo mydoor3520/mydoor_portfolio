@@ -676,7 +676,7 @@
         <div class="side-project">
           <h3 data-i18n="sp1_title">면접 훈련 웹서비스</h3>
           <div class="side-project__tech-tags">
-            <span>Python</span><span>FastAPI</span><span>LLM API</span><span>Prompt Engineering</span>
+            <span>Next.js 16</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>Claude API</span><span>Stripe</span><span>Docker</span>
           </div>
           <p data-i18n="sp1_desc">LLM API를 연동한 AI 기반 면접 훈련 서비스. AI 서비스일수록 좋은 기획과 테스트가 중요하다는 것을 체감.</p>
           <ul class="side-project__features">
@@ -685,12 +685,83 @@
             <li data-i18n="sp1_feat3">프롬프트 최적화를 통한 응답 품질 안정화</li>
           </ul>
           <blockquote class="side-project__insight" data-i18n="sp1_insight">"AI 서비스일수록 좋은 기획과 테스트가 중요"</blockquote>
+          <div class="sp-tabs" data-sp="sp1">
+  <div class="sp-tabs__nav" role="tablist">
+    <button class="sp-tab-btn sp-tab-btn--active" data-tab="specs" data-i18n="sp_tab_specs" role="tab" aria-selected="true" aria-controls="sp1-panel-specs" id="sp1-tab-specs" tabindex="0">기능 명세</button>
+    <button class="sp-tab-btn" data-tab="arch" data-i18n="sp_tab_arch" role="tab" aria-selected="false" aria-controls="sp1-panel-arch" id="sp1-tab-arch" tabindex="-1">아키텍처</button>
+    <button class="sp-tab-btn" data-tab="screens" data-i18n="sp_tab_screens" role="tab" aria-selected="false" aria-controls="sp1-panel-screens" id="sp1-tab-screens" tabindex="-1">스크린샷</button>
+  </div>
+  <div class="sp-tabs__content">
+    <div class="sp-tab-panel sp-tab-panel--active" data-tab="specs" role="tabpanel" id="sp1-panel-specs" aria-labelledby="sp1-tab-specs">
+      <ul class="sp-feature-list">
+        <li><strong data-i18n="sp1_spec1_title">AI 모의 면접</strong><span data-i18n="sp1_spec1_desc">Claude API 기반 SSE 스트리밍 실시간 면접. 난이도(주니어/미드/시니어), 유형(기술/행동/혼합), 기업별 스타일(네이버/쿠팡/스타트업) 지원</span></li>
+        <li><strong data-i18n="sp1_spec2_title">프로필 & 온보딩</strong><span data-i18n="sp1_spec2_desc">4단계 온보딩 위저드. 스킬 숙련도(1~5), 경력 사항, 자격증, 목표 포지션 관리</span></li>
+        <li><strong data-i18n="sp1_spec3_title">답변 평가 & 피드백</strong><span data-i18n="sp1_spec3_desc">AI 기반 1~10점 채점, 강점/약점 분석, 모범 답변 생성, 꼬리질문 지원</span></li>
+        <li><strong data-i18n="sp1_spec4_title">대시보드 & 분석</strong><span data-i18n="sp1_spec4_desc">세션 통계, 점수 추이 차트(Recharts), 주제별 성과 분석, 스킬갭 분석</span></li>
+        <li><strong data-i18n="sp1_spec5_title">이력서 코칭</strong><span data-i18n="sp1_spec5_desc">AI 이력서 편집(일반/JD 맞춤), PDF/OCR 파싱, DOCX 생성(3가지 템플릿), JD 키워드 매칭</span></li>
+        <li><strong data-i18n="sp1_spec6_title">채용 포지션 관리</strong><span data-i18n="sp1_spec6_desc">목표 포지션 큐레이션, AI JD 파서(URL/텍스트), 포지션별 예상 면접 질문 자동 생성</span></li>
+        <li><strong data-i18n="sp1_spec7_title">구독/결제 시스템</strong><span data-i18n="sp1_spec7_desc">Stripe 연동 크레딧 기반 모델. 프리/프로 티어, 월간/연간 결제 주기</span></li>
+      </ul>
+    </div>
+    <div class="sp-tab-panel" data-tab="arch" role="tabpanel" id="sp1-panel-arch" aria-labelledby="sp1-tab-arch" hidden>
+      <div class="sp-arch-diagram">
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp1_arch_client">Client</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">Next.js 16 + React 19</div>
+            <div class="sp-arch-node">Tailwind CSS</div>
+            <div class="sp-arch-node">Zustand</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp1_arch_middleware">Middleware</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">JWT + CSRF</div>
+            <div class="sp-arch-node">Rate Limiting</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp1_arch_api">API Layer</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">REST + SSE Streaming</div>
+            <div class="sp-arch-node" data-i18n="sp1_arch_knowledge">Interview Knowledge (37+ topics)</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp1_arch_data">Data Layer</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">PostgreSQL (Prisma)</div>
+            <div class="sp-arch-node">Redis</div>
+            <div class="sp-arch-node">RabbitMQ</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp1_arch_external">External Services</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">Claude AI</div>
+            <div class="sp-arch-node">Stripe</div>
+            <div class="sp-arch-node">Resend Email</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sp-tab-panel" data-tab="screens" role="tabpanel" id="sp1-panel-screens" aria-labelledby="sp1-tab-screens" hidden>
+      <div class="sp-placeholder">
+        <p data-i18n="sp1_screens_placeholder">스크린샷 준비 중입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
 
         <div class="side-project">
           <h3 data-i18n="sp2_title">SRT 자동 예매 앱</h3>
           <div class="side-project__tech-tags">
-            <span>Android</span><span>Kotlin</span><span>Claude Code</span><span>Vibe Coding</span>
+            <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>SQLite</span><span>Claude Code</span>
           </div>
           <p data-i18n="sp2_desc">Claude Code 바이브코딩으로 개발한 SRT 열차 자동 예매 애플리케이션. 비약적 생산성 향상을 경험하는 동시에 코드 오너십에 대한 고민을 갖게 됨.</p>
           <ul class="side-project__features">
@@ -699,6 +770,80 @@
             <li data-i18n="sp2_feat3">AI 코딩 시 테스트 방법론에 대한 고민과 실험</li>
           </ul>
           <blockquote class="side-project__insight" data-i18n="sp2_insight">"비약적 생산성 향상과 동시에 코드 오너십에 대한 고민"</blockquote>
+          <div class="sp-tabs" data-sp="sp2">
+  <div class="sp-tabs__nav" role="tablist">
+    <button class="sp-tab-btn sp-tab-btn--active" data-tab="specs" data-i18n="sp_tab_specs" role="tab" aria-selected="true" aria-controls="sp2-panel-specs" id="sp2-tab-specs" tabindex="0">기능 명세</button>
+    <button class="sp-tab-btn" data-tab="arch" data-i18n="sp_tab_arch" role="tab" aria-selected="false" aria-controls="sp2-panel-arch" id="sp2-tab-arch" tabindex="-1">아키텍처</button>
+    <button class="sp-tab-btn" data-tab="screens" data-i18n="sp_tab_screens" role="tab" aria-selected="false" aria-controls="sp2-panel-screens" id="sp2-tab-screens" tabindex="-1">스크린샷</button>
+  </div>
+  <div class="sp-tabs__content">
+    <div class="sp-tab-panel sp-tab-panel--active" data-tab="specs" role="tabpanel" id="sp2-panel-specs" aria-labelledby="sp2-tab-specs">
+      <ul class="sp-feature-list">
+        <li><strong data-i18n="sp2_spec1_title">자동 예매 엔진</strong><span data-i18n="sp2_spec1_desc">SRT 좌석 실시간 모니터링 + 자동 예매 시도. 최대 6시간, 3~5초 간격 재시도</span></li>
+        <li><strong data-i18n="sp2_spec2_title">유연한 예매 설정</strong><span data-i18n="sp2_spec2_desc">출발/도착역 36개, 날짜, 시간대(6:00~23:00), 승객 유형, 좌석 등급 선택</span></li>
+        <li><strong data-i18n="sp2_spec3_title">백그라운드 실행</strong><span data-i18n="sp2_spec3_desc">Flutter Foreground Service로 앱 백그라운드에서도 지속 동작 + 실시간 진행 알림</span></li>
+        <li><strong data-i18n="sp2_spec4_title">세션 관리</strong><span data-i18n="sp2_spec4_desc">25분마다 SRT 서버 세션 자동 갱신. IP 차단/로그인 에러 자동 복구</span></li>
+        <li><strong data-i18n="sp2_spec5_title">예매 이력 관리</strong><span data-i18n="sp2_spec5_desc">SQLite 로컬 DB에 모든 예매 시도 기록 저장. 90일 자동 정리</span></li>
+        <li><strong data-i18n="sp2_spec6_title">실시간 상태 업데이트</strong><span data-i18n="sp2_spec6_desc">Service↔App 양방향 콜백으로 시도 횟수, 경과시간, 성공 정보 실시간 표시</span></li>
+        <li><strong data-i18n="sp2_spec7_title">보안 자격 관리</strong><span data-i18n="sp2_spec7_desc">Flutter Secure Storage로 SRT 계정 정보 암호화 저장</span></li>
+      </ul>
+    </div>
+    <div class="sp-tab-panel" data-tab="arch" role="tabpanel" id="sp2-panel-arch" aria-labelledby="sp2-tab-arch" hidden>
+      <div class="sp-arch-diagram">
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp2_arch_ui">UI Layer</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">Flutter / Material 3</div>
+            <div class="sp-arch-node">ReserveScreen</div>
+            <div class="sp-arch-node">HomeScreen</div>
+            <div class="sp-arch-node">HistoryScreen</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp2_arch_state">State Management</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">Riverpod</div>
+            <div class="sp-arch-node">ReservationProvider</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp2_arch_service">Service Layer</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node" data-i18n="sp2_arch_engine">ReservationEngine (retry loop)</div>
+            <div class="sp-arch-node">ForegroundTask</div>
+            <div class="sp-arch-node">NotificationService</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp2_arch_data">Data Layer</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">SrtApiClient (Dio)</div>
+            <div class="sp-arch-node">NetFunnel (anti-bot)</div>
+            <div class="sp-arch-node">ResponseParser</div>
+          </div>
+        </div>
+        <div class="sp-arch-arrow">↓</div>
+        <div class="sp-arch-layer">
+          <div class="sp-arch-label" data-i18n="sp2_arch_external">External / Storage</div>
+          <div class="sp-arch-nodes">
+            <div class="sp-arch-node">SRT Server (srail.or.kr)</div>
+            <div class="sp-arch-node">SQLite DB</div>
+            <div class="sp-arch-node">Secure Storage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sp-tab-panel" data-tab="screens" role="tabpanel" id="sp2-panel-screens" aria-labelledby="sp2-tab-screens" hidden>
+      <div class="sp-figma-embed">
+        <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fmw7GpdL7PHFt60HxWE3AcL%2FSRTicket---Flutter-App-Design%3Fnode-id%3D0-1%26t%3D6K19OIgKnLLHervm-1" title="SRTicket Figma Prototype" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer" allowfullscreen loading="lazy"></iframe>
+        <p class="sp-figma-print-fallback" data-i18n="sp2_figma_fallback">Figma 프로토타입: SRTicket Flutter App Design</p>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
 
       </div>

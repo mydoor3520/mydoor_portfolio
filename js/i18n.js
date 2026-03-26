@@ -147,10 +147,10 @@
     side_projects_heading: "sideProjects.sectionTitle",
     sp1_title: "sideProjects.interviewTrainer.title",
     sp1_desc: "sideProjects.interviewTrainer.description",
-    sp1_insight: null,
+    sp1_insight: "sideProjects.sp1Insight",
     sp2_title: "sideProjects.srtApp.title",
     sp2_desc: "sideProjects.srtApp.description",
-    sp2_insight: null,
+    sp2_insight: "sideProjects.sp2Insight",
 
     // Journey
     journey_heading: "journey.sectionTitle",
@@ -252,7 +252,66 @@
     sp2_feat3: "sideProjects.srtApp.features[2]",
 
     // Back to top
-    back_to_top: null
+    back_to_top: null,
+
+    // Side project tabs
+    sp_tab_specs: "sideProjects.tabSpecs",
+    sp_tab_arch: "sideProjects.tabArch",
+    sp_tab_screens: "sideProjects.tabScreens",
+
+    // SP1 specs
+    sp1_spec1_title: "sideProjects.sp1Specs.spec1Title",
+    sp1_spec1_desc: "sideProjects.sp1Specs.spec1Desc",
+    sp1_spec2_title: "sideProjects.sp1Specs.spec2Title",
+    sp1_spec2_desc: "sideProjects.sp1Specs.spec2Desc",
+    sp1_spec3_title: "sideProjects.sp1Specs.spec3Title",
+    sp1_spec3_desc: "sideProjects.sp1Specs.spec3Desc",
+    sp1_spec4_title: "sideProjects.sp1Specs.spec4Title",
+    sp1_spec4_desc: "sideProjects.sp1Specs.spec4Desc",
+    sp1_spec5_title: "sideProjects.sp1Specs.spec5Title",
+    sp1_spec5_desc: "sideProjects.sp1Specs.spec5Desc",
+    sp1_spec6_title: "sideProjects.sp1Specs.spec6Title",
+    sp1_spec6_desc: "sideProjects.sp1Specs.spec6Desc",
+    sp1_spec7_title: "sideProjects.sp1Specs.spec7Title",
+    sp1_spec7_desc: "sideProjects.sp1Specs.spec7Desc",
+
+    // SP1 arch
+    sp1_arch_client: "sideProjects.sp1Arch.client",
+    sp1_arch_middleware: "sideProjects.sp1Arch.middleware",
+    sp1_arch_api: "sideProjects.sp1Arch.api",
+    sp1_arch_knowledge: "sideProjects.sp1Arch.knowledge",
+    sp1_arch_data: "sideProjects.sp1Arch.data",
+    sp1_arch_external: "sideProjects.sp1Arch.external",
+
+    // SP1 screens
+    sp1_screens_placeholder: "sideProjects.sp1ScreensPlaceholder",
+
+    // SP2 specs
+    sp2_spec1_title: "sideProjects.sp2Specs.spec1Title",
+    sp2_spec1_desc: "sideProjects.sp2Specs.spec1Desc",
+    sp2_spec2_title: "sideProjects.sp2Specs.spec2Title",
+    sp2_spec2_desc: "sideProjects.sp2Specs.spec2Desc",
+    sp2_spec3_title: "sideProjects.sp2Specs.spec3Title",
+    sp2_spec3_desc: "sideProjects.sp2Specs.spec3Desc",
+    sp2_spec4_title: "sideProjects.sp2Specs.spec4Title",
+    sp2_spec4_desc: "sideProjects.sp2Specs.spec4Desc",
+    sp2_spec5_title: "sideProjects.sp2Specs.spec5Title",
+    sp2_spec5_desc: "sideProjects.sp2Specs.spec5Desc",
+    sp2_spec6_title: "sideProjects.sp2Specs.spec6Title",
+    sp2_spec6_desc: "sideProjects.sp2Specs.spec6Desc",
+    sp2_spec7_title: "sideProjects.sp2Specs.spec7Title",
+    sp2_spec7_desc: "sideProjects.sp2Specs.spec7Desc",
+
+    // SP2 arch
+    sp2_arch_ui: "sideProjects.sp2Arch.ui",
+    sp2_arch_state: "sideProjects.sp2Arch.state",
+    sp2_arch_service: "sideProjects.sp2Arch.service",
+    sp2_arch_engine: "sideProjects.sp2Arch.engine",
+    sp2_arch_data: "sideProjects.sp2Arch.data",
+    sp2_arch_external: "sideProjects.sp2Arch.external",
+
+    // SP2 figma
+    sp2_figma_fallback: "sideProjects.sp2FigmaFallback"
   };
 
   function getNestedValue(obj, keyPath) {

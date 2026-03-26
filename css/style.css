@@ -1054,11 +1054,223 @@ section:last-of-type {
   transform: translateY(0);
 }
 
+/* ============================================
+   SIDE PROJECT TABS
+   ============================================ */
+.sp-tabs {
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+}
+
+.sp-tabs__nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+}
+
+.sp-tab-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sp-tab-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sp-tab-btn--active {
+  color: var(--accent, #60a5fa);
+  border-bottom-color: var(--accent, #60a5fa);
+}
+
+.sp-tab-btn:focus-visible {
+  outline: 2px solid var(--accent, #60a5fa);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.sp-tab-panel {
+  display: none;
+}
+
+.sp-tab-panel--active {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Feature list */
+.sp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sp-feature-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent, #60a5fa);
+}
+
+.sp-feature-list li strong {
+  color: var(--accent, #60a5fa);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sp-feature-list li span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Architecture diagram */
+.sp-arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 1rem 0;
+}
+
+.sp-arch-layer {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sp-arch-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent, #60a5fa);
+  margin-bottom: 0.4rem;
+}
+
+.sp-arch-nodes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.sp-arch-node {
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.sp-arch-arrow {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.15rem 0;
+}
+
+/* Figma embed */
+.sp-figma-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sp-figma-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.sp-figma-print-fallback {
+  display: none;
+}
+
+/* Placeholder */
+.sp-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.sp-placeholder p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Print fallback for Figma embed */
+@media print {
+  .sp-figma-embed iframe {
+    display: none;
+  }
+
+  .sp-figma-print-fallback {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    font-style: italic;
+  }
+
+  .sp-tab-panel {
+    display: block;
+  }
+
+  .sp-tab-panel[hidden] {
+    display: block;
+  }
+
+  .sp-tabs__nav {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .sp-tab-panel--active {
+    animation: none;
   }
 }
 
@@ -1780,6 +1992,25 @@ section:last-of-type {
   .business-impact {
     flex-direction: column;
   }
+
+  .sp-tabs__nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sp-tab-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .sp-arch-nodes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sp-figma-embed {
+    padding-bottom: 100%;
+  }
 }
 
 /* ============================================
@@ -1848,5 +2079,14 @@ section:last-of-type {
 
   .leadership-section {
     padding: 1rem;
+  }
+
+  .sp-feature-list li {
+    padding: 0.5rem;
+  }
+
+  .sp-tab-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
   }
 }
