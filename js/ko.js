@@ -237,6 +237,7 @@ window.i18nData.ko = {
       data: "Data Layer",
       external: "External Services"
     },
+    sp1ArchRationale: "SSE 스트리밍으로 면접 질문을 실시간 전달하기 위해 Next.js API Routes를 선택했고, 이력서 생성 같은 무거운 작업은 RabbitMQ 비동기 워커로 분리하여 API 응답 속도를 보호했습니다. Redis는 사용자별 rate limiting과 세션 캐싱에, PostgreSQL은 25개 이상의 도메인 모델을 안정적으로 관리하기 위해 선택했습니다.",
     sp1ScreensPlaceholder: "스크린샷 준비 중입니다.",
 
     // SRT specs
@@ -264,6 +265,7 @@ window.i18nData.ko = {
       data: "Data Layer",
       external: "External / Storage"
     },
+    sp2ArchRationale: "Foreground Service로 백그라운드 예매를 지속하면서도 Riverpod의 양방향 콜백으로 UI를 실시간 갱신하는 구조를 설계했습니다. SRT 서버의 NetFunnel(anti-bot) 우회와 25분 세션 만료를 Data Layer에서 투명하게 처리하여, Service Layer는 순수한 예매 재시도 로직에만 집중할 수 있도록 관심사를 분리했습니다.",
     sp2Screen1Alt: "SRT 홈 화면",
     sp2Screen1Label: "홈",
     sp2Screen2Alt: "SRT 예매 설정 화면",
