@@ -235,6 +235,8 @@ window.i18nData.en = {
       data: "Data Layer",
       external: "External Services"
     },
+    spDecisionLabel: "Key Decision",
+    sp1ArchDecision: "RabbitMQ vs Redis Queue — Resume generation/OCR tasks require retry on failure, so RabbitMQ was chosen for its message acknowledgement guarantees. Redis Queue is simpler but risks message loss.",
     sp1ArchRationale: "Chose Next.js API Routes for real-time SSE streaming of interview questions. Heavy tasks like resume generation are offloaded to RabbitMQ async workers to protect API response times. Redis handles per-user rate limiting and session caching, while PostgreSQL manages 25+ domain models reliably.",
     sp1ScreensPlaceholder: "Screenshots coming soon.",
 
@@ -262,6 +264,7 @@ window.i18nData.en = {
       data: "Data Layer",
       external: "External / Storage"
     },
+    sp2ArchDecision: "Riverpod vs Provider/BLoC — Avoided Provider's excessive boilerplate and BLoC's over-engineering. Chose Riverpod for compile-time safety and concise state management. An experimental adoption in a personal project.",
     sp2ArchRationale: "Designed a Foreground Service for persistent background booking with Riverpod's bidirectional callbacks for real-time UI updates. SRT server's NetFunnel (anti-bot) bypass and 25-minute session expiry are handled transparently in the Data Layer, allowing the Service Layer to focus purely on reservation retry logic — a clean separation of concerns.",
     sp2Screen1Alt: "SRT Home Screen",
     sp2Screen1Label: "Home",

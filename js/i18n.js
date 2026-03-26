@@ -309,8 +309,11 @@
     sp2_arch_engine: "sideProjects.sp2Arch.engine",
     sp2_arch_data: "sideProjects.sp2Arch.data",
     sp2_arch_external: "sideProjects.sp2Arch.external",
+    sp_decision_label: "sideProjects.spDecisionLabel",
     sp1_arch_rationale: "sideProjects.sp1ArchRationale",
+    sp1_arch_decision: "sideProjects.sp1ArchDecision",
     sp2_arch_rationale: "sideProjects.sp2ArchRationale",
+    sp2_arch_decision: "sideProjects.sp2ArchDecision",
 
     // SP2 gallery
     sp2_screen1_alt: "sideProjects.sp2Screen1Alt",

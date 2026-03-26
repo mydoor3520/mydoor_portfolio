@@ -237,6 +237,8 @@ window.i18nData.ko = {
       data: "Data Layer",
       external: "External Services"
     },
+    spDecisionLabel: "Key Decision",
+    sp1ArchDecision: "RabbitMQ vs Redis Queue — 이력서 생성/OCR 등 실패 시 재처리가 필요한 작업이 있어, 메시지 보장(acknowledgement)이 있는 RabbitMQ를 선택. Redis Queue는 단순하지만 메시지 유실 가능성이 trade-off.",
     sp1ArchRationale: "SSE 스트리밍으로 면접 질문을 실시간 전달하기 위해 Next.js API Routes를 선택했고, 이력서 생성 같은 무거운 작업은 RabbitMQ 비동기 워커로 분리하여 API 응답 속도를 보호했습니다. Redis는 사용자별 rate limiting과 세션 캐싱에, PostgreSQL은 25개 이상의 도메인 모델을 안정적으로 관리하기 위해 선택했습니다.",
     sp1ScreensPlaceholder: "스크린샷 준비 중입니다.",
 
@@ -265,6 +267,7 @@ window.i18nData.ko = {
       data: "Data Layer",
       external: "External / Storage"
     },
+    sp2ArchDecision: "Riverpod vs Provider/BLoC — Provider의 보일러플레이트 과다와 BLoC의 과도한 구조를 피하고, 컴파일 타임 안전성과 간결한 상태 관리를 위해 Riverpod을 선택. 개인 프로젝트에서의 실험적 도입.",
     sp2ArchRationale: "Foreground Service로 백그라운드 예매를 지속하면서도 Riverpod의 양방향 콜백으로 UI를 실시간 갱신하는 구조를 설계했습니다. SRT 서버의 NetFunnel(anti-bot) 우회와 25분 세션 만료를 Data Layer에서 투명하게 처리하여, Service Layer는 순수한 예매 재시도 로직에만 집중할 수 있도록 관심사를 분리했습니다.",
     sp2Screen1Alt: "SRT 홈 화면",
     sp2Screen1Label: "홈",

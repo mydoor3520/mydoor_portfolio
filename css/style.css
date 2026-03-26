@@ -1205,6 +1205,38 @@ section:last-of-type {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.sp-arch-decision {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.sp-arch-decision__label {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.sp-arch-decision p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.sp-arch-decision p strong {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Screenshot gallery */
 .sp-screenshot-gallery {
   display: flex;
