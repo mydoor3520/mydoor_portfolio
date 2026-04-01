@@ -111,6 +111,13 @@ a:hover {
   padding: 0 1.5rem;
 }
 
+/* --- Side Projects: temporarily hidden --- */
+.side-projects-section,
+.nav__links li:has(a[href="#side-projects"]),
+.nav__mobile a[href="#side-projects"] {
+  display: none !important;
+}
+
 section {
   padding: 3.75rem 0;
   border-bottom: 1px solid var(--border);
