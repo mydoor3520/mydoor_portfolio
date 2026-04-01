@@ -38,7 +38,7 @@ window.i18nData.ko = {
           situation: "\uAC15\uC6D0\uB3C4\uAD50\uC721\uCCAD\uC5D0 \uB0A9\uD488\uD558\uB294 \uC11C\uBC84\uB85C, \uAD00\uD560 \uCD08\uC911\uACE0 \uD559\uC0DD \uCD1D 13\uB9CC \uBA85 \uC911 \uC808\uBC18(\uC57D 7\uB9CC \uBA85)\uC774 \uB3D9\uC2DC \uC811\uC18D\uD558\uC5EC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB294 \uC11C\uBC84\uB97C \uB0A9\uD488\uD574\uC57C \uD558\uB294 \uC694\uAC74\uC774 \uC81C\uC2DC\uB428",
           analysis: "Python Locust\uB97C \uD65C\uC6A9\uD55C \uC2E4\uC81C \uC0AC\uC6A9\uC790 \uD589\uB3D9 \uC2DC\uB098\uB9AC\uC624 \uAE30\uBC18 \uBD80\uD558 \uD14C\uC2A4\uD2B8\uC5D0\uC11C \uBCD1\uBAA9 \uBC1C\uACAC. \uD2B8\uB79C\uC7AD\uC158 \uBC94\uC704 \uC624\uC124\uC815\uC73C\uB85C \uBE44\uAD00\uC801 \uB77D(Pessimistic Lock) \uC810\uC720 \uC2DC\uAC04\uC774 \uBE44\uC815\uC0C1\uC801\uC73C\uB85C \uAE38\uC5B4\uC9C0\uACE0, \uBB34\uBD84\uBCC4\uD55C \uC804\uCCB4 \uC870\uD68C(LIMIT \uC5C6\uC774)\uAC00 \uBC1C\uC0DD",
           action: "\uD2B8\uB79C\uC7AD\uC158 \uBC94\uC704\uC5D0\uC11C \uBB34\uAC70\uC6B4 \uC870\uD68C \uB85C\uC9C1\uC744 \uBD84\uB9AC\uD558\uC5EC \uB77D \uC810\uC720 \uC2DC\uAC04 \uCD5C\uC18C\uD654. \uADF8\uB8F9 \uC870\uD68C\uC5D0 LIMIT\uC744 \uC801\uC6A9\uD558\uC5EC \uD544\uC694\uD55C \uBC94\uC704\uB9CC \uC870\uD68C\uD558\uB3C4\uB85D \uC218\uC815",
-          result: "NCP \uD074\uB77C\uC6B0\uB4DC \uD658\uACBD 2\uCC28 \uBD80\uD558 \uD14C\uC2A4\uD2B8 \uD1B5\uACFC. \uC5D0\uB7EC\uC728 0%, \uB2E8\uC77C\uAC74 \uC218\uD589 \uB300\uBE44 \uC751\uB2F5 \uC2DC\uAC04 \uD070 \uCC28\uC774 \uC5C6\uC74C. \uC11C\uBC84 9\uB300 \uAD6C\uC131\uC758 \uACE0\uAC00\uC6A9\uC131 \uC544\uD0A4\uD14D\uCC98 \uD655\uBCF4"
+          result: "NCP \uD074\uB77C\uC6B0\uB4DC \uD658\uACBD 2\uCC28 \uBD80\uD558 \uD14C\uC2A4\uD2B8 \uD1B5\uACFC. \uB2E8\uC77C\uAC74 \uC218\uD589 \uB300\uBE44 \uC751\uB2F5 \uC2DC\uAC04 \uC720\uC758\uBBF8\uD55C \uCC28\uC774 \uC5C6\uC74C. \uC11C\uBC84 9\uB300 \uAD6C\uC131\uC758 \uACE0\uAC00\uC6A9\uC131 \uC544\uD0A4\uD14D\uCC98 \uD655\uBCF4"
         },
         cicd: {
           title: "CI/CD \uD30C\uC774\uD504\uB77C\uC778 \uAD6C\uCD95 \uBC0F \uBC30\uD3EC \uC790\uB3D9\uD654",
@@ -51,7 +51,7 @@ window.i18nData.ko = {
           title: "Slack \uC5F0\uB3D9 \uC2E4\uC2DC\uAC04 \uBAA8\uB2C8\uD130\uB9C1 \uC2DC\uC2A4\uD15C \uAD6C\uCD95",
           situation: "\uC11C\uBC84 \uC7A5\uC560 \uBC0F \uC5D0\uB7EC \uAC10\uC9C0\uB97C \uC704\uD55C \uBAA8\uB2C8\uD130\uB9C1 \uCCB4\uACC4\uAC00 \uBD80\uC7AC",
           action: "500 \uC5D0\uB7EC \uC2E4\uC2DC\uAC04 Slack \uC54C\uB9BC \uBC0F \uC0AC\uB0B4 NAS \uAE30\uBC18 \uD5EC\uC2A4\uCCB4\uD06C \uC11C\uBC84 \uAD6C\uCD95",
-          result: "LLM \uC11C\uBE44\uC2A4 \uC7A5\uC560 \uC2DC CS \uC778\uC785 \uC804 \uC120\uC81C\uC801\uC73C\uB85C \uAC10\uC9C0\uD558\uC5EC \uC989\uC2DC \uB2E4\uB978 LLM \uBAA8\uB378\uB85C \uAD50\uCCB4 \uBC30\uD3EC, \uC11C\uBE44\uC2A4 \uC911\uB2E8 \uC5C6\uC774 \uB300\uC751 \uC644\uB8CC"
+          result: "LLM \uC11C\uBE44\uC2A4 \uC7A5\uC560 \uC2DC CS \uC778\uC785 \uC804 \uC120\uC81C\uC801\uC73C\uB85C \uAC10\uC9C0. \uC989\uC2DC \uB300\uCCB4 LLM \uBAA8\uB378\uB85C \uAD50\uCCB4 \uBC30\uD3EC\uD558\uC5EC \uC0AC\uC6A9\uC790 \uCCB4\uAC10 \uC911\uB2E8 \uCD5C\uC18C\uD654"
         },
         cloudRecovery: {
           title: "\uD074\uB77C\uC6B0\uB4DC \uC704\uAE30 \uB300\uC751 \uBC0F \uC778\uD504\uB77C \uC7AC\uAD6C\uCD95 (NHN Cloud \u2192 NCP)",
@@ -303,7 +303,7 @@ window.i18nData.ko = {
       {
         year: "\uD604\uC7AC",
         title: "\uD604\uC7AC",
-        description: "AI \uC2DC\uB300\uC5D0 \uB9DE\uB294 \uC0C8\uB85C\uC6B4 \uAC1C\uBC1C \uBC29\uBC95\uB860(\uBC14\uC774\uBE0C\uCF54\uB529)\uC744 \uC9C1\uC811 \uCCB4\uD5D8\uD558\uACE0, \uADF8\uC5D0 \uB530\uB978 \uD14C\uC2A4\uD2B8/\uD488\uC9C8 \uBCF4\uC99D\uC758 \uC0C8\uB85C\uC6B4 \uACFC\uC81C\uB97C \uACE0\uBBFC\uD558\uB294 \uC5D4\uC9C0\uB2C8\uC5B4"
+        description: "AI \uBCF4\uC870 \uAC1C\uBC1C \uBC29\uBC95\uB860\uC744 \uC9C1\uC811 \uCCB4\uD5D8\uD558\uACE0, \uADF8\uC5D0 \uB530\uB978 \uD14C\uC2A4\uD2B8/\uD488\uC9C8 \uBCF4\uC99D\uC758 \uC0C8\uB85C\uC6B4 \uACFC\uC81C\uB97C \uACE0\uBBFC\uD558\uB294 \uC5D4\uC9C0\uB2C8\uC5B4"
       }
     ]
   },
@@ -374,7 +374,7 @@ window.i18nData.ko = {
   j3_transition: "쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.",
   j4_year: "2024 - 2026",
   j4_company: "팀플백",
-  j4_desc: "신생 개발팀에 합류하여 팀을 2명에서 6명으로 성장시키며 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 정시 퇴근이 전체 근무일의 20%도 안 될 만큼 내 제품이라는 마음으로 일했습니다.",
+  j4_desc: "신생 개발팀에 합류하여 팀을 2명에서 6명으로 성장시키며 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 내 제품이라는 마음으로 백엔드부터 인프라까지 직접 책임졌습니다.",
   j4_legacy: "리뉴얼한 서비스 '자작자작', 9대 서버 인프라와 CI/CD 파이프라인, 모니터링/백업 체계",
   j5_year: "Next",
   j5_company: "다음 여정",
@@ -403,9 +403,9 @@ window.i18nData.ko = {
   // TeamplBack leadership
   c1_leadership_title: "팀 리더십",
   c1_leadership_mentoring_label: "멘토링",
-  c1_leadership_mentoring: "1:1 정기 면담을 통한 성장 지원 및 개인 고민 상담. 내성적이던 주니어가 적극적으로 의사 표현하는 개발자로 성장",
+  c1_leadership_mentoring: "1:1 정기 면담을 통한 성장 지원. 코드리뷰에서 의견을 내지 않던 주니어가 설계 제안을 주도하는 수준으로 성장",
   c1_leadership_hiring_label: "채용",
-  c1_leadership_hiring: "백엔드 주니어 2명 채용 관여. 평가 기준: 개발에 대한 진심, 기본기, 주도적 사고. 원래 1명 채용 예정이었으나 2명 모두 추천하여 채용 성사",
+  c1_leadership_hiring: "백엔드 주니어 채용 과정에 면접관으로 참여. 기술 기본기와 성장 가능성을 평가 기준으로 설정하고 채용 진행",
   c1_leadership_process_label: "개발 문화",
   c1_leadership_process: "브랜치 전략, 코딩 컨벤션, 코드리뷰 방향을 제시하되 팀원의 자율적 의사결정을 유도",
   c1_leadership_tech_label: "기술 선정",

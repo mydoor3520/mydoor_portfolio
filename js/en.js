@@ -10,7 +10,7 @@ window.i18nData.en = {
 
   hero: {
     tagline: "Backend Engineer",
-    title: "Generalist Backend Engineer \u2014 A problem-solving engineer covering DevOps, infrastructure, and AI-powered development",
+    title: "Generalist Backend Engineer \u2014 A problem-solving engineer spanning DevOps, infrastructure, and AI-powered development",
     bio: "From backend architecture design to CI/CD, cloud infrastructure, and incident response — I'm an engineer who steps up for whatever it takes to keep services running reliably. With experience translating complex business logic into robust systems and leading teams through crisis situations, I focus on building trustworthy systems and teams.",
     contact: "mydoor3520@gmail.com",
     tags: [
@@ -38,7 +38,7 @@ window.i18nData.en = {
           situation: "The server was to be delivered to the Gangwon Provincial Office of Education, with a requirement that half of the 130,000 enrolled students (approximately 70,000) must be able to use the service concurrently.",
           analysis: "Load testing using Python Locust with real user behavior scenarios revealed bottlenecks: a misconfigured transaction scope caused pessimistic lock hold times to become abnormally long, and unbounded full-table queries (without LIMIT) were being executed on every user registration.",
           action: "Separated heavy query logic from the transaction scope to minimize lock hold time. Applied LIMIT to group queries to restrict retrieval to only the necessary range.",
-          result: "Passed the second load test on NCP cloud environment. 0% error rate with negligible response time difference compared to single-request execution. Established a high-availability architecture with 9 servers."
+          result: "Passed the second load test on NCP cloud environment with negligible response time degradation compared to single-request execution. Established a high-availability architecture with 9 servers."
         },
         cicd: {
           title: "CI/CD Pipeline and Deployment Automation",
@@ -51,7 +51,7 @@ window.i18nData.en = {
           title: "Real-time Monitoring System with Slack Integration",
           situation: "No monitoring system existed for detecting server failures and errors.",
           action: "Built real-time Slack notifications for 500 errors and an on-premise NAS-based health check server.",
-          result: "Proactively detected an LLM service outage before any customer support tickets came in. Immediately switched to an alternative LLM model and deployed, resolving the issue with zero service downtime."
+          result: "Proactively detected an LLM service outage before any customer support tickets came in. Immediately switched to an alternative LLM model, minimizing user-facing impact."
         },
         cloudRecovery: {
           title: "Cloud Crisis Response and Infrastructure Rebuild (NHN Cloud to NCP)",
@@ -300,7 +300,7 @@ window.i18nData.en = {
       {
         year: "Now",
         title: "Present",
-        description: "An engineer who embraces new development methodologies for the AI era (vibe coding) firsthand, while thoughtfully considering the emerging challenges of testing and quality assurance that come with them."
+        description: "An engineer who embraces AI-assisted development methodologies firsthand, while thoughtfully considering the emerging challenges of testing and quality assurance that come with them."
       }
     ]
   },
@@ -371,7 +371,7 @@ window.i18nData.en = {
   j3_transition: "With experience under my belt, I wanted the challenge of building and leading a team from scratch.",
   j4_year: "2024 - 2026",
   j4_company: "TeamplBack",
-  j4_desc: "Joined a new dev team, grew it from 2 to 6 members, and served as backend lead and DevOps. Renewed the service, built 70K CCU architecture, CI/CD, monitoring, and recovered entire infrastructure in 14 hours -- working with the dedication of an owner, where on-time departure was less than 20% of all working days.",
+  j4_desc: "Joined a new dev team, grew it from 2 to 6 members, and served as backend lead and DevOps. Renewed the service, built 70K CCU architecture, CI/CD, monitoring, and recovered entire infrastructure in 14 hours -- taking end-to-end ownership from backend to infrastructure.",
   j4_legacy: "Renewed service 'Jakjakjakjak', 9-server infrastructure with CI/CD pipeline, monitoring and backup systems",
   j5_year: "Next",
   j5_company: "Next Chapter",
@@ -400,9 +400,9 @@ window.i18nData.en = {
   // TeamplBack leadership
   c1_leadership_title: "Team Leadership",
   c1_leadership_mentoring_label: "Mentoring",
-  c1_leadership_mentoring: "Regular 1:1 meetings for growth support and personal concerns. An introverted junior grew into a developer who actively voices opinions",
+  c1_leadership_mentoring: "Regular 1:1 meetings for growth support. A junior who rarely spoke in code reviews grew to proactively propose design improvements",
   c1_leadership_hiring_label: "Hiring",
-  c1_leadership_hiring: "Involved in hiring 2 backend juniors. Criteria: genuine passion for development, solid fundamentals, proactive thinking. Originally planned to hire 1, but recommended both — both hired successfully",
+  c1_leadership_hiring: "Participated as interviewer in backend junior hiring. Defined evaluation criteria focused on technical fundamentals and growth potential",
   c1_leadership_process_label: "Dev Culture",
   c1_leadership_process: "Set direction for branch strategy, coding conventions, and code review while encouraging team members' autonomous decision-making",
   c1_leadership_tech_label: "Tech Selection",
