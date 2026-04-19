@@ -9,16 +9,16 @@ window.i18nData.en = {
   },
 
   hero: {
-    tagline: "Backend Engineer",
+    tagline: "Backend Engineer who builds systems and teams you can trust",
     title: "Generalist Backend Engineer \u2014 A problem-solving engineer spanning DevOps, infrastructure, and AI-powered development",
-    bio: "From backend architecture design to CI/CD, cloud infrastructure, and incident response — I'm an engineer who steps up for whatever it takes to keep services running reliably. With experience translating complex business logic into robust systems and leading teams through crisis situations, I focus on building trustworthy systems and teams.",
+    bio: "I translate complex business domains into reliable code, led a 14-hour infrastructure recovery under crisis, and grew a team from 2 to 6 engineers. I design zero-tolerance systems like payment and settlement, and take end-to-end ownership from backend to infrastructure.",
     contact: "mydoor3520@gmail.com",
     tags: [
       "Backend Architecture",
       "DevOps / Infrastructure",
       "Incident Response & Recovery",
       "Business Logic Design",
-      "AI / LLM Integration"
+      "Team Building & Leadership"
     ]
   },
 
@@ -58,7 +58,7 @@ window.i18nData.en = {
           situation: "While using NHN Cloud, the CEO mistakenly believed the account was under a partnership agreement, but it was actually an educational account. On a Friday at 4 PM, while users were actively using the service, the entire NHN Cloud account was deleted. All servers, databases, and infrastructure were lost.",
           analysis: "Recovery priorities set as: user notification \u2192 DB recovery \u2192 infrastructure rebuild \u2192 verification \u2192 launch",
           action: "Led the 14-hour recovery from 4 PM to 6 AM the next day. Deployed a temporary maintenance page, obtained DB backups through NHN support, requested an emergency NCP public cloud account, rebuilt all 9 servers from scratch, and restored and verified the database.",
-          result: "Full service recovery completed in 14 hours. Subsequently established a NAS-based daily automated backup system and revised cloud account management procedures to prevent recurrence."
+          result: "Friday 4PM incident — Saturday 6AM service restored. Led team mobilization, role distribution, and dismissed members as their parts completed. Established NAS backup system to prevent recurrence."
         }
       }
     },
@@ -85,7 +85,7 @@ window.i18nData.en = {
         settlement: {
           title: "Settlement System (Spring Batch)",
           situation: "Manual Excel-based settlement where the accounting team aggregated data manually.",
-          action: "Built an automated settlement system using Spring Batch (weekly/monthly). Set up a dedicated settlement management server separated from the service server. Continuously improved through feedback from the accounting team.",
+          action: "Built automated settlement with Spring Batch on a dedicated server. Validated settlement rules through weekly meetings with the accounting team, iterating 3 times based on their feedback",
           result: "Fully automated the manual settlement process, improving accounting team efficiency."
         },
         versioning: {
@@ -320,8 +320,8 @@ window.i18nData.en = {
   // Hero metrics
   hero_metric1_value: "7+",
   hero_metric1_label: "Years Experience",
-  hero_metric2_value: "70K",
-  hero_metric2_label: "Load Test Design Target",
+  hero_metric2_value: "9",
+  hero_metric2_label: "HA Server Architecture",
   hero_metric3_value: "14h",
   hero_metric3_label: "Full Infra Recovery",
   hero_metric4_value: "10x",
@@ -344,6 +344,15 @@ window.i18nData.en = {
   arch_db_slave: "DB Slave (Backup)",
   arch_pdf: "PDF Server",
   arch_batch: "Batch Server",
+  arch_zone_public: "Public",
+  arch_zone_private: "Private",
+  arch_bastion: "Bastion",
+  arch_bastion_runner: "GitHub Runner",
+  arch_access_note: "External: External LB → Backend/Frontend LB | Internal: Redis/PDF → Internal API LB → API | DB: API/PDF/Batch direct access",
+  arch_internal_lb: "Internal API LB",
+  arch_label_external_path: "EXTERNAL TRAFFIC",
+  arch_label_internal_path: "INTERNAL COMMUNICATION",
+  arch_label_data_layer: "DATA LAYER",
 
   // CI/CD flow
   cicd_build: "Build",
@@ -399,8 +408,9 @@ window.i18nData.en = {
 
   // TeamplBack leadership
   c1_leadership_title: "Team Leadership",
+  c1_leadership_intro: "Beyond technical delivery, I invested in building a culture where the team could grow autonomously.",
   c1_leadership_mentoring_label: "Mentoring",
-  c1_leadership_mentoring: "Regular 1:1 meetings for growth support. A junior who rarely spoke in code reviews grew to proactively propose design improvements",
+  c1_leadership_mentoring: "Regular 1:1s for growth support. A junior who was silent in code reviews grew to proposing API interface separations and driving the team's code review culture within 3 months",
   c1_leadership_hiring_label: "Hiring",
   c1_leadership_hiring: "Participated as interviewer in backend junior hiring. Defined evaluation criteria focused on technical fundamentals and growth potential",
   c1_leadership_process_label: "Dev Culture",
@@ -409,5 +419,12 @@ window.i18nData.en = {
   c1_leadership_tech: "Led QueryDSL → jOOQ migration. Identified maintenance risk from QueryDSL's discontinued updates, explored alternatives with the team, and adopted jOOQ",
 
   // Redis decision
-  c1_redis_decision: "Redis was introduced not for 70K CCU scaling, but for TTL-based temporary storage of email verification codes. It was a deliberate choice driven by functional need, not as a session store or general cache layer."
+  c1_redis_decision: "Redis was introduced not for 70K CCU scaling, but for TTL-based temporary storage of email verification codes. It was a deliberate choice driven by functional need, not as a session store or general cache layer.",
+  c1_p2_decision: "Blue/green was chosen over canary deployment due to team size (6 engineers) and service characteristics. Canary requires traffic splitting and monitoring infrastructure, while our education service needed full cutover rather than partial deployments. Blue/green was implementable with NCP CLI alone — matching our team's operational capacity.",
+  c1_p3_decision: "Chose Slack webhooks over dedicated monitoring tools (Datadog, Grafana). For a 6-person team, the learning and operational cost of separate monitoring infrastructure wasn't justified. Since everyone was already on Slack, routing 500 errors there maximized both detection speed and response time.",
+  c2_p3_decision: "The settlement server was separated because Spring Batch's bulk data processing impacted service response times. Additionally, settlement data required restricted access, so isolating it on a dedicated server accessible only to the accounting team secured both performance and data governance.",
+  c3_p1_decision: "Elasticsearch was considered but the data volume didn't justify the operational cost of a separate search engine. Normalizing XML metadata into PostgreSQL solved both search performance and data integrity without adding infrastructure complexity.",
+  career_bridge_1: "I wanted to experience building things as a team, not alone.",
+  career_bridge_2: "I wanted to build a service that grows with its users, not just deliver and leave.",
+  career_bridge_3: "With experience under my belt, I wanted the challenge of building and leading a team from scratch."
 };

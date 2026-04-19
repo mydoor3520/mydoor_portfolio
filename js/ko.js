@@ -9,16 +9,16 @@ window.i18nData.ko = {
   },
 
   hero: {
-    tagline: "Backend Engineer",
+    tagline: "신뢰할 수 있는 시스템과 팀을 만드는 백엔드 엔지니어",
     title: "\uBC31\uC5D4\uB4DC \uAE30\uBC18 \uC81C\uB108\uB7F4\uB9AC\uC2A4\uD2B8 \u2014 DevOps, \uC778\uD504\uB77C, AI \uD65C\uC6A9 \uAC1C\uBC1C\uAE4C\uC9C0 \uCEE4\uBC84\uD558\uB294 \uBB38\uC81C \uD574\uACB0\uD615 \uC5D4\uC9C0\uB2C8\uC5B4",
-    bio: "백엔드 아키텍처 설계부터 CI/CD, 클라우드 인프라, 장애 대응까지 — 서비스가 안정적으로 돌아가는 데 필요한 일이라면 직접 나서는 엔지니어입니다. 복잡한 비즈니스 로직을 시스템으로 풀어내고, 위기 상황에서 팀을 이끌어본 경험을 바탕으로, 신뢰할 수 있는 시스템과 팀을 만드는 데 집중합니다.",
+    bio: "복잡한 비즈니스 도메인을 코드로 풀어내고, 위기 상황에서 팀을 이끌어 14시간 만에 인프라를 복구하고, 2명이던 팀을 6명으로 키워낸 엔지니어입니다. 결제·정산처럼 실수가 허용되지 않는 시스템을 설계하고, 백엔드부터 인프라까지 직접 책임지며 일합니다.",
     contact: "mydoor3520@gmail.com",
     tags: [
       "\uBC31\uC5D4\uB4DC \uC544\uD0A4\uD14D\uCC98",
       "DevOps/\uC778\uD504\uB77C",
       "\uC7A5\uC560 \uB300\uC751/\uBCF5\uAD6C",
       "\uBE44\uC988\uB2C8\uC2A4 \uB85C\uC9C1 \uC124\uACC4",
-      "AI/LLM \uC5F0\uB3D9"
+      "팀 빌딩 & 리더십"
     ]
   },
 
@@ -58,7 +58,7 @@ window.i18nData.ko = {
           situation: "\uAE30\uC874 NHN Cloud \uC0AC\uC6A9 \uC911, \uB300\uD45C\uAC00 NHN Cloud \uACC4\uC815\uC744 \uD611\uC57D\uB41C \uACC4\uC815\uC73C\uB85C \uCC29\uAC01\uD558\uACE0 \uC788\uC5C8\uC73C\uB098 \uC2E4\uC81C\uB85C\uB294 \uAD50\uC721\uC6A9 \uACC4\uC815\uC774\uC5C8\uC74C. \uAE08\uC694\uC77C \uC624\uD6C4 4\uC2DC, \uC0AC\uC6A9\uC790\uAC00 \uC11C\uBE44\uC2A4\uB97C \uC0AC\uC6A9 \uC911\uC778 \uC0C1\uD0DC\uC5D0\uC11C NHN Cloud \uACC4\uC815 \uC804\uCCB4\uAC00 \uC0AD\uC81C\uB428. \uBAA8\uB4E0 \uC11C\uBC84, DB, \uC778\uD504\uB77C\uAC00 \uC18C\uBA78",
           analysis: "\uC0AC\uC6A9\uC790 \uC548\uB0B4 \u2192 DB \uBCF5\uAD6C \u2192 \uC778\uD504\uB77C \uC7AC\uAD6C\uC131 \u2192 \uAC80\uC99D \u2192 \uC624\uD508 \uC21C\uC11C\uB85C \uBCF5\uAD6C \uC6B0\uC120\uC21C\uC704 \uC218\uB9BD",
           action: "\uC624\uD6C4 4\uC2DC \uC0AC\uACE0 \uC778\uC9C0\uBD80\uD130 \uB2E4\uC74C\uB0A0 \uC624\uC804 6\uC2DC\uAE4C\uC9C0 14\uC2DC\uAC04 \uB3D9\uC548 \uBCF5\uAD6C \uC8FC\uB3C4. \uC0AC\uC6A9\uC790 \uC548\uB0B4 \uD398\uC774\uC9C0 \uC784\uC2DC \uBC30\uD3EC, NHN \uC9C0\uC6D0\uC744 \uBC1B\uC544 DB \uBC31\uC5C5, NCP \uACC4\uC815 \uAE34\uAE09 \uBC1C\uAE09, \uC11C\uBC84 9\uB300 \uC804\uCCB4 \uC2E0\uADDC \uAD6C\uCD95, DB \uBCF5\uAD6C \uBC0F \uAC80\uC99D",
-          result: "14\uC2DC\uAC04 \uB9CC\uC5D0 \uC804\uCCB4 \uC11C\uBE44\uC2A4 \uBCF5\uAD6C \uC644\uB8CC. \uC774\uD6C4 NAS \uAE30\uBC18 \uC77C\uC77C \uC790\uB3D9 \uBC31\uC5C5 \uCCB4\uACC4 \uAD6C\uCD95 \uBC0F \uD074\uB77C\uC6B0\uB4DC \uACC4\uC815 \uAD00\uB9AC \uCCB4\uACC4 \uBCC0\uACBD\uC73C\uB85C \uC7AC\uBC1C \uBC29\uC9C0"
+          result: "금요일 오후 4시 사고 - 토요일 오전 6시 서비스 정상 오픈. 팀원 소집, 역할 분배, 완료된 인원 순차 귀가 지시까지 주도. 이후 NAS 백업 체계 구축으로 재발 방지"
         }
       }
     },
@@ -85,7 +85,7 @@ window.i18nData.ko = {
         settlement: {
           title: "\uC815\uC0B0 \uC2DC\uC2A4\uD15C \uAD6C\uCD95 (Spring Batch)",
           situation: "\uC5D1\uC140 \uAE30\uBC18 \uC218\uB3D9 \uC815\uC0B0\uC73C\uB85C \uD68C\uACC4\uD300\uC774 \uC9C1\uC811 \uC9D1\uACC4",
-          action: "Spring Batch \uAE30\uBC18 \uC790\uB3D9\uD654 \uC815\uC0B0 \uC2DC\uC2A4\uD15C \uAD6C\uCD95(\uC8FC\uBCC4/\uC6D4\uBCC4). \uBCC4\uB3C4 \uC815\uC0B0\uAD00\uB9AC \uC11C\uBC84\uB97C \uAD6C\uCD95\uD558\uC5EC \uC11C\uBE44\uC2A4 \uC11C\uBC84\uC640 \uBD84\uB9AC. \uD68C\uACC4\uD300\uACFC \uC9C0\uC18D\uC801\uC778 \uD53C\uB4DC\uBC31\uC744 \uD1B5\uD574 \uAC1C\uC120",
+          action: "Spring Batch 자동화 + 별도 정산관리 서버 구축. 회계팀과 주간 미팅을 통해 정산 규칙을 검증하고, 피드백을 반영하여 3차례 개선",
           result: "\uC218\uB3D9 \uC815\uC0B0 \uD504\uB85C\uC138\uC2A4\uB97C \uC644\uC804 \uC790\uB3D9\uD654\uD558\uC5EC \uD68C\uACC4\uD300 \uC5C5\uBB34 \uD6A8\uC728\uD654"
         },
         versioning: {
@@ -323,8 +323,8 @@ window.i18nData.ko = {
   // Hero metrics
   hero_metric1_value: "7+",
   hero_metric1_label: "년 경력",
-  hero_metric2_value: "70K",
-  hero_metric2_label: "부하테스트 설계 목표",
+  hero_metric2_value: "9",
+  hero_metric2_label: "서버 고가용성 아키텍처",
   hero_metric3_value: "14h",
   hero_metric3_label: "인프라 전체 복구",
   hero_metric4_value: "10x",
@@ -347,6 +347,15 @@ window.i18nData.ko = {
   arch_db_slave: "DB Slave (백업)",
   arch_pdf: "PDF 서버",
   arch_batch: "배치 서버",
+  arch_zone_public: "Public",
+  arch_zone_private: "Private",
+  arch_bastion: "Bastion",
+  arch_bastion_runner: "GitHub Runner",
+  arch_access_note: "외부: External LB → Backend/Frontend LB | 내부: Redis/PDF → Internal API LB → API | DB: API/PDF/Batch 직접 접근",
+  arch_internal_lb: "Internal API LB",
+  arch_label_external_path: "EXTERNAL TRAFFIC",
+  arch_label_internal_path: "INTERNAL COMMUNICATION",
+  arch_label_data_layer: "DATA LAYER",
 
   // CI/CD flow
   cicd_build: "빌드",
@@ -385,6 +394,13 @@ window.i18nData.ko = {
   c1_p1_decision: "PDF 생성 서버를 별도로 분리한 이유는 문집 생성 기능의 CPU 부하가 API 서버의 응답 시간에 직접적 영향을 주었기 때문입니다. DB Slave는 읽기 분산 대신 순수 백업 전용으로 운영했는데, 읽기 부하가 크지 않아 복잡도를 추가하는 것보다 백업 안정성을 우선한 판단이었습니다.",
   c1_p4_decision: "복구 우선순위를 사용자 안내 → DB 복구 → 인프라 구성 → 검증 → 오픈 순서로 수립했습니다. 사용자가 빈 페이지를 보는 것이 가장 큰 리스크라 판단하여, NCP Object Storage에 점검 안내 HTML을 올리고 가비아 도메인을 임시 연결하는 것을 1순위로 실행했습니다. 이후 NAS 백업 체계를 구축하여 같은 사고의 재발을 방지했습니다.",
   c2_p1_decision: "단품, 일반 패키지, 선택형 패키지라는 세 가지 상품 유형이 각각 다른 환불 비율 계산과 강사 정산 로직을 필요로 했습니다. 하나의 통합 환불 계산 엔진을 설계하되, 상품 유형별 정산 분배 전략을 분리하는 구조를 택했습니다. 이를 통해 새로운 상품 유형이 추가되어도 환불 로직 자체는 수정 없이 확장할 수 있었습니다.",
+  c1_p2_decision: "카나리 배포 대신 블루/그린을 선택한 이유는 팀 규모(6명)와 서비스 특성 때문이었습니다. 카나리는 트래픽 분배와 모니터링 인프라가 필요하지만, 교육 서비스 특성상 부분 배포보다 전체 전환이 적합했고, NCP CLI만으로 구현 가능한 블루/그린이 팀의 운영 역량에 맞는 선택이었습니다.",
+  c1_p3_decision: "Datadog, Grafana 같은 전문 모니터링 도구 대신 Slack 웹훅을 선택했습니다. 6인 팀에서 별도 모니터링 인프라의 학습·운영 비용 대비, 팀 전원이 이미 사용 중인 Slack으로 500 에러를 즉시 공유하는 것이 감지 속도와 대응 속도 모두에서 효과적이었습니다.",
+  c2_p3_decision: "정산 서버를 서비스 서버와 분리한 이유는 Spring Batch의 대량 데이터 처리가 서비스 응답 시간에 영향을 주었기 때문입니다. 또한 정산 데이터는 접근 권한이 제한되어야 하므로, 회계팀만 접근 가능한 별도 관리 서버로 분리하여 보안과 성능을 동시에 확보했습니다.",
+  c3_p1_decision: "Elasticsearch 도입도 검토했으나, 데이터 규모가 크지 않아 별도 검색 엔진의 운영 비용이 정당화되지 않았습니다. XML 메타데이터를 PostgreSQL로 정규화하면 검색 성능과 데이터 정합성을 동시에 해결할 수 있어, 인프라 복잡도를 추가하지 않는 방향을 선택했습니다.",
+  career_bridge_1: "혼자가 아닌 팀으로 만드는 개발을 경험하고 싶었습니다.",
+  career_bridge_2: "납품하고 떠나는 것이 아닌, 사용자와 함께 성장하는 서비스를 만들고 싶었습니다.",
+  career_bridge_3: "쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.",
 
   // Print button
   print_btn: "PDF 다운로드",
@@ -402,8 +418,9 @@ window.i18nData.ko = {
 
   // TeamplBack leadership
   c1_leadership_title: "팀 리더십",
+  c1_leadership_intro: "기술적 성과를 넘어, 팀이 자율적으로 성장할 수 있는 문화를 만드는 데 투자했습니다.",
   c1_leadership_mentoring_label: "멘토링",
-  c1_leadership_mentoring: "1:1 정기 면담을 통한 성장 지원. 코드리뷰에서 의견을 내지 않던 주니어가 설계 제안을 주도하는 수준으로 성장",
+  c1_leadership_mentoring: "1:1 정기 면담을 통한 성장 지원. 코드리뷰에서 의견을 내지 않던 주니어가 3개월 후 API 설계 시 직접 인터페이스 분리를 제안하고, 팀 내 코드리뷰 문화를 주도하는 수준으로 성장",
   c1_leadership_hiring_label: "채용",
   c1_leadership_hiring: "백엔드 주니어 채용 과정에 면접관으로 참여. 기술 기본기와 성장 가능성을 평가 기준으로 설정하고 채용 진행",
   c1_leadership_process_label: "개발 문화",

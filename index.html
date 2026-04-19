@@ -45,10 +45,6 @@
     "url": "https://mydoor3520.github.io",
     "email": "mydoor3520@gmail.com",
     "knowsAbout": ["Backend Architecture", "DevOps", "Cloud Infrastructure", "AI/LLM Integration", "Java", "Spring Boot", "Python", "FastAPI"],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "팀플백"
-    },
     "alumniOf": [
       { "@type": "Organization", "name": "팀플백" },
       { "@type": "Organization", "name": "프라임에듀넷" },
@@ -68,9 +64,9 @@
       <ul class="nav__links">
         <li><a href="#about" class="nav-link" data-i18n="nav_about">소개</a></li>
         <li><a href="#career" class="nav-link" data-i18n="nav_career">경력</a></li>
-        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a></li>
-        <li><a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a></li>
         <li><a href="#journey" class="nav-link" data-i18n="nav_journey">여정</a></li>
+        <li><a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a></li>
       </ul>
       <button class="nav__lang" data-lang-toggle type="button" aria-label="Toggle language">
         <span class="lang-ko active">KO</span> / <span class="lang-en">EN</span>
@@ -87,9 +83,9 @@
   <div class="nav__mobile nav-menu">
     <a href="#about" class="nav-link" data-i18n="nav_about">소개</a>
     <a href="#career" class="nav-link" data-i18n="nav_career">경력</a>
-    <a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a>
-    <a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a>
     <a href="#journey" class="nav-link" data-i18n="nav_journey">여정</a>
+    <a href="#side-projects" class="nav-link" data-i18n="nav_side_projects">사이드 프로젝트</a>
+    <a href="#skills" class="nav-link" data-i18n="nav_skills">기술</a>
   </div>
 
   <main>
@@ -116,8 +112,8 @@
           <div class="metric-card__label" data-i18n="hero_metric1_label">년 경력</div>
         </div>
         <div class="metric-card">
-          <div class="metric-card__value" data-i18n="hero_metric2_value">70K</div>
-          <div class="metric-card__label" data-i18n="hero_metric2_label">동시접속 아키텍처</div>
+          <div class="metric-card__value" data-i18n="hero_metric2_value">9</div>
+          <div class="metric-card__label" data-i18n="hero_metric2_label">서버 고가용성 아키텍처</div>
         </div>
         <div class="metric-card">
           <div class="metric-card__value" data-i18n="hero_metric3_value">14h</div>
@@ -200,32 +196,148 @@
                 </div>
               </div>
             <div class="arch-diagram">
-              <div class="arch-diagram__title" data-i18n="arch_title">Server Architecture</div>
-              <div class="arch-row">
-                <div class="arch-node arch-node--accent" data-i18n="arch_ext_lb">External LB</div>
-              </div>
-              <div class="arch-arrow">|</div>
-              <div class="arch-row">
-                <div class="arch-node arch-node--accent" data-i18n="arch_be_lb">Backend LB</div>
-                <div class="arch-node arch-node--accent" data-i18n="arch_fe_lb">Frontend LB</div>
-              </div>
-              <div class="arch-arrow">|</div>
-              <div class="arch-row">
-                <div class="arch-node" data-i18n="arch_api1">API Server #1</div>
-                <div class="arch-node" data-i18n="arch_api2">API Server #2</div>
-                <div class="arch-node" data-i18n="arch_fe1">Frontend #1</div>
-                <div class="arch-node" data-i18n="arch_fe2">Frontend #2</div>
-              </div>
-              <div class="arch-arrow">|</div>
-              <div class="arch-row">
-                <div class="arch-node" data-i18n="arch_redis">Redis</div>
-                <div class="arch-node" data-i18n="arch_db_master">DB Master</div>
-                <div class="arch-node" data-i18n="arch_db_slave">DB Slave</div>
-              </div>
-              <div class="arch-row" style="margin-top: 0.75rem;">
-                <div class="arch-node" data-i18n="arch_pdf">PDF Server</div>
-                <div class="arch-node" data-i18n="arch_batch">Batch Server</div>
-              </div>
+              <div class="arch-diagram__title" data-i18n="arch_title">서버 아키텍처 구성</div>
+              <svg class="arch-svg" viewBox="0 0 900 720" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#04beb8" stroke-width="1.2"/></marker>
+                  <marker id="arrow-gray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#94a3b8" stroke-width="1.2"/></marker>
+                </defs>
+
+                <!-- ============== PUBLIC ZONE ============== -->
+                <rect x="10" y="10" width="880" height="100" rx="8" fill="rgba(4,190,184,0.04)" stroke="#04beb8" stroke-width="1.5" stroke-dasharray="6,3"/>
+                <text x="24" y="30" font-family="'JetBrains Mono',monospace" font-size="10" font-weight="600" fill="#04beb8" letter-spacing="0.08em" data-i18n="arch_zone_public">PUBLIC</text>
+
+                <!-- External LB (left side - external traffic) -->
+                <rect x="120" y="44" width="140" height="40" rx="6" fill="#f8f9fa" stroke="#04beb8" stroke-width="1.5"/>
+                <text x="190" y="69" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#04beb8" data-i18n="arch_ext_lb">External LB</text>
+
+                <!-- Bastion (right side - deployment) -->
+                <rect x="640" y="40" width="120" height="40" rx="6" fill="rgba(230,126,34,0.06)" stroke="#e67e22" stroke-width="1.5"/>
+                <text x="700" y="65" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#e67e22" data-i18n="arch_bastion">Bastion</text>
+                <text x="700" y="92" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#718096" data-i18n="arch_bastion_runner">GitHub Runner</text>
+
+                <!-- Bastion <-> GitHub -->
+                <line x1="760" y1="60" x2="830" y2="60" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2"/>
+                <text x="838" y="64" font-family="'JetBrains Mono',monospace" font-size="9" fill="#e67e22">GitHub</text>
+
+                <!-- ============== PRIVATE ZONE ============== -->
+                <rect x="10" y="130" width="880" height="580" rx="8" fill="rgba(0,0,0,0.01)" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,3"/>
+                <text x="24" y="150" font-family="'JetBrains Mono',monospace" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.08em" data-i18n="arch_zone_private">PRIVATE</text>
+
+                <!-- ===== LEFT COLUMN: External Traffic Path ===== -->
+                <text x="220" y="175" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#94a3b8" letter-spacing="0.05em" data-i18n="arch_label_external_path">EXTERNAL TRAFFIC</text>
+
+                <!-- External LB -> T-split to Backend LB / Frontend LB -->
+                <line x1="190" y1="84" x2="190" y2="190" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="100" y1="190" x2="340" y2="190" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="100" y1="190" x2="100" y2="210" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+                <line x1="340" y1="190" x2="340" y2="210" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+                <!-- Backend LB -->
+                <rect x="40" y="213" width="120" height="36" rx="6" fill="#f8f9fa" stroke="#04beb8" stroke-width="1.5"/>
+                <text x="100" y="237" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#04beb8" data-i18n="arch_be_lb">Backend LB</text>
+
+                <!-- Frontend LB -->
+                <rect x="280" y="213" width="120" height="36" rx="6" fill="#f8f9fa" stroke="#04beb8" stroke-width="1.5"/>
+                <text x="340" y="237" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#04beb8" data-i18n="arch_fe_lb">Frontend LB</text>
+
+                <!-- Backend LB -> API #1, #2 -->
+                <line x1="100" y1="249" x2="100" y2="270" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="60" y1="270" x2="140" y2="270" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="60" y1="270" x2="60" y2="290" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+                <line x1="140" y1="270" x2="140" y2="290" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+                <!-- Frontend LB -> Frontend #1, #2 -->
+                <line x1="340" y1="249" x2="340" y2="270" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="300" y1="270" x2="380" y2="270" stroke="#04beb8" stroke-width="1.2"/>
+                <line x1="300" y1="270" x2="300" y2="290" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+                <line x1="380" y1="270" x2="380" y2="290" stroke="#04beb8" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+                <!-- API Server #1 -->
+                <rect x="10" y="293" width="100" height="32" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="60" y="314" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_api1">API 서버 #1</text>
+                <!-- API Server #2 -->
+                <rect x="90" y="293" width="100" height="32" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="140" y="314" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_api2">API 서버 #2</text>
+                <!-- Frontend #1 -->
+                <rect x="250" y="293" width="100" height="32" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="300" y="314" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_fe1">프론트 #1</text>
+                <!-- Frontend #2 -->
+                <rect x="330" y="293" width="100" height="32" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="380" y="314" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_fe2">프론트 #2</text>
+
+                <!-- Vertical separator between left and right columns -->
+                <line x1="465" y1="170" x2="465" y2="600" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,4"/>
+
+                <!-- ===== RIGHT COLUMN: Internal Communication ===== -->
+                <text x="680" y="175" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#94a3b8" letter-spacing="0.05em" data-i18n="arch_label_internal_path">INTERNAL COMMUNICATION</text>
+
+                <!-- Bastion -> Private zone (SSH access to all private servers) -->
+                <line x1="700" y1="80" x2="700" y2="155" stroke="#e67e22" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+                <text x="710" y="120" font-family="'JetBrains Mono',monospace" font-size="9" fill="#e67e22">SSH (모든 서버)</text>
+
+                <!-- Internal API LB -->
+                <rect x="610" y="200" width="180" height="40" rx="6" fill="#f8f9fa" stroke="#04beb8" stroke-width="1.5"/>
+                <text x="700" y="225" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#04beb8" data-i18n="arch_internal_lb">Internal API LB</text>
+
+                <!-- Internal LB -> API servers (round-trip lines back to left column) -->
+                <line x1="610" y1="220" x2="540" y2="220" stroke="#04beb8" stroke-width="1.2" stroke-dasharray="3,3"/>
+                <text x="500" y="215" font-family="'JetBrains Mono',monospace" font-size="8" fill="#04beb8">→ API 서버</text>
+
+                <!-- Redis -->
+                <rect x="510" y="290" width="100" height="36" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="560" y="313" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_redis">Redis</text>
+
+                <!-- PDF Server -->
+                <rect x="650" y="290" width="100" height="36" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="700" y="313" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_pdf">PDF 서버</text>
+
+                <!-- Batch Server (right-most, only DB connection) -->
+                <rect x="790" y="290" width="100" height="36" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="840" y="313" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#4a5568" data-i18n="arch_batch">배치 서버</text>
+
+                <!-- Redis -> Internal API LB (calls API) -->
+                <line x1="560" y1="290" x2="560" y2="270" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,2"/>
+                <line x1="560" y1="270" x2="660" y2="270" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,2"/>
+                <line x1="660" y1="270" x2="660" y2="242" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+
+                <!-- PDF -> Internal API LB (calls API) -->
+                <line x1="720" y1="290" x2="720" y2="270" stroke="#94a3b8" stroke-width="1"/>
+                <line x1="720" y1="270" x2="740" y2="270" stroke="#94a3b8" stroke-width="1"/>
+                <line x1="740" y1="270" x2="740" y2="242" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+
+                <!-- ===== BOTTOM: DB Section (full width) ===== -->
+                <line x1="40" y1="430" x2="860" y2="430" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="450" y="450" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#94a3b8" letter-spacing="0.05em" data-i18n="arch_label_data_layer">DATA LAYER</text>
+
+                <!-- API #1, #2 -> DB merge bus at y=475 -->
+                <line x1="60" y1="325" x2="60" y2="475" stroke="#94a3b8" stroke-width="1"/>
+                <line x1="140" y1="325" x2="140" y2="475" stroke="#94a3b8" stroke-width="1"/>
+
+                <!-- PDF -> DB merge bus -->
+                <line x1="680" y1="326" x2="680" y2="475" stroke="#94a3b8" stroke-width="1"/>
+
+                <!-- Batch -> DB merge bus -->
+                <line x1="840" y1="326" x2="840" y2="475" stroke="#94a3b8" stroke-width="1"/>
+
+                <!-- Horizontal merge bus connecting all 4 sources -->
+                <line x1="60" y1="475" x2="840" y2="475" stroke="#94a3b8" stroke-width="1"/>
+
+                <!-- Final arrow into DB box from middle -->
+                <line x1="450" y1="475" x2="450" y2="500" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow-gray)"/>
+
+                <!-- DB Group box -->
+                <rect x="290" y="505" width="320" height="55" rx="6" fill="rgba(0,0,0,0.02)" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,2"/>
+                <!-- DB Master -->
+                <rect x="300" y="514" width="140" height="38" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="370" y="537" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#4a5568" data-i18n="arch_db_master">DB Master</text>
+                <!-- DB Slave -->
+                <rect x="450" y="514" width="150" height="38" rx="5" fill="#f1f3f5" stroke="#e2e8f0" stroke-width="1"/>
+                <text x="525" y="537" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#4a5568" data-i18n="arch_db_slave">DB Slave (백업)</text>
+
+                <!-- Access note -->
+                <text x="450" y="595" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#94a3b8" data-i18n="arch_access_note">외부: External LB → Backend/Frontend LB | 내부: Redis/PDF → Internal API LB → API | DB: API/PDF/Batch 직접 접근</text>
+              </svg>
             </div>
             <div class="decision-block">
               <div class="decision-block__title" data-i18n="decision_title">Technical Decision</div>
@@ -240,6 +352,7 @@
             <!-- Leadership Section -->
             <div class="leadership-section">
               <h4 class="leadership-section__title" data-i18n="c1_leadership_title">팀 리더십</h4>
+              <p class="leadership-section__intro" data-i18n="c1_leadership_intro">기술적 성과를 넘어, 팀이 자율적으로 성장할 수 있는 문화를 만드는 데 투자했습니다.</p>
               <div class="leadership-item">
                 <span class="leadership-label" data-i18n="c1_leadership_mentoring_label">멘토링</span>
                 <span class="leadership-content" data-i18n="c1_leadership_mentoring">1:1 정기 면담을 통한 성장 지원. 코드리뷰에서 의견을 내지 않던 주니어가 설계 제안을 주도하는 수준으로 성장</span>
@@ -292,6 +405,10 @@
               <div class="cicd-arrow">&rarr;</div>
               <div class="cicd-step" data-i18n="cicd_rollback">Auto Rollback</div>
             </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">기술적 의사결정</div>
+              <p class="decision-block__content" data-i18n="c1_p2_decision">카나리 배포 대신 블루/그린을 선택한 이유는 팀 규모(6명)와 서비스 특성 때문이었습니다. 카나리는 트래픽 분배와 모니터링 인프라가 필요하지만, 교육 서비스 특성상 부분 배포보다 전체 전환이 적합했고, NCP CLI만으로 구현 가능한 블루/그린이 팀의 운영 역량에 맞는 선택이었습니다.</p>
+            </div>
             </div>
 
             <!-- Project 1-3: Slack 모니터링 -->
@@ -311,6 +428,10 @@
                   <span class="star-content" data-i18n="c1_p3_r">LLM 서비스 장애를 CS 인입 전 선제 감지, 즉시 다른 모델로 교체 배포</span>
                 </div>
               </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">기술적 의사결정</div>
+              <p class="decision-block__content" data-i18n="c1_p3_decision">Datadog, Grafana 같은 전문 모니터링 도구 대신 Slack 웹훅을 선택했습니다. 6인 팀에서 별도 모니터링 인프라의 학습·운영 비용 대비, 팀 전원이 이미 사용 중인 Slack으로 500 에러를 즉시 공유하는 것이 감지 속도와 대응 속도 모두에서 효과적이었습니다.</p>
+            </div>
             </div>
 
             <!-- Project 1-4: 클라우드 위기 대응 -->
@@ -342,6 +463,11 @@
           </div>
         </div>
 
+        <div class="career-bridge">
+          <div class="career-bridge__line"></div>
+          <p class="career-bridge__text" data-i18n="career_bridge_3">쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.</p>
+        </div>
+
         <!-- ---- Company 2: 프라임에듀넷 ---- -->
         <div class="career__company" data-company="primeedunet">
           <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0" data-default-open>
@@ -359,7 +485,7 @@
             </div>
 
             <!-- Project 2-1: 환불 시스템 -->
-            <div class="project">
+            <div class="project project--highlight">
               <h4 class="project__title" data-i18n="c2_p1_title">환불 시스템 구축</h4>
               <div class="project__star">
                 <div class="star-item">
@@ -421,6 +547,10 @@
                   <span class="star-content" data-i18n="c2_p3_r">수동 정산 프로세스를 완전 자동화하여 회계팀 업무 효율화</span>
                 </div>
               </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">기술적 의사결정</div>
+              <p class="decision-block__content" data-i18n="c2_p3_decision">정산 서버를 서비스 서버와 분리한 이유는 Spring Batch의 대량 데이터 처리가 서비스 응답 시간에 영향을 주었기 때문입니다. 또한 정산 데이터는 접근 권한이 제한되어야 하므로, 회계팀만 접근 가능한 별도 관리 서버로 분리하여 보안과 성능을 동시에 확보했습니다.</p>
+            </div>
             </div>
 
             <!-- Project 2-4: 상품 버전관리 -->
@@ -470,6 +600,11 @@
           </div>
         </div>
 
+        <div class="career-bridge">
+          <div class="career-bridge__line"></div>
+          <p class="career-bridge__text" data-i18n="career_bridge_2">납품하고 떠나는 것이 아닌, 사용자와 함께 성장하는 서비스를 만들고 싶었습니다.</p>
+        </div>
+
         <!-- ---- Company 3: 버블콘 ---- -->
         <div class="career__company" data-company="bubblecon">
           <div class="company-header accordion-header" aria-expanded="true" role="button" tabindex="0" data-default-open>
@@ -503,10 +638,19 @@
                   <span class="star-content" data-i18n="c3_p1_r">검색 시간 10초 - 1초 이내 (10배 개선)</span>
                 </div>
               </div>
+            <div class="decision-block">
+              <div class="decision-block__title" data-i18n="decision_title">기술적 의사결정</div>
+              <p class="decision-block__content" data-i18n="c3_p1_decision">Elasticsearch 도입도 검토했으나, 데이터 규모가 크지 않아 별도 검색 엔진의 운영 비용이 정당화되지 않았습니다. XML 메타데이터를 PostgreSQL로 정규화하면 검색 성능과 데이터 정합성을 동시에 해결할 수 있어, 인프라 복잡도를 추가하지 않는 방향을 선택했습니다.</p>
+            </div>
             </div>
 
             <p class="project-summary" data-i18n="c3_other_summary">이 외: POSCO 교육 시스템 현장 지원 4주</p>
           </div>
+        </div>
+
+        <div class="career-bridge">
+          <div class="career-bridge__line"></div>
+          <p class="career-bridge__text" data-i18n="career_bridge_1">혼자가 아닌 팀으로 만드는 개발을 경험하고 싶었습니다.</p>
         </div>
 
         <!-- ---- Company 4: 브레이너 ---- -->
@@ -685,82 +829,10 @@
             <li data-i18n="sp1_feat3">프롬프트 최적화를 통한 응답 품질 안정화</li>
           </ul>
           <blockquote class="side-project__insight" data-i18n="sp1_insight">"AI 서비스일수록 좋은 기획과 테스트가 중요"</blockquote>
-          <div class="sp-tabs" data-sp="sp1">
-  <div class="sp-tabs__nav" role="tablist">
-    <button class="sp-tab-btn sp-tab-btn--active" data-tab="specs" data-i18n="sp_tab_specs" role="tab" aria-selected="true" aria-controls="sp1-panel-specs" id="sp1-tab-specs" tabindex="0">기능 명세</button>
-    <button class="sp-tab-btn" data-tab="arch" data-i18n="sp_tab_arch" role="tab" aria-selected="false" aria-controls="sp1-panel-arch" id="sp1-tab-arch" tabindex="-1">아키텍처</button>
-    <button class="sp-tab-btn" data-tab="screens" data-i18n="sp_tab_screens" role="tab" aria-selected="false" aria-controls="sp1-panel-screens" id="sp1-tab-screens" tabindex="-1">스크린샷</button>
-  </div>
-  <div class="sp-tabs__content">
-    <div class="sp-tab-panel sp-tab-panel--active" data-tab="specs" role="tabpanel" id="sp1-panel-specs" aria-labelledby="sp1-tab-specs">
-      <ul class="sp-feature-list">
-        <li><strong data-i18n="sp1_spec1_title">AI 모의 면접</strong><span data-i18n="sp1_spec1_desc">Claude API 기반 SSE 스트리밍 실시간 면접. 난이도(주니어/미드/시니어), 유형(기술/행동/혼합), 기업별 스타일(네이버/쿠팡/스타트업) 지원</span></li>
-        <li><strong data-i18n="sp1_spec2_title">프로필 & 온보딩</strong><span data-i18n="sp1_spec2_desc">4단계 온보딩 위저드. 스킬 숙련도(1~5), 경력 사항, 자격증, 목표 포지션 관리</span></li>
-        <li><strong data-i18n="sp1_spec3_title">답변 평가 & 피드백</strong><span data-i18n="sp1_spec3_desc">AI 기반 1~10점 채점, 강점/약점 분석, 모범 답변 생성, 꼬리질문 지원</span></li>
-        <li><strong data-i18n="sp1_spec4_title">대시보드 & 분석</strong><span data-i18n="sp1_spec4_desc">세션 통계, 점수 추이 차트(Recharts), 주제별 성과 분석, 스킬갭 분석</span></li>
-        <li><strong data-i18n="sp1_spec5_title">이력서 코칭</strong><span data-i18n="sp1_spec5_desc">AI 이력서 편집(일반/JD 맞춤), PDF/OCR 파싱, DOCX 생성(3가지 템플릿), JD 키워드 매칭</span></li>
-        <li><strong data-i18n="sp1_spec6_title">채용 포지션 관리</strong><span data-i18n="sp1_spec6_desc">목표 포지션 큐레이션, AI JD 파서(URL/텍스트), 포지션별 예상 면접 질문 자동 생성</span></li>
-        <li><strong data-i18n="sp1_spec7_title">구독/결제 시스템</strong><span data-i18n="sp1_spec7_desc">Stripe 연동 크레딧 기반 모델. 프리/프로 티어, 월간/연간 결제 주기</span></li>
-      </ul>
-    </div>
-    <div class="sp-tab-panel" data-tab="arch" role="tabpanel" id="sp1-panel-arch" aria-labelledby="sp1-tab-arch" hidden>
-      <div class="sp-arch-diagram">
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp1_arch_client">Client</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">Next.js 16 + React 19</div>
-            <div class="sp-arch-node">Tailwind CSS</div>
-            <div class="sp-arch-node">Zustand</div>
+          <div class="sp-decision">
+            <span class="sp-decision__label" data-i18n="sp_decision_label">Key Decision</span>
+            <p data-i18n="sp1_arch_decision"><strong>RabbitMQ vs Redis Queue</strong> — 이력서 생성/OCR 등 실패 시 재처리가 필요한 작업이 있어, 메시지 보장(acknowledgement)이 있는 RabbitMQ를 선택. Redis Queue는 단순하지만 메시지 유실 가능성이 trade-off.</p>
           </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp1_arch_middleware">Middleware</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">JWT + CSRF</div>
-            <div class="sp-arch-node">Rate Limiting</div>
-          </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp1_arch_api">API Layer</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">REST + SSE Streaming</div>
-            <div class="sp-arch-node" data-i18n="sp1_arch_knowledge">Interview Knowledge (37+ topics)</div>
-          </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp1_arch_data">Data Layer</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">PostgreSQL (Prisma)</div>
-            <div class="sp-arch-node">Redis</div>
-            <div class="sp-arch-node">RabbitMQ</div>
-          </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp1_arch_external">External Services</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">Claude AI</div>
-            <div class="sp-arch-node">Stripe</div>
-            <div class="sp-arch-node">Resend Email</div>
-          </div>
-        </div>
-      </div>
-      <p class="sp-arch-rationale" data-i18n="sp1_arch_rationale">SSE 스트리밍으로 면접 질문을 실시간 전달하기 위해 Next.js API Routes를 선택했고, 이력서 생성 같은 무거운 작업은 RabbitMQ 비동기 워커로 분리하여 API 응답 속도를 보호했습니다. Redis는 사용자별 rate limiting과 세션 캐싱에, PostgreSQL은 25개 이상의 도메인 모델을 안정적으로 관리하기 위해 선택했습니다.</p>
-      <div class="sp-arch-decision">
-        <span class="sp-arch-decision__label" data-i18n="sp_decision_label">Key Decision</span>
-        <p data-i18n="sp1_arch_decision"><strong>RabbitMQ vs Redis Queue</strong> — 이력서 생성/OCR 등 실패 시 재처리가 필요한 작업이 있어, 메시지 보장(acknowledgement)이 있는 RabbitMQ를 선택. Redis Queue는 단순하지만 메시지 유실 가능성이 trade-off.</p>
-      </div>
-    </div>
-    <div class="sp-tab-panel" data-tab="screens" role="tabpanel" id="sp1-panel-screens" aria-labelledby="sp1-tab-screens" hidden>
-      <div class="sp-placeholder">
-        <p data-i18n="sp1_screens_placeholder">스크린샷 준비 중입니다.</p>
-      </div>
-    </div>
-  </div>
-</div>
         </div>
 
         <div class="side-project">
@@ -775,105 +847,31 @@
             <li data-i18n="sp2_feat3">AI 코딩 시 테스트 방법론에 대한 고민과 실험</li>
           </ul>
           <blockquote class="side-project__insight" data-i18n="sp2_insight">"비약적 생산성 향상과 동시에 코드 오너십에 대한 고민"</blockquote>
-          <div class="sp-tabs" data-sp="sp2">
-  <div class="sp-tabs__nav" role="tablist">
-    <button class="sp-tab-btn sp-tab-btn--active" data-tab="specs" data-i18n="sp_tab_specs" role="tab" aria-selected="true" aria-controls="sp2-panel-specs" id="sp2-tab-specs" tabindex="0">기능 명세</button>
-    <button class="sp-tab-btn" data-tab="arch" data-i18n="sp_tab_arch" role="tab" aria-selected="false" aria-controls="sp2-panel-arch" id="sp2-tab-arch" tabindex="-1">아키텍처</button>
-    <button class="sp-tab-btn" data-tab="screens" data-i18n="sp_tab_screens" role="tab" aria-selected="false" aria-controls="sp2-panel-screens" id="sp2-tab-screens" tabindex="-1">스크린샷</button>
-  </div>
-  <div class="sp-tabs__content">
-    <div class="sp-tab-panel sp-tab-panel--active" data-tab="specs" role="tabpanel" id="sp2-panel-specs" aria-labelledby="sp2-tab-specs">
-      <ul class="sp-feature-list">
-        <li><strong data-i18n="sp2_spec1_title">자동 예매 엔진</strong><span data-i18n="sp2_spec1_desc">SRT 좌석 실시간 모니터링 + 자동 예매 시도. 최대 6시간, 3~5초 간격 재시도</span></li>
-        <li><strong data-i18n="sp2_spec2_title">유연한 예매 설정</strong><span data-i18n="sp2_spec2_desc">출발/도착역 36개, 날짜, 시간대(6:00~23:00), 승객 유형, 좌석 등급 선택</span></li>
-        <li><strong data-i18n="sp2_spec3_title">백그라운드 실행</strong><span data-i18n="sp2_spec3_desc">Flutter Foreground Service로 앱 백그라운드에서도 지속 동작 + 실시간 진행 알림</span></li>
-        <li><strong data-i18n="sp2_spec4_title">세션 관리</strong><span data-i18n="sp2_spec4_desc">25분마다 SRT 서버 세션 자동 갱신. IP 차단/로그인 에러 자동 복구</span></li>
-        <li><strong data-i18n="sp2_spec5_title">예매 이력 관리</strong><span data-i18n="sp2_spec5_desc">SQLite 로컬 DB에 모든 예매 시도 기록 저장. 90일 자동 정리</span></li>
-        <li><strong data-i18n="sp2_spec6_title">실시간 상태 업데이트</strong><span data-i18n="sp2_spec6_desc">Service↔App 양방향 콜백으로 시도 횟수, 경과시간, 성공 정보 실시간 표시</span></li>
-        <li><strong data-i18n="sp2_spec7_title">보안 자격 관리</strong><span data-i18n="sp2_spec7_desc">Flutter Secure Storage로 SRT 계정 정보 암호화 저장</span></li>
-      </ul>
-    </div>
-    <div class="sp-tab-panel" data-tab="arch" role="tabpanel" id="sp2-panel-arch" aria-labelledby="sp2-tab-arch" hidden>
-      <div class="sp-arch-diagram">
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp2_arch_ui">UI Layer</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">Flutter / Material 3</div>
-            <div class="sp-arch-node">ReserveScreen</div>
-            <div class="sp-arch-node">HomeScreen</div>
-            <div class="sp-arch-node">HistoryScreen</div>
+          <div class="sp-decision">
+            <span class="sp-decision__label" data-i18n="sp_decision_label">Key Decision</span>
+            <p data-i18n="sp2_arch_decision"><strong>Riverpod vs Provider/BLoC</strong> — Provider의 보일러플레이트 과다와 BLoC의 과도한 구조를 피하고, 컴파일 타임 안전성과 간결한 상태 관리를 위해 Riverpod을 선택. 개인 프로젝트에서의 실험적 도입.</p>
           </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp2_arch_state">State Management</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">Riverpod</div>
-            <div class="sp-arch-node">ReservationProvider</div>
+          <div class="sp-screenshots">
+            <div class="sp-screenshots__grid">
+              <div class="sp-screenshots__item">
+                <img src="assets/srt-screens/home.png" alt="SRT 홈 화면" loading="lazy">
+                <span data-i18n="sp2_screen1_label">홈</span>
+              </div>
+              <div class="sp-screenshots__item">
+                <img src="assets/srt-screens/reserve.png" alt="SRT 예매 설정 화면" loading="lazy">
+                <span data-i18n="sp2_screen2_label">예매 설정</span>
+              </div>
+              <div class="sp-screenshots__item">
+                <img src="assets/srt-screens/history.png" alt="예약 내역 화면" loading="lazy">
+                <span data-i18n="sp2_screen3_label">예약 내역</span>
+              </div>
+              <div class="sp-screenshots__item">
+                <img src="assets/srt-screens/settings.png" alt="설정 화면" loading="lazy">
+                <span data-i18n="sp2_screen4_label">설정</span>
+              </div>
+            </div>
+            <p class="sp-screenshots__note" data-i18n="sp2_gallery_note">Figma 프로토타입 기반 주요 화면 캡쳐</p>
           </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp2_arch_service">Service Layer</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node" data-i18n="sp2_arch_engine">ReservationEngine (retry loop)</div>
-            <div class="sp-arch-node">ForegroundTask</div>
-            <div class="sp-arch-node">NotificationService</div>
-          </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp2_arch_data">Data Layer</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">SrtApiClient (Dio)</div>
-            <div class="sp-arch-node">NetFunnel (anti-bot)</div>
-            <div class="sp-arch-node">ResponseParser</div>
-          </div>
-        </div>
-        <div class="sp-arch-arrow">↓</div>
-        <div class="sp-arch-layer">
-          <div class="sp-arch-label" data-i18n="sp2_arch_external">External / Storage</div>
-          <div class="sp-arch-nodes">
-            <div class="sp-arch-node">SRT Server (srail.or.kr)</div>
-            <div class="sp-arch-node">SQLite DB</div>
-            <div class="sp-arch-node">Secure Storage</div>
-          </div>
-        </div>
-      </div>
-      <p class="sp-arch-rationale" data-i18n="sp2_arch_rationale">Foreground Service로 백그라운드 예매를 지속하면서도 Riverpod의 양방향 콜백으로 UI를 실시간 갱신하는 구조를 설계했습니다. SRT 서버의 NetFunnel(anti-bot) 우회와 25분 세션 만료를 Data Layer에서 투명하게 처리하여, Service Layer는 순수한 예매 재시도 로직에만 집중할 수 있도록 관심사를 분리했습니다.</p>
-      <div class="sp-arch-decision">
-        <span class="sp-arch-decision__label" data-i18n="sp_decision_label">Key Decision</span>
-        <p data-i18n="sp2_arch_decision"><strong>Riverpod vs Provider/BLoC</strong> — Provider의 보일러플레이트 과다와 BLoC의 과도한 구조를 피하고, 컴파일 타임 안전성과 간결한 상태 관리를 위해 Riverpod을 선택. 개인 프로젝트에서의 실험적 도입.</p>
-      </div>
-    </div>
-    <div class="sp-tab-panel" data-tab="screens" role="tabpanel" id="sp2-panel-screens" aria-labelledby="sp2-tab-screens" hidden>
-      <div class="sp-screenshot-gallery">
-  <div class="sp-gallery__main">
-    <img class="sp-gallery__image" src="assets/srt-screens/home.png" alt="SRT 홈 화면" data-i18n-alt="sp2_screen1_alt" loading="lazy">
-  </div>
-  <div class="sp-gallery__thumbs">
-    <button class="sp-gallery__thumb sp-gallery__thumb--active" data-src="assets/srt-screens/home.png" data-alt-key="sp2_screen1_alt">
-      <img src="assets/srt-screens/home.png" alt="" loading="lazy">
-      <span data-i18n="sp2_screen1_label">홈</span>
-    </button>
-    <button class="sp-gallery__thumb" data-src="assets/srt-screens/reserve.png" data-alt-key="sp2_screen2_alt">
-      <img src="assets/srt-screens/reserve.png" alt="" loading="lazy">
-      <span data-i18n="sp2_screen2_label">예매 설정</span>
-    </button>
-    <button class="sp-gallery__thumb" data-src="assets/srt-screens/history.png" data-alt-key="sp2_screen3_alt">
-      <img src="assets/srt-screens/history.png" alt="" loading="lazy">
-      <span data-i18n="sp2_screen3_label">예약 내역</span>
-    </button>
-    <button class="sp-gallery__thumb" data-src="assets/srt-screens/settings.png" data-alt-key="sp2_screen4_alt">
-      <img src="assets/srt-screens/settings.png" alt="" loading="lazy">
-      <span data-i18n="sp2_screen4_label">설정</span>
-    </button>
-  </div>
-  <p class="sp-gallery__note" data-i18n="sp2_gallery_note">Figma 프로토타입 기반 주요 화면 캡쳐</p>
-</div>
-    </div>
-  </div>
-</div>
         </div>
 
       </div>
@@ -885,54 +883,35 @@
     <section id="journey" class="journey-section reveal" aria-labelledby="journey-heading">
       <div class="container">
         <h2 id="journey-heading" data-i18n="journey_heading">여정</h2>
-
-        <div class="journey__timeline">
-          <div class="timeline-item">
-            <div class="timeline-year" data-i18n="j1_year">2019 - 2020</div>
-            <div class="timeline-company" data-i18n="j1_company">브레이너</div>
-            <p class="timeline-desc" data-i18n="j1_desc">첫 직장. 20년차 개발팀장과 둘이서 보안관제 시스템을 개발하고, 현장에 직접 나가 납품했습니다. 리눅스, Docker를 처음 다루기 시작했고, JasperReports 기반 보고서 자동화와 보안관제-이슈관리 연동 워크플로우를 구현했습니다.</p>
-            <p class="timeline-legacy" data-i18n="j1_legacy">다수의 기관에 납품된 보안관제 시스템</p>
-          </div>
-          <div class="timeline-bridge">
-            <div class="timeline-bridge__line"></div>
-            <p class="timeline-bridge__text" data-i18n="j1_transition">혼자가 아닌 팀으로 만드는 개발을 경험하고 싶었습니다.</p>
-            <div class="timeline-bridge__line"></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year" data-i18n="j2_year">2020 - 2022</div>
-            <div class="timeline-company" data-i18n="j2_company">버블콘</div>
-            <p class="timeline-desc" data-i18n="j2_desc">4인 개발팀에서 교육 콘텐츠 허브를 개발했습니다. XML 데이터를 PostgreSQL로 정규화하여 검색 성능을 10배 개선했고, 포스코 교육 시스템 오픈에 4주간 현장 상주하며 지원했습니다.</p>
-            <p class="timeline-legacy" data-i18n="j2_legacy">현재까지 운영 중인 포스코 사내 교육 시스템</p>
-          </div>
-          <div class="timeline-bridge">
-            <div class="timeline-bridge__line"></div>
-            <p class="timeline-bridge__text" data-i18n="j2_transition">납품하고 떠나는 것이 아닌, 사용자와 함께 성장하는 서비스를 만들고 싶었습니다.</p>
-            <div class="timeline-bridge__line"></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year" data-i18n="j3_year">2022 - 2024</div>
-            <div class="timeline-company" data-i18n="j3_company">프라임에듀넷</div>
-            <p class="timeline-desc" data-i18n="j3_desc">공무원 시험 인강 플랫폼에서 결제, 환불, 정산이라는 돈이 오가는 시스템을 처음부터 설계했습니다. 이니시스 PG 연동, Spring Batch 정산 자동화, 레거시 데이터 마이그레이션을 수행하며 복잡한 비즈니스 로직을 코드로 풀어내는 역량을 쌓았습니다.</p>
-            <p class="timeline-legacy" data-i18n="j3_legacy">서비스 축소 이후에도 변경 없이 운영 중인 결제/환불/정산 시스템</p>
-          </div>
-          <div class="timeline-bridge">
-            <div class="timeline-bridge__line"></div>
-            <p class="timeline-bridge__text" data-i18n="j3_transition">쌓아온 경험을 바탕으로, 이번에는 직접 팀을 구성하고 이끄는 도전을 하고 싶었습니다.</p>
-            <div class="timeline-bridge__line"></div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year" data-i18n="j4_year">2024 - 2026</div>
-            <div class="timeline-company" data-i18n="j4_company">팀플백</div>
-            <p class="timeline-desc" data-i18n="j4_desc">신생 개발팀에 합류하여 팀을 5명으로 구성하고 백엔드 리드 겸 DevOps를 담당했습니다. 서비스 '자작자작' 리뉴얼, 7만 CCU 아키텍처, CI/CD, 모니터링, 14시간 인프라 복구까지 -- 내 제품이라는 마음으로 백엔드부터 인프라까지 직접 책임졌습니다.</p>
-            <p class="timeline-legacy" data-i18n="j4_legacy">리뉴얼한 서비스 '자작자작', 9대 서버 인프라와 CI/CD 파이프라인, 모니터링/백업 체계</p>
-          </div>
-          <div class="timeline-bridge timeline-bridge--next">
-            <div class="timeline-bridge__line"></div>
-          </div>
-          <div class="timeline-item timeline-item--next">
-            <div class="timeline-year" data-i18n="j5_year">Next</div>
-            <div class="timeline-company" data-i18n="j5_company">다음 여정</div>
-            <p class="timeline-desc" data-i18n="j5_desc">7년간 네 번의 도전을 통해 제가 가장 잘하는 것과 가장 원하는 것을 알게 되었습니다. 새로운 기술에 두려움 없이 도전하는 팀에서, 신뢰를 기반으로 오래 함께 만들어가는 동료가 되고 싶습니다.</p>
+        <div class="journey__compact-timeline">
+          <a href="#career" class="compact-timeline__item" data-company="teampleback">
+            <span class="compact-timeline__year" data-i18n="j4_year">2024 - 2026</span>
+            <span class="compact-timeline__company" data-i18n="j4_company">팀플백</span>
+            <span class="compact-timeline__role">Backend Lead</span>
+          </a>
+          <div class="compact-timeline__connector"></div>
+          <a href="#career" class="compact-timeline__item" data-company="primeedunet">
+            <span class="compact-timeline__year" data-i18n="j3_year">2022 - 2024</span>
+            <span class="compact-timeline__company" data-i18n="j3_company">프라임에듀넷</span>
+            <span class="compact-timeline__role">Payment/Settlement</span>
+          </a>
+          <div class="compact-timeline__connector"></div>
+          <a href="#career" class="compact-timeline__item" data-company="bubblecon">
+            <span class="compact-timeline__year" data-i18n="j2_year">2020 - 2022</span>
+            <span class="compact-timeline__company" data-i18n="j2_company">버블콘</span>
+            <span class="compact-timeline__role">Education SI</span>
+          </a>
+          <div class="compact-timeline__connector"></div>
+          <a href="#career" class="compact-timeline__item" data-company="brainer">
+            <span class="compact-timeline__year" data-i18n="j1_year">2019 - 2020</span>
+            <span class="compact-timeline__company" data-i18n="j1_company">브레이너</span>
+            <span class="compact-timeline__role">Security Solutions</span>
+          </a>
+          <div class="compact-timeline__connector compact-timeline__connector--next"></div>
+          <div class="compact-timeline__item compact-timeline__item--next">
+            <span class="compact-timeline__year" data-i18n="j5_year">Next</span>
+            <span class="compact-timeline__company" data-i18n="j5_company">다음 여정</span>
+            <p class="compact-timeline__next-desc" data-i18n="j5_desc">7년간 네 번의 도전을 통해 제가 가장 잘하는 것과 가장 원하는 것을 알게 되었습니다. 새로운 기술에 두려움 없이 도전하는 팀에서, 신뢰를 기반으로 오래 함께 만들어가는 동료가 되고 싶습니다.</p>
           </div>
         </div>
       </div>

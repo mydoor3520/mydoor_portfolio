@@ -24,6 +24,7 @@
     tag_incident: "hero.tags[2]",
     tag_business: "hero.tags[3]",
     tag_ai: "hero.tags[4]",
+    c1_leadership_intro: "c1_leadership_intro",
 
     // Career
     career_heading: "career.sectionTitle",
@@ -205,6 +206,15 @@
     arch_db_slave: "arch_db_slave",
     arch_pdf: "arch_pdf",
     arch_batch: "arch_batch",
+    arch_zone_public: "arch_zone_public",
+    arch_zone_private: "arch_zone_private",
+    arch_bastion: "arch_bastion",
+    arch_bastion_runner: "arch_bastion_runner",
+    arch_access_note: "arch_access_note",
+    arch_internal_lb: "arch_internal_lb",
+    arch_label_external_path: "arch_label_external_path",
+    arch_label_internal_path: "arch_label_internal_path",
+    arch_label_data_layer: "arch_label_data_layer",
 
     // CI/CD flow
     cicd_build: "cicd_build",
@@ -228,6 +238,13 @@
     c1_p4_decision: "c1_p4_decision",
     c2_p1_decision: "c2_p1_decision",
     c1_redis_decision: "c1_redis_decision",
+    c1_p2_decision: "c1_p2_decision",
+    c1_p3_decision: "c1_p3_decision",
+    c2_p3_decision: "c2_p3_decision",
+    c3_p1_decision: "c3_p1_decision",
+    career_bridge_1: "career_bridge_1",
+    career_bridge_2: "career_bridge_2",
+    career_bridge_3: "career_bridge_3",
 
     // TeamplBack leadership
     c1_leadership_title: "c1_leadership_title",
