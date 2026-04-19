@@ -34,7 +34,7 @@ window.i18nData.ko = {
       stack: "Java, Spring Boot, NCP, NHN Cloud, GitHub Actions, Docker, Locust, Python, FastAPI, Slack, MySQL, Redis",
       projects: {
         loadTest: {
-          title: "7\uB9CC CCU \uBD80\uD558 \uD14C\uC2A4\uD2B8 \uBC0F \uACE0\uAC00\uC6A9\uC131 \uC544\uD0A4\uD14D\uCC98 \uD655\uBCF4",
+          title: "NHN→NCP 이관과 7만 CCU 부하 검증",
           situation: "\uAC15\uC6D0\uB3C4\uAD50\uC721\uCCAD\uC5D0 \uB0A9\uD488\uD558\uB294 \uC11C\uBC84\uB85C, \uAD00\uD560 \uCD08\uC911\uACE0 \uD559\uC0DD \uCD1D 13\uB9CC \uBA85 \uC911 \uC808\uBC18(\uC57D 7\uB9CC \uBA85)\uC774 \uB3D9\uC2DC \uC811\uC18D\uD558\uC5EC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB294 \uC11C\uBC84\uB97C \uB0A9\uD488\uD574\uC57C \uD558\uB294 \uC694\uAC74\uC774 \uC81C\uC2DC\uB428",
           analysis: "Python Locust\uB97C \uD65C\uC6A9\uD55C \uC2E4\uC81C \uC0AC\uC6A9\uC790 \uD589\uB3D9 \uC2DC\uB098\uB9AC\uC624 \uAE30\uBC18 \uBD80\uD558 \uD14C\uC2A4\uD2B8\uC5D0\uC11C \uBCD1\uBAA9 \uBC1C\uACAC. \uD2B8\uB79C\uC7AD\uC158 \uBC94\uC704 \uC624\uC124\uC815\uC73C\uB85C \uBE44\uAD00\uC801 \uB77D(Pessimistic Lock) \uC810\uC720 \uC2DC\uAC04\uC774 \uBE44\uC815\uC0C1\uC801\uC73C\uB85C \uAE38\uC5B4\uC9C0\uACE0, \uBB34\uBD84\uBCC4\uD55C \uC804\uCCB4 \uC870\uD68C(LIMIT \uC5C6\uC774)\uAC00 \uBC1C\uC0DD",
           action: "\uD2B8\uB79C\uC7AD\uC158 \uBC94\uC704\uC5D0\uC11C \uBB34\uAC70\uC6B4 \uC870\uD68C \uB85C\uC9C1\uC744 \uBD84\uB9AC\uD558\uC5EC \uB77D \uC810\uC720 \uC2DC\uAC04 \uCD5C\uC18C\uD654. \uADF8\uB8F9 \uC870\uD68C\uC5D0 LIMIT\uC744 \uC801\uC6A9\uD558\uC5EC \uD544\uC694\uD55C \uBC94\uC704\uB9CC \uC870\uD68C\uD558\uB3C4\uB85D \uC218\uC815",
@@ -312,13 +312,81 @@ window.i18nData.ko = {
     copyright: "Park Jeongho. All rights reserved."
   },
 
-  labels: {
-    situation: "\uC0C1\uD669",
-    analysis: "\uBD84\uC11D",
-    action: "\uD574\uACB0",
-    result: "\uACB0\uACFC"
-  },
   c2_p5_lesson_label: "\uAD50\uD6C8",
+
+  // ── 카드별 자연어 헤딩 (STAR 폐기, 패턴별 자연어로 교체) ──
+  // C1_P1 — NHN→NCP 이관과 7만 CCU 부하 검증 (improvement + incident 혼합)
+  c1_p1_h1: "이관 배경과 9대 아키텍처 설계",
+  c1_p1_b1: "NHN Cloud → NCP 이관을 결정. API 2대, 프론트 2대, Redis 1대, DB Master+Slave 2대, PDF 1대, 배치 1대로 9대 고가용성 구성을 사전 설계하고 신규 환경에서 미리 동작 검증을 마침. 정식 이관은 다른 개발 건으로 지연되었고, 그 사이 14시간 복구 사고가 발생 (자세한 내용은 아래 ‘클라우드 위기 대응 14시간 복구’ 카드)",
+  c1_p1_h2: "7만 CCU 부하 검증 시나리오",
+  c1_p1_b2: "강원도교육청 납품 요건: 관할 초중고 학생 약 13만 명 중 7만 명 동시접속. Locust로 실제 사용자 시나리오(벌크 가입 → 글 작성 → AI 피드백) 기반 부하 테스트 설계",
+  c1_p1_h3: "발견한 병목과 데드락",
+  c1_p1_b3: "커넥션 풀 부족으로 요청이 대기, 과도한 @Transactional 범위로 락 점유 시간이 길어져 데드락 발생. 무분별한 전체 조회(LIMIT 미적용)도 부하 가중 요인",
+  c1_p1_h4: "튜닝과 통과 결과",
+  c1_p1_b4: "커넥션 풀 증설, 트랜잭션 범위 축소, LIMIT 적용으로 불필요한 전체 조회 제거. 2차 부하 테스트에서 단일건 수행 대비 응답 시간 유의미한 차이 없이 통과",
+
+  // C1_P2 — CI/CD 파이프라인 (improvement)
+  c1_p2_h1: "기존 배포의 문제",
+  c1_p2_h2: "필요했던 체계",
+  c1_p2_h3: "파이프라인 설계",
+  c1_p2_h4: "무중단 배포 결과",
+
+  // C1_P3 — Slack 모니터링 (decision, decision-block 흡수)
+  c1_p3_h1: "감지 체계의 부재",
+  c1_p3_h2: "고려한 대안",
+  c1_p3_h3: "Slack 웹훅을 택한 이유",
+  c1_p3_h4: "실제 효과",
+  // 본문 — decision-block에서 흡수된 "고려한 대안" 본문
+  c1_p3_alternatives: "Datadog, Grafana 같은 전문 모니터링 도구 도입을 검토. 6인 팀 규모에서 별도 모니터링 인프라의 학습·운영 비용이 부담",
+
+  // C1_P4 — 14시간 복구 (incident)
+  c1_p4_h1: "사고 개요",
+  c1_p4_h2: "복구 우선순위",
+  c1_p4_h3: "14시간의 대응",
+  c1_p4_h4: "재발 방지까지",
+
+  // C2_P1 — 환불 시스템 (decision, decision-block 흡수)
+  c2_p1_h1: "환불·정산의 부재",
+  c2_p1_h2: "복잡했던 상품 구조",
+  c2_p1_h3: "통합 엔진 + 분리된 정산 전략",
+  c2_p1_h4: "확장 가능한 결과",
+  // 본문 — decision-block에서 흡수된 "왜 그렇게 설계했나"
+  c2_p1_design_rationale: "단품·일반 패키지·선택형 패키지가 각각 다른 환불 비율 계산과 강사 정산 로직을 필요로 했음. 하나의 통합 환불 계산 엔진을 두되 상품 유형별 정산 분배 전략은 분리. 이후 새로운 상품 유형이 추가되어도 환불 로직 자체는 수정 없이 확장 가능했음",
+
+  // C2_P2 — 레거시 결제 마이그레이션 (improvement)
+  c2_p2_h1: "혼재된 결제·환불 데이터",
+  c2_p2_h2: "분리와 마이그레이션",
+  c2_p2_h3: "확보된 정합성",
+
+  // C2_P3 — 정산 시스템 Spring Batch (decision)
+  c2_p3_h1: "수동 정산의 한계",
+  c2_p3_h2: "자동화 + 회계팀 협업",
+  c2_p3_h3: "완전 자동화",
+
+  // C2_P4 — 상품 버전 관리 (improvement)
+  c2_p4_h1: "버전이 바뀌는 상품",
+  c2_p4_h2: "버전 이력 로직",
+  c2_p4_h3: "추적 가능한 운영",
+
+  // C2_P5 — 환불 도메인 설계 실패 (domain)
+  c2_p5_h1: "놓친 도메인 변수",
+  c2_p5_h2: "근본 원인의 발견",
+  c2_p5_h3: "재설계와 데이터 소급",
+  c2_p5_h4: "바뀐 일하는 방식",
+  // h5는 c2_p5_lesson_label 재사용 (위 정의)
+
+  // C3_P1 — XML→PostgreSQL (decision, decision-block 흡수)
+  c3_p1_h1: "10초 걸리던 검색",
+  c3_p1_h2: "고려한 대안",
+  c3_p1_h3: "PostgreSQL 정규화를 택한 이유",
+  c3_p1_h4: "체감 10배 개선",
+  // 본문 — decision-block에서 흡수된 "Elasticsearch 대신 무엇을 골랐나"
+  c3_p1_alternatives: "Elasticsearch 도입을 검토. 데이터 규모가 크지 않아 별도 검색 엔진의 운영 비용이 정당화되지 않음. 인프라 복잡도를 추가하지 않는 방향을 우선",
+
+  // C4_P2 — 보안관제-이슈관리 연동 (improvement)
+  c4_p2_h1: "수동 추적의 부담",
+  c4_p2_h2: "API 연동 + 대시보드",
+  c4_p2_h3: "자동화된 추적",
 
   // Hero metrics
   hero_metric1_value: "7+",

@@ -34,7 +34,7 @@ window.i18nData.en = {
       stack: "Java, Spring Boot, NCP, NHN Cloud, GitHub Actions, Docker, Locust, Python, FastAPI, Slack, MySQL, Redis",
       projects: {
         loadTest: {
-          title: "70K CCU Load Testing and High-Availability Architecture",
+          title: "NHN→NCP Migration and 70K CCU Load Validation",
           situation: "The server was to be delivered to the Gangwon Provincial Office of Education, with a requirement that half of the 130,000 enrolled students (approximately 70,000) must be able to use the service concurrently.",
           analysis: "Load testing using Python Locust with real user behavior scenarios revealed bottlenecks: a misconfigured transaction scope caused pessimistic lock hold times to become abnormally long, and unbounded full-table queries (without LIMIT) were being executed on every user registration.",
           action: "Separated heavy query logic from the transaction scope to minimize lock hold time. Applied LIMIT to group queries to restrict retrieval to only the necessary range.",
@@ -310,13 +310,78 @@ window.i18nData.en = {
   },
 
   c2_p5_lesson_label: "Lesson",
-  labels: {
-    situation: "Situation",
-    analysis: "Analysis",
-    action: "Action",
-    result: "Result"
-  }
-,
+
+  // ── Per-card natural-language headings (replaces STAR labels) ──
+  // C1_P1 — NHN→NCP migration and 70K CCU load validation (improvement + incident)
+  c1_p1_h1: "Migration Background and 9-Server Architecture",
+  c1_p1_b1: "Decided to migrate NHN Cloud → NCP. Pre-designed and pre-validated a 9-server HA setup (API ×2, Frontend ×2, Redis ×1, DB Master+Slave ×2, PDF ×1, Batch ×1) on the new environment. The actual cutover was delayed due to other priorities, and during that gap the 14-hour recovery incident occurred (see the 'Cloud Recovery in 14 Hours' card below)",
+  c1_p1_h2: "70K CCU Load Test Scenario",
+  c1_p1_b2: "Gangwon Office of Education delivery requirement: ~70K concurrent users out of 130K students. Designed a Locust-based load test using realistic user flows (bulk signup → writing → AI feedback)",
+  c1_p1_h3: "Bottlenecks and Deadlocks We Found",
+  c1_p1_b3: "Connection pool exhaustion caused requests to queue up; oversized @Transactional scopes held locks too long, causing deadlocks. Indiscriminate full-table reads (no LIMIT) compounded the load",
+  c1_p1_h4: "Tuning and Passing Result",
+  c1_p1_b4: "Increased connection pool size, narrowed transaction scopes, applied LIMIT to remove unnecessary full reads. Second load test passed — response times comparable to single-request execution",
+
+  // C1_P2 — CI/CD pipeline (improvement)
+  c1_p2_h1: "Problem with Manual Deploy",
+  c1_p2_h2: "What Was Needed",
+  c1_p2_h3: "Pipeline Design",
+  c1_p2_h4: "Zero-Downtime Result",
+
+  // C1_P3 — Slack monitoring (decision, decision-block absorbed)
+  c1_p3_h1: "No Detection in Place",
+  c1_p3_h2: "Alternatives Considered",
+  c1_p3_h3: "Why Slack Webhook",
+  c1_p3_h4: "Actual Effect",
+  c1_p3_alternatives: "Considered Datadog and Grafana. The learning and operational cost of a separate monitoring stack was not justified for a 6-person team",
+
+  // C1_P4 — 14h recovery (incident)
+  c1_p4_h1: "Incident Overview",
+  c1_p4_h2: "Recovery Priority",
+  c1_p4_h3: "14 Hours of Response",
+  c1_p4_h4: "And Then, Prevention",
+
+  // C2_P1 — Refund system (decision, decision-block absorbed)
+  c2_p1_h1: "No Refund / Settlement",
+  c2_p1_h2: "Complex Product Structure",
+  c2_p1_h3: "Unified Engine + Split Strategies",
+  c2_p1_h4: "An Extensible Result",
+  c2_p1_design_rationale: "Standalone, regular package, and selectable package each required different refund-rate calculation and instructor settlement logic. We built one unified refund engine but separated the per-product-type settlement strategies. New product types could later be added without touching the refund logic",
+
+  // C2_P2 — Legacy payment migration (improvement)
+  c2_p2_h1: "Mixed Payment / Refund Data",
+  c2_p2_h2: "Separation and Migration",
+  c2_p2_h3: "Restored Consistency",
+
+  // C2_P3 — Settlement system Spring Batch (decision)
+  c2_p3_h1: "Limit of Manual Settlement",
+  c2_p3_h2: "Automation + Finance Team",
+  c2_p3_h3: "Fully Automated",
+
+  // C2_P4 — Product version management (improvement)
+  c2_p4_h1: "Products That Change",
+  c2_p4_h2: "Version History Logic",
+  c2_p4_h3: "Traceable Operations",
+
+  // C2_P5 — Refund domain redesign (domain)
+  c2_p5_h1: "Missed Domain Variable",
+  c2_p5_h2: "Discovering the Root Cause",
+  c2_p5_h3: "Redesign and Backfill",
+  c2_p5_h4: "How My Approach Changed",
+  // h5 reuses c2_p5_lesson_label (above)
+
+  // C3_P1 — XML to PostgreSQL (decision, decision-block absorbed)
+  c3_p1_h1: "Search Took 10 Seconds",
+  c3_p1_h2: "Alternatives Considered",
+  c3_p1_h3: "Why PostgreSQL Normalization",
+  c3_p1_h4: "Felt 10x Improvement",
+  c3_p1_alternatives: "Considered Elasticsearch. Data scale was not large enough to justify the operational cost of a separate search engine. Avoided adding infrastructure complexity",
+
+  // C4_P2 — Security workflow integration (improvement)
+  c4_p2_h1: "Burden of Manual Tracking",
+  c4_p2_h2: "API Integration + Dashboard",
+  c4_p2_h3: "Automated Tracking",
+
   // Hero metrics
   hero_metric1_value: "7+",
   hero_metric1_label: "Years Experience",

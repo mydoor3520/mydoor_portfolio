@@ -496,50 +496,38 @@ section:last-of-type {
 }
 
 .project__star {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .star-item {
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+.star-item:last-child {
+  margin-bottom: 0;
 }
 
 .star-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  min-width: 3rem;
-  margin-right: 0.5rem;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--accent);
+  line-height: 1.4;
 }
 
-.star-label--situation {
-  color: #d97706;
-  background: rgba(217, 119, 6, 0.1);
-}
-
-.star-label--analysis {
-  color: #7c3aed;
-  background: rgba(124, 58, 237, 0.1);
-}
-
-.star-label--action {
-  color: #059669;
-  background: rgba(5, 150, 105, 0.1);
-}
-
-.star-label--result {
-  color: var(--accent);
-  background: rgba(4, 190, 184, 0.1);
+/* Lesson row keeps a distinct accent (yellow/orange) */
+.star-label--lesson {
+  border-left-color: #d97706;
 }
 
 .star-content {
-  display: inline;
+  display: block;
   color: var(--text-secondary);
+  padding-left: 0.6rem;
 }
 
 /* ============================================
@@ -1632,12 +1620,12 @@ a.compact-timeline__item:hover {
   }
 
   .star-item {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 
   .star-label {
-    font-size: 6.5pt;
-    min-width: 2.2rem;
+    font-size: 8pt;
+    margin-bottom: 0.2rem;
   }
 
   .star-content {
@@ -2008,10 +1996,7 @@ a.compact-timeline__item:hover {
   border-left: 3px solid #d97706;
 }
 
-.star-label--lesson {
-  background: rgba(217, 119, 6, 0.12);
-  color: #d97706;
-}
+/* Lesson row uses orange accent on the heading bar (defined in main star-label rule) */
 
 .project-summary {
   font-size: 0.85rem;
